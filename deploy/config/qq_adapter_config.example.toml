@@ -1,0 +1,11 @@
+[plugin]
+enabled = true
+config_version = "0.4.2"
+[qq_official]
+app_id = "YOUR_QQ_APP_ID"
+app_secret = "REPLACE_ME"
+api_base_url = "https://api.bot.qq.com"
+[mute]
+enabled = false
+[recall]
+enabled = false

@@ -1,0 +1,57 @@
+{
+  "persisted_relationship_count": 4,
+  "actual_events": [
+    "greeting",
+    "praise"
+  ],
+  "confirmed_gif_states": [
+    "caring",
+    "happy"
+  ],
+  "native_memory_validation": {
+    "same_chat_hits": 2,
+    "other_chat_hits": 0,
+    "same_chat_success": true,
+    "other_chat_success": true,
+    "source_delete_success": true,
+    "hits_after_delete": 0,
+    "ok": true
+  },
+  "animation_validation_ok": true,
+  "source_commit": "ed9205b",
+  "patch_sha256": "575c12bf1d77db91b25df1cfcf1f31abb7fa525bab26a211201a7bbfa93bb705",
+  "backup_has_scope_patch": true,
+  "backup_sqlite_integrity": [
+    "ok",
+    "ok",
+    "ok",
+    "ok"
+  ],
+  "pending": null,
+  "restart_validation": {
+    "qq_reconnected": true,
+    "companion_state_preserved": true,
+    "relationship_count": 4,
+    "delivery_record_count": 2,
+    "host_management_auth_ok": true
+  },
+  "live_memory_self_check": {
+    "success": true,
+    "enabled": true,
+    "memory_enabled": true,
+    "runtime_ready": true,
+    "retrieval_ready": true,
+    "degraded": false,
+    "dimension": 1024
+  },
+  "checked_at": "2026-11-03T14:13:37.343350+00:00",
+  "final_acceptance": {
+    "explicit_expression_tool_confirmed": true,
+    "mood_transition": "boundary -> praise",
+    "positive_valence": 0.2665,
+    "tool_only_state_update_fix": "1.0.1",
+    "catchup_used_for_original_tool_turn": true,
+    "hook_contract_tests_passed": 8,
+    "state_tests_passed": 4
+  }
+}

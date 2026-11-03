@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "id": "local.liya-companion",
+  "version": "1.0.1",
+  "name": "璃芽·陪伴人格",
+  "description": "按成员和聊天流保存关系、事件心情，向真实回复注入状态并发送对应动态表情。",
+  "author": {"name": "Codex (local deployment)", "url": "https://openai.com/codex/"},
+  "urls": {"repository": "http://127.0.0.1:18001/", "documentation": "https://docs.maibot.chat/"},
+  "i18n": {"default_locale": "zh-CN", "supported_locales": ["zh-CN"]},
+  "license": "MIT",
+  "host_application": {"min_version": "1.3.19", "max_version": "1.3.99"},
+  "sdk": {"min_version": "2.19.0", "max_version": "2.98.99"},
+  "dependencies": [],
+  "capabilities": ["llm.generate", "send.emoji"]
+}

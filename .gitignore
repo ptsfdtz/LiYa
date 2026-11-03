@@ -1,0 +1,23 @@
+# Keep real deployment credentials and user databases outside this reference folder.
+deploy/api.json
+deploy/config/bot_config.toml
+deploy/config/model_config.toml
+deploy/config/qq_adapter_config.toml
+**/config.toml
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+*.sqlite3-wal
+*.sqlite3-shm
+backups/
+embedding-models/
+logs/
+__pycache__/
+*.pyc

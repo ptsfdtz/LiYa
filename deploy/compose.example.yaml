@@ -1,0 +1,37 @@
+services:
+  core:
+    image: sengokucola/maibot@sha256:f1acc52b710c776985559e616f100a6f10c2222fb689c65ae35c1b218d5deab8
+    container_name: dragon-maibot
+    restart: unless-stopped
+    stop_grace_period: 70s
+    environment:
+      TZ: Asia/Shanghai
+      HTTP_HOST: 0.0.0.0
+    ports:
+      - "127.0.0.1:18001:8001"
+    volumes:
+      - ./config:/MaiMBot/config
+      - ./data:/MaiMBot/data
+      - ./plugins:/MaiMBot/plugins
+      - ./logs:/MaiMBot/logs
+      - ./api.json:/run/secrets/provider.json:ro
+      - ./patches/search_hit_processing_service.py:/MaiMBot/src/A_memorix/core/runtime/services/search_hit_processing_service.py:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  embeddings:
+    image: ollama/ollama@sha256:ebaef4f4c5d93660e1f25f8ad085a112f51ccfb0e8458073e71793959dba91c9
+    container_name: dragon-maibot-embeddings
+    restart: unless-stopped
+    volumes:
+      - ./embedding-models:/root/.ollama
+    environment:
+      OLLAMA_KEEP_ALIVE: 10m
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

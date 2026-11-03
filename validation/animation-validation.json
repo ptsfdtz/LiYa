@@ -1,0 +1,746 @@
+{
+  "ok": true,
+  "errors": [],
+  "rows": [
+    {
+      "state": "idle",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/artwork/frames/idle/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18611,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 3
+        },
+        {
+          "index": 1,
+          "file": "/artwork/frames/idle/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18492,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 7
+        },
+        {
+          "index": 2,
+          "file": "/artwork/frames/idle/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18546,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 11
+        },
+        {
+          "index": 3,
+          "file": "/artwork/frames/idle/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18651,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 10
+        }
+      ]
+    },
+    {
+      "state": "happy",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/artwork/frames/happy/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19264,
+          "bbox": [
+            27,
+            5,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 3
+        },
+        {
+          "index": 1,
+          "file": "/artwork/frames/happy/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19340,
+          "bbox": [
+            27,
+            5,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "/artwork/frames/happy/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19394,
+          "bbox": [
+            27,
+            5,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 20
+        },
+        {
+          "index": 3,
+          "file": "/artwork/frames/happy/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19298,
+          "bbox": [
+            27,
+            5,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 12
+        }
+      ]
+    },
+    {
+      "state": "curious",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/artwork/frames/curious/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18883,
+          "bbox": [
+            26,
+            7,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 39
+        },
+        {
+          "index": 1,
+          "file": "/artwork/frames/curious/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19161,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 7
+        },
+        {
+          "index": 2,
+          "file": "/artwork/frames/curious/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19169,
+          "bbox": [
+            22,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 28
+        },
+        {
+          "index": 3,
+          "file": "/artwork/frames/curious/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19073,
+          "bbox": [
+            26,
+            6,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 5
+        }
+      ]
+    },
+    {
+      "state": "thinking",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/artwork/frames/thinking/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19784,
+          "bbox": [
+            24,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 13
+        },
+        {
+          "index": 1,
+          "file": "/artwork/frames/thinking/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19477,
+          "bbox": [
+            24,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 11
+        },
+        {
+          "index": 2,
+          "file": "/artwork/frames/thinking/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19405,
+          "bbox": [
+            24,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 26
+        },
+        {
+          "index": 3,
+          "file": "/artwork/frames/thinking/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19785,
+          "bbox": [
+            24,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 6
+        }
+      ]
+    },
+    {
+      "state": "sulky",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/artwork/frames/sulky/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19319,
+          "bbox": [
+            27,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 48
+        },
+        {
+          "index": 1,
+          "file": "/artwork/frames/sulky/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19193,
+          "bbox": [
+            29,
+            5,
+            163,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 34
+        },
+        {
+          "index": 2,
+          "file": "/artwork/frames/sulky/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19676,
+          "bbox": [
+            25,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 34
+        },
+        {
+          "index": 3,
+          "file": "/artwork/frames/sulky/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19221,
+          "bbox": [
+            27,
+            5,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 31
+        }
+      ]
+    },
+    {
+      "state": "caring",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/artwork/frames/caring/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18799,
+          "bbox": [
+            28,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 30
+        },
+        {
+          "index": 1,
+          "file": "/artwork/frames/caring/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18280,
+          "bbox": [
+            28,
+            9,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 10
+        },
+        {
+          "index": 2,
+          "file": "/artwork/frames/caring/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18398,
+          "bbox": [
+            28,
+            9,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 15
+        },
+        {
+          "index": 3,
+          "file": "/artwork/frames/caring/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18732,
+          "bbox": [
+            28,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 19
+        }
+      ]
+    },
+    {
+      "state": "greeting",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/artwork/frames/greeting/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19354,
+          "bbox": [
+            23,
+            5,
+            168,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 3
+        },
+        {
+          "index": 1,
+          "file": "/artwork/frames/greeting/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19330,
+          "bbox": [
+            23,
+            5,
+            168,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 2
+        },
+        {
+          "index": 2,
+          "file": "/artwork/frames/greeting/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19734,
+          "bbox": [
+            23,
+            5,
+            168,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 7
+        },
+        {
+          "index": 3,
+          "file": "/artwork/frames/greeting/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 19356,
+          "bbox": [
+            23,
+            5,
+            168,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 5
+        }
+      ]
+    },
+    {
+      "state": "sleepy",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/artwork/frames/sleepy/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23634,
+          "bbox": [
+            14,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 16
+        },
+        {
+          "index": 1,
+          "file": "/artwork/frames/sleepy/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23702,
+          "bbox": [
+            14,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 15
+        },
+        {
+          "index": 2,
+          "file": "/artwork/frames/sleepy/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23603,
+          "bbox": [
+            14,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 3
+        },
+        {
+          "index": 3,
+          "file": "/artwork/frames/sleepy/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23605,
+          "bbox": [
+            14,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 7
+        }
+      ]
+    },
+    {
+      "state": "excited",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "/artwork/frames/excited/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16832,
+          "bbox": [
+            26,
+            22,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 15
+        },
+        {
+          "index": 1,
+          "file": "/artwork/frames/excited/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15478,
+          "bbox": [
+            28,
+            5,
+            163,
+            177
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 23
+        },
+        {
+          "index": 2,
+          "file": "/artwork/frames/excited/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 15453,
+          "bbox": [
+            28,
+            16,
+            163,
+            189
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 8
+        },
+        {
+          "index": 3,
+          "file": "/artwork/frames/excited/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 16743,
+          "bbox": [
+            26,
+            23,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 12
+        }
+      ]
+    }
+  ],
+  "motion": [
+    {
+      "state": "idle",
+      "unique_frames": 4,
+      "bytes": 81128,
+      "baselines": [
+        203,
+        203,
+        203,
+        203
+      ]
+    },
+    {
+      "state": "happy",
+      "unique_frames": 4,
+      "bytes": 83521,
+      "baselines": [
+        203,
+        203,
+        203,
+        203
+      ]
+    },
+    {
+      "state": "curious",
+      "unique_frames": 4,
+      "bytes": 82845,
+      "baselines": [
+        203,
+        203,
+        203,
+        203
+      ]
+    },
+    {
+      "state": "thinking",
+      "unique_frames": 4,
+      "bytes": 84052,
+      "baselines": [
+        203,
+        203,
+        203,
+        203
+      ]
+    },
+    {
+      "state": "sulky",
+      "unique_frames": 4,
+      "bytes": 82516,
+      "baselines": [
+        203,
+        203,
+        203,
+        203
+      ]
+    },
+    {
+      "state": "caring",
+      "unique_frames": 4,
+      "bytes": 80439,
+      "baselines": [
+        203,
+        203,
+        203,
+        203
+      ]
+    },
+    {
+      "state": "greeting",
+      "unique_frames": 4,
+      "bytes": 84360,
+      "baselines": [
+        203,
+        203,
+        203,
+        203
+      ]
+    },
+    {
+      "state": "sleepy",
+      "unique_frames": 4,
+      "bytes": 99530,
+      "baselines": [
+        203,
+        203,
+        203,
+        203
+      ]
+    },
+    {
+      "state": "excited",
+      "unique_frames": 4,
+      "bytes": 70498,
+      "baselines": [
+        203,
+        177,
+        189,
+        203
+      ]
+    }
+  ]
+}

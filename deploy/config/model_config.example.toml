@@ -1,0 +1,120 @@
+[inner]
+version = "1.17.25"
+
+[web]
+preview_chars = 4000 # 单次返回的内容预览字数，完整内容通过 read_tool_result 读取。
+services = {} # 联网服务定义；仅添加服务不会启用工具，需要在功能分配中选择。
+
+[[models]]
+model_type = "llm"
+model_identifier = "gpt-6.1-sol"
+name = "dragon-gpt"
+api_provider = "Sub2API"
+send_temperature = false
+visual = true
+
+[models.extra_params.reasoning]
+effort = "low"
+[[models]]
+model_type = "embedding"
+model_identifier = "bge-m3"
+name = "liya-memory-embedding"
+api_provider = "LocalMemory"
+send_temperature = false
+[model_task_config.web_search] # 选择已定义的联网服务，用于搜索和网页读取；未分配时不开放统一联网工具。
+model_list = [] # 选择一个 web.services 中的联网服务名称；留空不开放统一联网工具。
+
+[model_task_config.replyer] # 回复模型，影响麦麦的回复表现
+model_list = ["dragon-gpt"] # 使用的模型列表, 每个元素对应上面的模型名称(name)
+max_tokens = 4096 # 任务最大输出token数
+temperature = 1.0 # 模型温度
+selection_strategy = "random" # 模型选择策略：balance（负载均衡）、random（随机选择）或 sequential（按配置顺序优先选择）
+hard_timeout = 240.0 # 任务硬超时（秒），到点未返回则取消请求并尝试切换下一个模型；防止上游代理静默排队导致主循环饥饿
+
+[model_task_config.planner] # 规划模型，决定麦麦的行动，需要有一定Agent能力的模型
+model_list = ["dragon-gpt"] # 使用的模型列表, 每个元素对应上面的模型名称(name)
+max_tokens = 4096 # 任务最大输出token数
+temperature = 0.7 # 模型温度
+selection_strategy = "random" # 模型选择策略：balance（负载均衡）、random（随机选择）或 sequential（按配置顺序优先选择）
+hard_timeout = 180.0 # 任务硬超时（秒），到点未返回则取消请求并尝试切换下一个模型；防止上游代理静默排队导致主循环饥饿
+
+[model_task_config.memory] # 记忆模型配置，用于长期记忆总结、抽取、写回等高记忆任务；留空时由调用方按需回退
+model_list = ["dragon-gpt"] # 使用的模型列表, 每个元素对应上面的模型名称(name)
+max_tokens = 4096 # 任务最大输出token数
+temperature = 0.3 # 模型温度
+selection_strategy = "random" # 模型选择策略：balance（负载均衡）、random（随机选择）或 sequential（按配置顺序优先选择）
+hard_timeout = 240.0 # 任务硬超时（秒），到点未返回则取消请求并尝试切换下一个模型；防止上游代理静默排队导致主循环饥饿
+
+[model_task_config.utils] # 执行文本概括，整理等小任务，是麦麦必须的模型。可以选择速度快的小尺寸模型
+model_list = ["dragon-gpt"] # 使用的模型列表, 每个元素对应上面的模型名称(name)
+max_tokens = 4096 # 任务最大输出token数
+temperature = 0.5 # 模型温度
+selection_strategy = "random" # 模型选择策略：balance（负载均衡）、random（随机选择）或 sequential（按配置顺序优先选择）
+hard_timeout = 120.0 # 任务硬超时（秒），到点未返回则取消请求并尝试切换下一个模型；防止上游代理静默排队导致主循环饥饿
+
+[model_task_config.learner] # 学习模型配置，用于表达方式学习和黑话学习；留空时用 utils 模型
+model_list = ["dragon-gpt"] # 使用的模型列表, 每个元素对应上面的模型名称(name)
+max_tokens = 4096 # 任务最大输出token数
+temperature = 0.7 # 模型温度
+selection_strategy = "balance" # 模型选择策略：balance（负载均衡）、random（随机选择）或 sequential（按配置顺序优先选择）
+hard_timeout = 120.0 # 任务硬超时（秒），到点未返回则取消请求并尝试切换下一个模型；防止上游代理静默排队导致主循环饥饿
+
+[model_task_config.fast_model] # 快速模型配置，用于表达方式选择、回复断句等需要快速完成的小任务，建议选择响应快的模型；留空时用 utils 模型
+model_list = ["dragon-gpt"] # 使用的模型列表, 每个元素对应上面的模型名称(name)
+max_tokens = 4096 # 任务最大输出token数
+temperature = 0.3 # 模型温度
+selection_strategy = "balance" # 模型选择策略：balance（负载均衡）、random（随机选择）或 sequential（按配置顺序优先选择）
+hard_timeout = 120.0 # 任务硬超时（秒），到点未返回则取消请求并尝试切换下一个模型；防止上游代理静默排队导致主循环饥饿
+
+[model_task_config.emoji] # 表情包发送模型配置；留空时保持原有 planner/vlm 选择逻辑
+model_list = ["dragon-gpt"] # 使用的模型列表, 每个元素对应上面的模型名称(name)
+max_tokens = 4096 # 任务最大输出token数
+temperature = 0.7 # 模型温度
+selection_strategy = "balance" # 模型选择策略：balance（负载均衡）、random（随机选择）或 sequential（按配置顺序优先选择）
+hard_timeout = 120.0 # 任务硬超时（秒），到点未返回则取消请求并尝试切换下一个模型；防止上游代理静默排队导致主循环饥饿
+
+[model_task_config.vlm] # 视觉模型，需要能够识图的模型
+model_list = ["dragon-gpt"] # 使用的模型列表, 每个元素对应上面的模型名称(name)
+max_tokens = 4096 # 任务最大输出token数
+temperature = 0.7 # 模型温度
+selection_strategy = "balance" # 模型选择策略：balance（负载均衡）、random（随机选择）或 sequential（按配置顺序优先选择）
+hard_timeout = 240.0 # 任务硬超时（秒），到点未返回则取消请求并尝试切换下一个模型；防止上游代理静默排队导致主循环饥饿
+
+[model_task_config.voice] # 语音识别模型
+model_list = [] # 使用的模型列表, 每个元素对应上面的模型名称(name)
+max_tokens = 8192 # 任务最大输出token数
+temperature = 0.7 # 模型温度
+selection_strategy = "balance" # 模型选择策略：balance（负载均衡）、random（随机选择）或 sequential（按配置顺序优先选择）
+hard_timeout = 120.0 # 任务硬超时（秒），到点未返回则取消请求并尝试切换下一个模型；防止上游代理静默排队导致主循环饥饿
+
+[model_task_config.embedding] # 嵌入模型；可选择文本或图片嵌入类型，不可使用 LLM，所选模型需支持文本向量化
+model_list = ["liya-memory-embedding"] # 使用的模型列表, 每个元素对应上面的模型名称(name)
+max_tokens = 4096 # 任务最大输出token数
+temperature = 0.7 # 模型温度
+selection_strategy = "balance" # 模型选择策略：balance（负载均衡）、random（随机选择）或 sequential（按配置顺序优先选择）
+hard_timeout = 60.0 # 任务硬超时（秒），到点未返回则取消请求并尝试切换下一个模型；防止上游代理静默排队导致主循环饥饿
+
+[model_task_config.image_embedding] # 图片嵌入模型；可选择文本或图片嵌入类型，不可使用 LLM，留空时不启用；所选模型必须实现图片输入到向量的协议
+model_list = [] # 使用的模型列表, 每个元素对应上面的模型名称(name)
+max_tokens = 4096 # 任务最大输出token数
+temperature = 0.7 # 模型温度
+selection_strategy = "balance" # 模型选择策略：balance（负载均衡）、random（随机选择）或 sequential（按配置顺序优先选择）
+hard_timeout = 60.0 # 任务硬超时（秒），到点未返回则取消请求并尝试切换下一个模型；防止上游代理静默排队导致主循环饥饿
+
+[[api_providers]]
+name = "Sub2API"
+base_url = "https://sub2api.keepresearch.com/v1"
+api_key = "REPLACE_ME"
+client_type = "openai_responses"
+max_retry = 2
+timeout = 90
+retry_interval = 3
+[[api_providers]]
+name = "LocalMemory"
+base_url = "http://embeddings:11434/v1"
+api_key = ""
+auth_type = "none"
+client_type = "openai"
+timeout = 120
+max_retry = 2
+retry_interval = 2

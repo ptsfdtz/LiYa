@@ -1,0 +1,105 @@
+{
+  "character": "璃芽",
+  "status": "deployed_with_native_memory_and_companion_plugin",
+  "live_bot_modified": true,
+  "personality_draft": "liya-personality-v2.json",
+  "visual_identity": {
+    "reference": "../assets/liya-avatar.png",
+    "companion_sheet": "../assets/liya-state-sheet-clean.png",
+    "style": "三头身Q版成年小龙娘，适合虚拟陪伴角色和表情素材",
+    "fixed_features": [
+      "银白色长发",
+      "青绿色弯龙角",
+      "金色眼睛",
+      "鳍状小耳",
+      "白花与深青发带",
+      "白青色金边服装",
+      "青绿色龙尾"
+    ],
+    "sheet_layout": {
+      "rows": 3,
+      "columns": 3,
+      "reading_order": "从左至右、从上至下"
+    },
+    "states": [
+      {
+        "cell": 1,
+        "id": "idle",
+        "meaning": "平静待机",
+        "future_motion": "轻呼吸、偶尔眨眼、尾尖缓慢摆动"
+      },
+      {
+        "cell": 2,
+        "id": "happy",
+        "meaning": "开心",
+        "future_motion": "眼睛弯起、尾巴轻卷"
+      },
+      {
+        "cell": 3,
+        "id": "curious",
+        "meaning": "好奇",
+        "future_motion": "微微歪头、抬手"
+      },
+      {
+        "cell": 4,
+        "id": "thinking",
+        "meaning": "思考",
+        "future_motion": "托腮、小幅抬眼"
+      },
+      {
+        "cell": 5,
+        "id": "sulky",
+        "meaning": "轻微不服气",
+        "future_motion": "抱臂、轻轻偏头，短时恢复平静"
+      },
+      {
+        "cell": 6,
+        "id": "caring",
+        "meaning": "认真倾听与关心",
+        "future_motion": "表情柔和、轻点头"
+      },
+      {
+        "cell": 7,
+        "id": "greeting",
+        "meaning": "招手欢迎",
+        "future_motion": "轻轻挥手"
+      },
+      {
+        "cell": 8,
+        "id": "sleepy",
+        "meaning": "困倦",
+        "future_motion": "慢眨眼、抱尾巴"
+      },
+      {
+        "cell": 9,
+        "id": "excited",
+        "meaning": "兴奋庆祝",
+        "future_motion": "小幅跳起后落地"
+      }
+    ],
+    "animation_status": "九状态各四帧GIF已制作并安装至QQ陪伴插件；Live2D与ChatGPT Work宠物不在本次QQ部署范围"
+  },
+  "deployed_runtime_design": {
+    "stable_core": "身份、偏好、价值观与行为边界保持稳定；日常对话不能任意覆盖核心设定",
+    "temporary_mood": "记录情绪方向、活跃程度和触发事件，随时间回到基线；仅凭实际事件改变，不逐句随机变脸",
+    "per_person_relationship": "按成员区分熟悉度、信任、称呼与边界；由真实互动逐渐积累",
+    "memory": "分别保存可核实的成员偏好、共同经历和约定，保留来源、时间与纠正记录",
+    "conversation_pacing": "群聊适时接话、私聊专注当前对象；主动关心要基于具体事件与平台允许的发送能力",
+    "visual_selection": "按当前事件选择九种四帧GIF；自动表情每聊天30分钟冷却，明确请求看形象可调用表情工具，每分钟最多一次",
+    "completed_stages": [
+      "部署人格v2",
+      "配置并验收长期记忆与人物画像",
+      "部署持续心情与关系插件1.0.1",
+      "生成独立表情素材",
+      "制作并验收九状态动画"
+    ]
+  },
+  "research_sources": [
+    "https://docs.sillytavern.app/usage/core-concepts/characterdesign/",
+    "https://docs.sillytavern.app/usage/core-concepts/worldinfo/",
+    "https://docs.maibot.chat/manual/personality",
+    "https://docs.maibot.chat/manual/webui/memory-management",
+    "https://github.com/moeru-ai/airi",
+    "https://arxiv.org/abs/2304.03442"
+  ]
+}

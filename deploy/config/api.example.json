@@ -1,0 +1,5 @@
+{
+  "base_url": "https://YOUR_API_BASE/v1",
+  "api_key": "REPLACE_ME",
+  "requested_model": "gpt-6.1-sol"
+}
