@@ -43,6 +43,53 @@ class ConversationHookTests(unittest.IsolatedAsyncioTestCase):
         await self.observe('b1','你好',user='b')
         self.assertEqual((await self.plugin.before_send(message=outgoing))['action'],'abort')
 
+    async def test_c05_real_qq_early_hook_stops_failure_notice_and_survives_resume(self):
+        await self.observe('old')
+        await self.plugin.planner(session_id='g')
+        early={'session_id':'g','message_id':'stop','account_id':'bot-account','is_mentioned':False,
+            'is_at':False,'processed_plain_text':'@璃芽 先别说了',
+            'raw_message':[{'type':'at','data':{'target_user_id':'bot-account'}}],
+            'message_info':{'user_info':{'user_id':'a','user_nickname':'同名'},'group_info':{'group_id':'group-g'}}}
+        self.assertEqual((await self.plugin.receive(message=early))['action'],'abort')
+        await self.plugin.postprocess(session_id='g',reply_message_id='old',response='这次回复没能生成成功，稍后再试一下。')
+        outgoing={'session_id':'g','raw_message':[{'type':'text','data':'这次回复没能生成成功，稍后再试一下。'}]}
+        self.assertEqual((await self.plugin.before_send(message=outgoing))['action'],'abort')
+        await self.observe('resume','继续回答')
+        self.assertEqual((await self.plugin.before_send(message=outgoing))['action'],'abort')
+
+    async def test_tool_receipts_reach_replyer_and_failures_do_not_reuse_success(self):
+        await self.observe('a1','请记住我喜欢测试')
+        await self.plugin.planner(session_id='g')
+        async def capability(*args,**kwargs):
+            return {'success':True,'action':'remember','message':'已保存当前聊天中的个人事实。'}
+        self.plugin._ctx.call_capability=capability
+        await self.plugin.personal_record(stream_id='g',request_id='a1',action='remember',value='我喜欢测试')
+        reply=await self.plugin.reply(session_id='g',reply_message_id='a1')
+        self.assertIn('已保存当前聊天中的个人事实',reply['modified_kwargs']['extra_prompt'])
+        self.assertIn('当前回复阶段负责',reply['modified_kwargs']['extra_prompt'])
+        async def failed(*args,**kwargs):
+            return {'success':False,'error':'服务不可用'}
+        self.plugin._ctx.call_capability=failed
+        await self.plugin.personal_record(stream_id='g',request_id='a1',action='list')
+        self.assertFalse(self.plugin.conversations.tool_results('g','a1')[-1]['result']['success'])
+        await self.observe('b1','你好',user='b')
+        await self.plugin.planner(session_id='g')
+        reply=await self.plugin.reply(session_id='g',reply_message_id='b1')
+        self.assertNotIn('已保存当前聊天中的个人事实',reply['modified_kwargs']['extra_prompt'])
+
+    async def test_reminder_reply_preserves_actual_content_and_delivery_conditions(self):
+        await self.observe('a1','一分钟后提醒我，内容写“QQ验收提醒”')
+        await self.plugin.planner(session_id='g')
+        result=await self.plugin.activity(stream_id='g',request_id='a1',action='create_reminder',value='错误的整段指令')
+        self.assertEqual(result['text'],'QQ验收提醒')
+        reply=await self.plugin.reply(session_id='g',reply_message_id='a1')
+        self.assertIn('QQ验收提醒',reply['modified_kwargs']['extra_prompt'])
+        text=(await self.plugin.postprocess(session_id='g',reply_message_id='a1',response='提醒已设好。'))['modified_kwargs']['response']
+        self.assertIn(result['delivery'],text)
+        complete='提醒已设好，送达受平台权限、额度和连接状态影响。'
+        unchanged=await self.plugin.postprocess(session_id='g',reply_message_id='a1',response=complete)
+        self.assertEqual(unchanged['modified_kwargs']['response'],complete)
+
     async def test_c01_reply_to_quoted_author_keeps_current_requester(self):
         await self.observe('a1','我不喝咖啡')
         await self.observe('b1','他说不喝咖啡',user='b')

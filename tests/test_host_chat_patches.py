@@ -24,6 +24,19 @@ def load(name,path):
 
 
 class HostChatPatchTests(unittest.IsolatedAsyncioTestCase):
+    def test_qq_bot_mentions_follow_unified_identity_without_claiming_other_members(self):
+        codec=load('liya_qq_identity_codec',Path('/MaiMBot/plugins/qq_official_adapter/codec.py'))
+        payload={'id':'synthetic-message','timestamp':'2026-11-04T11:00:00+08:00',
+            'group_openid':'synthetic-group','author':{'member_openid':'synthetic-member'},
+            'content':'<@bot-openid> 先别说了 <@other-openid>',
+            'mentions':[{'id':'bot-openid','username':'璃芽'},{'id':'other-openid','username':'其他成员'}]}
+        decoded,_,_=codec.decode_message('GROUP_MESSAGE_CREATE',payload,'ready-bot-id',
+            bot_name='璃芽',unified_account_id='unified-bot',
+            id_map={'user':{'bot-openid':'unified-bot','other-openid':'other-member'}})
+        targets=[s['data']['target_user_id'] for s in decoded['raw_message'] if s['type']=='at']
+        self.assertEqual(targets,['unified-bot','other-member'])
+        self.assertEqual(decoded['account_id'],'unified-bot')
+
     def test_host_overrides_model_supplied_identity_and_profile_paths_are_scoped(self):
         with TemporaryDirectory() as temporary:
             output=Path(temporary)

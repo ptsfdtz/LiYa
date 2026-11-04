@@ -66,6 +66,11 @@ class ActivityService:
         source = self.store.get_message(session, source_id)
         if not source or source['user'] != user or not any(w in source['text'] for w in ('提醒', '叫我', '通知我', '约定')):
             return {'success': False, 'error': '只有本人明确要求后才能建立提醒。'}
+        explicit = re.findall(r'(?:提醒)?内容\s*(?:写(?:成|为)?|是|为|[:：])\s*[“"]([^”"]+)[”"]', source['text'])
+        if len(explicit) > 1:
+            return {'success': False, 'error': '请明确这一条提醒使用哪段通知内容。'}
+        if explicit:
+            text = explicit[0]
         try:
             delay=relative_delay(source['text'])
         except ValueError as exc:
@@ -89,7 +94,7 @@ class ActivityService:
                        (uuid.uuid4().hex[:12], session, user, source_id, when, text.strip(), 'pending'))
             row = db.execute('SELECT id FROM reminders WHERE session=? AND source_id=? AND due=? AND text=?',
                              (session, source_id, when, text.strip())).fetchone()
-        return {'success': True, 'id': row['id'], 'due': datetime.fromtimestamp(when,SHANGHAI).strftime('%Y-%m-%d %H:%M:%S'), 'timezone': 'Asia/Shanghai',
+        return {'success': True, 'id': row['id'], 'text': text.strip(), 'due': datetime.fromtimestamp(when,SHANGHAI).strftime('%Y-%m-%d %H:%M:%S'), 'timezone': 'Asia/Shanghai',
                 'timing_basis':'message_reception' if delay is not None else 'absolute_time',
                 'delivery': '到时尝试发送QQ通知；送达受平台权限、额度和连接状态影响，可查询或取消。'}
 

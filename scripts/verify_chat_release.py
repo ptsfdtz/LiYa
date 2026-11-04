@@ -20,6 +20,8 @@ import hashlib,http.cookiejar,json,sqlite3,subprocess,tarfile,urllib.request
 root=Path('/opt/dragon-maibot')
 stage=Path(STAGE)
 record=json.loads((stage/'activation.json').read_text())
+asset_stage=ASSET_STAGE
+asset_record=json.loads((Path(asset_stage)/'activation.json').read_text()) if asset_stage else None
 secret=json.loads((root/'data/webui.json').read_text())['access_token']
 opener=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
 base='http://127.0.0.1:18001/api/webui'
@@ -52,8 +54,18 @@ with tarfile.open(root/'backups'/backup,'r:gz') as archive:
         suffix='plugins/liya_companion/assets/'+asset.name
         old=next((m for m in members if m.name.endswith(suffix)),None)
         asset_status[asset.name]=bool(old) and hashlib.sha256(archive.extractfile(old).read()).hexdigest()==hashlib.sha256(asset.read_bytes()).hexdigest()
+asset_release_status={name:hashlib.sha256((root/'plugins/liya_companion/assets'/name).read_bytes()).hexdigest()==digest
+                      for name,digest in asset_record['asset_sha256'].items()} if asset_record else {}
 qq=next((p for p in installed['plugins'] if 'qq-adapter' in str(p.get('id'))),None)
 qq_status={'loaded':bool(qq and qq.get('loaded'))}
+qq_identity={}
+if record.get('qq_identity_mapping'):
+    identity=record['qq_identity_mapping']
+    mapping=json.loads((root/'data/plugins/Mai-with-u.qq-adapter/id_map.json').read_text())
+    fingerprint=lambda value:hashlib.sha256(str(value).encode()).hexdigest()[:16]
+    qq_identity={'mapping_matches':any(fingerprint(alias)==identity['alias_fingerprint'] and
+        fingerprint(account)==identity['canonical_fingerprint'] for alias,account in mapping['user'].items()),
+        'codec_matches':hashlib.sha256((root/'plugins/qq_official_adapter/codec.py').read_bytes()).hexdigest()==identity['codec_sha256']}
 if qq:
     widgets=get('/plugins/config/'+qq['id']+'/widgets')
     def texts(value):
@@ -66,19 +78,23 @@ if qq:
     qq_status['connected']=any('已连接' in text for text in texts(widgets))
 report={'checked_at':datetime.now(timezone(timedelta(hours=8))).isoformat(),
     'release':record['release'],'plugin_version':json.loads((root/'plugins/liya_companion/_manifest.json').read_text())['version'],
-    'source_commit':record['source_commit'],'backup':backup,'plugin_loaded':bool(own.get('loaded')),
+    'source_commit':subprocess.check_output(['git','-C',str(root/'plugins/liya_companion'),'rev-parse','HEAD'],text=True).strip(),
+    'backup':backup,'plugin_loaded':bool(own.get('loaded')),
     'registered_tools':[c['name'] for c in components['components']], 'memory':runtime,'qq':qq_status,
+    'qq_identity_mapping':qq_identity,
     'source_sha256':source,'all_sources_match':source==record['source_sha256'],'host_patches':host,
-    'assets_unchanged':asset_status,'database':data,'database_before':record['database_before'],
+    'assets_unchanged':asset_status,'asset_release':asset_stage,'assets_match_release':asset_release_status,
+    'database':data,'database_before':record['database_before'],
     'qq_end_to_end_test':'pending_member_initiated_messages','qq_proactive_reminder_delivery':'not_yet_verified'}
 assert report['plugin_loaded'] and report['all_sources_match']
 assert runtime.get('runtime_ready') and runtime.get('retrieval_ready') and not runtime.get('degraded')
 assert all(item['matches'] and item['readonly'] for item in host.values())
-assert all(asset_status.values())
+assert all(asset_release_status.values()) if asset_record else all(asset_status.values())
 assert all(item['integrity']=='ok' for item in data.values())
+assert not qq_identity or all(qq_identity.values())
 (stage/'verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(report,ensure_ascii=False))
-'''.replace('STAGE',repr(stage))
+'''.replace('ASSET_STAGE',repr(preflight.get('asset_stage'))).replace('STAGE',repr(stage))
     result=subprocess.run(['ssh','-o','BatchMode=yes','marsIntranet','python3','-'],input=script,text=True,capture_output=True,encoding='utf-8')
     if result.returncode:
         print(result.stderr)

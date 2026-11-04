@@ -12,6 +12,13 @@ STOP = re.compile(r'^(?:璃芽[，,：: ]*)?(?:先)?(?:别说了|不要说了|�
 CLOSING = re.compile(r'^(?:嗯+[嗯哼]?|哦+|好[的吧]?|哈哈+|谢谢[你啦]?|晚安|拜拜|我去(?:吃饭|睡觉|忙)[了啦]?)[。！!~～\s]*$')
 
 
+def mentions_bot(message):
+    if message.get('is_mentioned') or message.get('is_at'):
+        return True
+    account_id = str(message.get('account_id') or '')
+    return bool(account_id and account_id in message_metadata(message)['mentions'])
+
+
 def message_metadata(message):
     """Retain identity and media availability, never binary media or guessed authors."""
     info = message.get('message_info') or {}
@@ -85,7 +92,7 @@ class ConversationStore:
             return False
         text = str(message.get('processed_plain_text') or '')
         meta = message_metadata(message)
-        mentioned = bool(message.get('is_mentioned') or message.get('is_at'))
+        mentioned = mentions_bot(message)
         # In groups a bare instruction between other people must not control the bot.
         directed = mentioned or not meta['group']
         clean = re.sub(r'^\s*@?璃芽[，,：: ]*', '', text).strip()
@@ -186,6 +193,20 @@ class ConversationStore:
             added = db.execute('INSERT OR IGNORE INTO operations VALUES(?,?,?,?)',
                                (session, source_id, kind, json.dumps({'status': 'sending'}))).rowcount
         return bool(added)
+
+    def record_tool_result(self, session, source_id, tool, action, result):
+        receipt = {'tool': tool, 'action': action, 'result': result, 'recorded_at': time.time()}
+        with self.connect() as db:
+            db.execute('''INSERT INTO operations VALUES(?,?,?,?)
+                ON CONFLICT(session,request_id,kind) DO UPDATE SET result=excluded.result''',
+                (session, source_id, 'tool-result:'+tool+':'+action, json.dumps(receipt, ensure_ascii=False)))
+
+    def tool_results(self, session, source_id):
+        with self.connect() as db:
+            rows = db.execute('''SELECT result FROM operations
+                WHERE session=? AND request_id=? AND kind LIKE 'tool-result:%'
+                ORDER BY json_extract(result,'$.recorded_at') LIMIT 20''', (session, source_id)).fetchall()
+        return [json.loads(row[0]) for row in rows]
 
     def finish_delivery(self, session, source_id, sent):
         with self.connect() as db:

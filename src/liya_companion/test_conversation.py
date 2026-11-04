@@ -64,6 +64,18 @@ class ConversationTests(unittest.TestCase):
         self.store.observe(message('stop', text='先别说了', is_mentioned=False), now=100)
         self.assertTrue(self.store.may_send('g', 'stop'))
 
+    def test_c05_early_receive_uses_account_id_and_actual_mention_target(self):
+        self.store.observe(message('old'), now=100)
+        for target in ('another-member', 'bot-account'):
+            self.store.observe(message(target, text='@璃芽 先别说了', is_mentioned=False,
+                account_id='bot-account', raw_message=[{'type':'at','data':{'target_user_id':target}}]), now=101)
+            self.assertEqual(self.store.get_message('g',target)['mentioned'], int(target=='bot-account'))
+            self.assertEqual(self.store.may_send('g','old'), target!='bot-account')
+        self.store.observe(message('resume', text='继续回答', is_mentioned=False, account_id='bot-account',
+            raw_message=[{'type':'at','data':{'target_user_id':'bot-account'}}]), now=102)
+        self.assertTrue(self.store.may_send('g','resume'))
+        self.assertFalse(self.store.may_send('g','old'))
+
     def test_m01_preferences_are_scoped_persistent_and_author_verified(self):
         self.store.observe(message('a1', text='以后叫我小林'), now=100)
         self.store.set_preference('g', 'a', 'nickname', '小林', 'a1')

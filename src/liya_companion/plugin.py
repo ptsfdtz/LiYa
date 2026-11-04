@@ -14,7 +14,7 @@ from maibot_sdk.types import HookMode, ToolParameterInfo, ToolParamType
 from .state import EVENTS, EXPRESSIONS, StateStore, state_prompt
 from .briefing import BriefingService, local_time
 from .web_research import web_research_prompt
-from .conversation import ConversationStore, conversation_prompt
+from .conversation import ConversationStore, conversation_prompt, mentions_bot
 from .personal import PersonalService
 from .activities import ActivityService
 
@@ -118,8 +118,8 @@ class LiyaCompanion(MaiBotPlugin):
         await asyncio.to_thread(self.conversations.observe,message)
         await asyncio.to_thread(self.store.observe,str(message.get('session_id','')),str(info.get('user_id','')),
                                 str(info.get('user_nickname','')),str(message.get('message_id','')),
-                                str(message.get('processed_plain_text') or ''),bool(message.get('is_mentioned') or message.get('is_at')),
-                                engaged=bool(message.get('is_mentioned') or message.get('is_at') or
+                                str(message.get('processed_plain_text') or ''),mentions_bot(message),
+                                engaged=bool(mentions_bot(message) or
                                              not (message.get('message_info') or {}).get('group_info')))
         session=str(message.get('session_id') or '')
         if self.conversations.boundary(session,str(info.get('user_id') or ''))['paused']:
@@ -163,6 +163,12 @@ class LiyaCompanion(MaiBotPlugin):
         source=self.conversations.get_message(session_id,source_id)
         if source:
             extra_prompt+=conversation_prompt(self.conversations.context(session_id,source['id']))
+            results=self.conversations.tool_results(session_id,source['id'])
+            if results:
+                extra_prompt+=('\n本轮工具由Planner执行，以下为服务器记录的实际回执数据。当前回复阶段负责向成员报告结果，'
+                    '不需要重新调用工具。以每项result.success及实际字段为准，成功不能说没有调用工具，'
+                    '失败不能说已完成。提醒正文使用result.text，并保留result.delivery中的投递条件。\n'
+                    +json.dumps(results,ensure_ascii=False))
         if self.config.plugin.briefing_enabled:
             extra_prompt+='\n如果本次回复转发liya_group_briefing的结果，完整保留text中的简报、统计范围、条数和覆盖说明；工具失败时不编造简报。'
         extra_prompt+=web_research_prompt()
@@ -217,6 +223,13 @@ class LiyaCompanion(MaiBotPlugin):
         session=str(kwargs.get('session_id') or '')
         source_id=str(self.anchors.get(session) or kwargs.get('reply_message_id') or '')
         text=str(kwargs.get('response') or '')
+        results=self.conversations.tool_results(session,source_id) if source_id else []
+        for receipt in results:
+            result=receipt['result']
+            if (receipt['tool']=='liya_activity' and receipt['action']=='create_reminder'
+                    and result.get('success') and not all(word in text for word in ('权限','额度','连接'))):
+                text+='\n'+result['delivery']
+                kwargs={**kwargs,'response':text}
         if source_id and self.conversations.context(session,source_id).get('clarify_memory'):
             text='你指的是哪件事？具体说一下，我再处理。'
             kwargs={**kwargs,'response':text}
@@ -299,14 +312,17 @@ class LiyaCompanion(MaiBotPlugin):
             if self.anchors.get(stream_id)!=request_id or not self.conversations.may_send(stream_id,request_id):
                 return {'success':False,'error':'该请求已被新消息取代或已停止。'}
             try:
-                return await self.personal.execute(session=stream_id,source_id=request_id,action=action,
+                result=await self.personal.execute(session=stream_id,source_id=request_id,action=action,
                                                    key=key,target=target,value=value)
             except (ValueError,TypeError):
-                return {'success':False,'error':'记录内容不明确或参数无效，请具体说明。'}
+                result={'success':False,'error':'记录内容不明确或参数无效，请具体说明。'}
+            self.conversations.record_tool_result(stream_id,request_id,'liya_personal',action,result)
+            return result
 
     @Tool('liya_activity',brief_description='本人明确要求的提醒、小约定、猜谜和字词接龙',
           detailed_description='request_id使用本次anchor_id。action=create_reminder时due为北京时间YYYY-MM-DD HH:MM，'
-            'value为提醒内容；list_reminders查询本人提醒；cancel_reminder用target指定本人提醒id。'
+            'value仅为通知正文，去掉相对时间及“提醒我”等设置指令；用户指定内容时逐字采用。'
+            'list_reminders查询本人提醒；cancel_reminder用target指定本人提醒id。'
             '提醒仅尝试QQ投递，须保留工具返回的投递条件，失败不冒充成功。'
             'game_start用kind=riddle猜谜或chain字词接龙，仅明确要求后开始；game_answer用value提交实际答案；'
             'game_status查询；game_stop由发起者结束。不能自动反复开始活动或刷屏。',
@@ -330,13 +346,14 @@ class LiyaCompanion(MaiBotPlugin):
             operation='activity:'+json.dumps([action,due,kind,target,value],ensure_ascii=False)
             cached=self.conversations.cached_operation(stream_id,request_id,operation)
             if cached and action not in ('list_reminders','game_status'):
+                self.conversations.record_tool_result(stream_id,request_id,'liya_activity',action,cached)
                 return cached
             if action=='create_reminder':
                 if not self.config.plugin.reminders_enabled:
                     return {'success':False,'error':'提醒功能未开启。'}
                 result=self.activities.create_reminder(stream_id,user,request_id,due,value)
             elif action=='list_reminders':
-                return {'success':True,'reminders':self.activities.reminders(stream_id,user)}
+                result={'success':True,'reminders':self.activities.reminders(stream_id,user)}
             elif action=='cancel_reminder':
                 result=self.activities.cancel_reminder(stream_id,user,target)
             elif action.startswith('game_'):
@@ -345,6 +362,7 @@ class LiyaCompanion(MaiBotPlugin):
                 return {'success':False,'error':'不支持的活动操作。'}
             if result.get('success'):
                 self.conversations.save_operation(stream_id,request_id,operation,result)
+            self.conversations.record_tool_result(stream_id,request_id,'liya_activity',action,result)
             return result
 
     @Tool('liya_group_briefing', brief_description='按时间范围或最近N条消息整理当前群聊简报',

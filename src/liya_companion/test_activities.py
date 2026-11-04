@@ -93,6 +93,17 @@ class ActivityTests(unittest.IsolatedAsyncioTestCase):
         self.store.observe(message('multiple',text='一分钟后提醒我，五分钟后再提醒我'),now=self.now)
         self.assertFalse(self.service.create_reminder('g','a','multiple','2026-11-04 12:00','交作业',now=self.now)['success'])
 
+    async def test_r01_explicit_content_overrides_model_copied_instruction(self):
+        original='一分钟后提醒我交作业，内容写“QQ验收提醒”'
+        self.store.observe(message('explicit',text=original),now=self.now)
+        result=self.service.create_reminder('g','a','explicit','','一分钟后提醒我交作业，内容写“QQ验收提醒”',now=self.now+5)
+        self.assertEqual(result['text'],'QQ验收提醒')
+        self.assertEqual(self.service.reminders('g','a')[0]['text'],'QQ验收提醒')
+        await self.service.deliver_due(now=self.now+60)
+        self.assertEqual(self.sender.calls[0][0],'提醒同名：QQ验收提醒')
+        self.store.observe(message('ambiguous',text='一分钟后提醒我，内容写“甲”，内容写“乙”'),now=self.now)
+        self.assertFalse(self.service.create_reminder('g','a','ambiguous','','甲',now=self.now+5)['success'])
+
     async def test_g01_explicit_games_continue_after_restart_and_are_chat_scoped(self):
         self.store.observe(message('start', text='玩猜谜'), now=self.now)
         result = self.service.game('g', 'a', 'start', 'start', 'riddle')
