@@ -21,3 +21,4 @@ embedding-models/
 logs/
 __pycache__/
 *.pyc
+.venv-artwork/

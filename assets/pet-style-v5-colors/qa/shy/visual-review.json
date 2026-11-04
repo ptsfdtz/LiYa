@@ -1,0 +1,19 @@
+{
+  "state": "shy",
+  "task": "color-only sleepy-master palette correction with local cheek blush preserved",
+  "generation_attempts": 1,
+  "selected_source": "assets/pet-style-v5-colors/decoded/shy.png",
+  "selected_prompt": "assets/pet-style-v5-colors/prompts/shy.txt",
+  "mode": "built-in image_gen edit, transparent_background=false",
+  "color_verdict": "improved_subtle",
+  "color_observation": "Full source visually inspected. Overall rosy grading is slightly reduced toward neutral silver/lilac hair and ivory, with subdued jade/teal and gold and consistent soft illumination. Local natural cheek blush remains visible as an expression, without spreading into a global pink light.",
+  "reference_paths": ["assets/pet-style-v4/reference-sleepy.png", "assets/pet-style-v4/qa/rows/sleepy/row-clean.png"],
+  "approximate_hair_median_saturation_before": 0.1278,
+  "approximate_hair_median_saturation_after": 0.1196,
+  "geometry_verdict": "visually_preserved_with_minor_generated_boundary_drift",
+  "geometry_observation": "Original eight bashful fingertip/head/eyelid pose structures, order, half-blink/full-blink shapes, compact body scale, linework, outfit, positions, composition and single low attached viewer-right tail remain visually intact. Canvas remains 2172x724 and eight component groups recover read-only. Bounds drift by at most 2px vertically and 1px horizontally; foreground mask IoU 0.976371. Not a pixel-exact recolor.",
+  "no_clipping_or_added_effects_observed": true,
+  "background_note": "Flat near-magenta generated chroma retained; byte-exact #FF00FF not asserted. No background-only retries.",
+  "qa_scope": "Full source visual review and read-only component, geometry and descriptive color analysis. No v4, active or script changes; no v4 helper runs. Parent handles adapted v5 extraction and shared GIF palette.",
+  "source_analysis": "assets/pet-style-v5-colors/qa/shy/source-analysis.json"
+}

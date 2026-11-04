@@ -1,0 +1,26 @@
+{
+  "state": "happy",
+  "operation": "built-in image_gen color-only edit",
+  "attempts": 1,
+  "source": "assets/pet-style-v4/decoded/happy.png",
+  "candidate": "assets/pet-style-v5-colors/decoded/happy.png",
+  "prompt": "assets/pet-style-v5-colors/prompts/happy.txt",
+  "color_references": ["assets/pet-style-v4/reference-sleepy.png", "assets/pet-style-v4/qa/rows/sleepy/row-clean.png"],
+  "visual_checks": {
+    "frame_count": 8,
+    "palette": "Subtle correction toward original soft silver/lilac hair, muted jade/teal, ivory, subdued gold and neutral light skin. Original had a fairly close base palette; candidate reduces rosy cast without dark or warm emotional grading.",
+    "consistency": "Materials and neutral soft illumination are visually consistent across the eight poses.",
+    "geometry": "Same smiling, laughing and blinking expressions, clasped hand poses, compact round proportions, lineart design, pose order, spacing and low tail variation visibly retained. Canvas remains 2172x724.",
+    "tail": "One low attached viewer-right tail per existing pose.",
+    "effects": "No new effects, shadows, symbols or guide marks."
+  },
+  "measurements": {
+    "foreground_mask_iou_vs_v4": 0.975937774738693,
+    "mean_foreground_rgb_v4": [191.3632, 169.4979, 170.7879],
+    "mean_foreground_rgb_candidate": [189.7878, 169.8732, 168.5078],
+    "background_top_left_rgb": [243, 11, 242],
+    "background_bottom_right_rgb": [241, 34, 242]
+  },
+  "limitations": "Image generation edit preserves geometry visually, not pixel-exactly. Minor near-magenta variation left for parent deterministic extraction. No v4, active asset, script or server changes.",
+  "accepted_for_parent_staging": true
+}

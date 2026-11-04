@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "frames_root": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\happy\\frames",
+  "states": [
+    "happy"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "happy",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\happy\\frames\\happy\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18698,
+          "bbox": [
+            22,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 4
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\happy\\frames\\happy\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18737,
+          "bbox": [
+            21,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 2
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\happy\\frames\\happy\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18688,
+          "bbox": [
+            20,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 10
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\happy\\frames\\happy\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18585,
+          "bbox": [
+            20,
+            7,
+            171,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 1
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\happy\\frames\\happy\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18721,
+          "bbox": [
+            20,
+            7,
+            171,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 14
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\happy\\frames\\happy\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18708,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 3
+        },
+        {
+          "index": 6,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\happy\\frames\\happy\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18658,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 21
+        },
+        {
+          "index": 7,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\happy\\frames\\happy\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18563,
+          "bbox": [
+            21,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 10
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "state": "surprised",
+  "source": "assets/pet-style-v4/decoded/surprised.png",
+  "prompt": "assets/pet-style-v4/prompts/surprised.txt",
+  "generator": "built-in image_gen",
+  "generation_attempts": 1,
+  "inspected": ["whole source strip", "row-clean.png", "gif-contact.png decoded from final surprised.gif"],
+  "actual_drawn_poses": 8,
+  "gif_unique_frames": 8,
+  "identity": "Approved original compact rounded painterly chibi, silver-white/lavender curls, teal horns, golden eyes, white flower and viewer-left dark teal bow, original white/teal/gold dress and white shoes preserved.",
+  "motion": "Calm, eyes widen with small O mouth, both attached hands rise toward chest and open fingers, peak surprise with small head recoil, blink, hands relax and lower, return to calm. Small tail curl response and settle.",
+  "tails": "Exactly one attached low viewer-right teal tail per pose; no extra left appendage or high waist root.",
+  "cropping": "Eight separated full silhouettes, complete horns, shoes, hands and tails; zero edge pixels in every extracted frame.",
+  "baseline": "All final alpha bbox bottoms y=203. Top y=5 or 6. Stable planted feet and scale with no whole-body tilt or jump.",
+  "effects": "No detached effects, punctuation, text, shadows or guide marks.",
+  "bundled_review": "ok=true; zero errors and warnings",
+  "accepted": true
+}

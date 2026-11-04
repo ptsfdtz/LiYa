@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "chroma_key": {
+    "hex": "#FF00FF",
+    "rgb": [
+      255,
+      0,
+      255
+    ],
+    "threshold": 96.0
+  },
+  "rows": [
+    {
+      "state": "determined",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\determined\\frames\\determined\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\determined\\frames\\determined\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\determined\\frames\\determined\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\determined\\frames\\determined\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\determined\\frames\\determined\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\determined\\frames\\determined\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\determined\\frames\\determined\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\determined\\frames\\determined\\07.png"
+      ],
+      "method": "components"
+    }
+  ]
+}

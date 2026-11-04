@@ -101,5 +101,19 @@
     "https://docs.maibot.chat/manual/webui/memory-management",
     "https://github.com/moeru-ai/airi",
     "https://arxiv.org/abs/2304.03442"
-  ]
+  ],
+  "local_animation_revision": {
+    "revision": 5,
+    "status": "all_15_drawn_frame_expressions_with_unified_colors",
+    "reference": "../assets/pet-style-v4/reference-sleepy.png",
+    "workflow": "内置图像工具逐状态绘制8帧动作条；采用宠物技能随附提帧、共享缩放、组装、去色溢、检查及渲染脚本",
+    "style": "用户原版圆润、紧凑Q版；困倦坐姿抱尾，其余表情保留原版小体型与一条低位尾巴",
+    "frames_per_state": 8,
+    "preview": "../assets/expressions/liya-fifteen-states.gif",
+    "validation": "../validation/pet-style-v5-color-validation.json",
+    "deployed": false,
+    "color_reference": "../assets/pet-style-v4/reference-sleepy.png",
+    "shared_palette": "../assets/pet-style-v5-colors/shared-palette.json",
+    "palette_audit": "../validation/pet-style-v5-color-palette-audit.json"
+  }
 }

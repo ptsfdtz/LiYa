@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "frames_root": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\relieved\\frames",
+  "states": [
+    "relieved"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "relieved",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\relieved\\frames\\relieved\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18553,
+          "bbox": [
+            28,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 7
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\relieved\\frames\\relieved\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18532,
+          "bbox": [
+            28,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 8
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\relieved\\frames\\relieved\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18483,
+          "bbox": [
+            28,
+            5,
+            163,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 6
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\relieved\\frames\\relieved\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18514,
+          "bbox": [
+            28,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 32
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\relieved\\frames\\relieved\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18652,
+          "bbox": [
+            27,
+            5,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 10
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\relieved\\frames\\relieved\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18493,
+          "bbox": [
+            28,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 15
+        },
+        {
+          "index": 6,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\relieved\\frames\\relieved\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18477,
+          "bbox": [
+            28,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 16
+        },
+        {
+          "index": 7,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\relieved\\frames\\relieved\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18457,
+          "bbox": [
+            28,
+            5,
+            163,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 12
+        }
+      ]
+    }
+  ]
+}

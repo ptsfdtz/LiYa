@@ -1,0 +1,240 @@
+{
+  "v4": {
+    "size": [
+      2172,
+      724
+    ],
+    "component_groups": 8,
+    "source_bounds": [
+      [
+        43,
+        219,
+        248,
+        507
+      ],
+      [
+        308,
+        218,
+        519,
+        507
+      ],
+      [
+        578,
+        218,
+        793,
+        507
+      ],
+      [
+        848,
+        219,
+        1062,
+        507
+      ],
+      [
+        1120,
+        218,
+        1334,
+        507
+      ],
+      [
+        1397,
+        218,
+        1606,
+        507
+      ],
+      [
+        1671,
+        218,
+        1878,
+        507
+      ],
+      [
+        1944,
+        219,
+        2149,
+        507
+      ]
+    ],
+    "approx_hair_region_summary": {
+      "pixel_count": 63422,
+      "median_rgb": [
+        225.0,
+        191.0,
+        202.0
+      ],
+      "median_saturation": 0.148
+    },
+    "background_sample_modes": [
+      {
+        "rgb": [
+          249,
+          7,
+          249
+        ],
+        "count": 574
+      },
+      {
+        "rgb": [
+          251,
+          5,
+          248
+        ],
+        "count": 459
+      },
+      {
+        "rgb": [
+          250,
+          5,
+          248
+        ],
+        "count": 394
+      }
+    ]
+  },
+  "v5": {
+    "size": [
+      2172,
+      724
+    ],
+    "component_groups": 8,
+    "source_bounds": [
+      [
+        43,
+        220,
+        248,
+        506
+      ],
+      [
+        308,
+        219,
+        519,
+        506
+      ],
+      [
+        578,
+        219,
+        793,
+        506
+      ],
+      [
+        848,
+        220,
+        1062,
+        506
+      ],
+      [
+        1121,
+        219,
+        1334,
+        506
+      ],
+      [
+        1397,
+        219,
+        1606,
+        506
+      ],
+      [
+        1672,
+        220,
+        1877,
+        506
+      ],
+      [
+        1944,
+        220,
+        2148,
+        506
+      ]
+    ],
+    "approx_hair_region_summary": {
+      "pixel_count": 60310,
+      "median_rgb": [
+        219.0,
+        192.0,
+        201.0
+      ],
+      "median_saturation": 0.1208
+    },
+    "background_sample_modes": [
+      {
+        "rgb": [
+          252,
+          6,
+          251
+        ],
+        "count": 561
+      },
+      {
+        "rgb": [
+          249,
+          16,
+          246
+        ],
+        "count": 501
+      },
+      {
+        "rgb": [
+          251,
+          6,
+          250
+        ],
+        "count": 435
+      }
+    ]
+  },
+  "geometry": {
+    "foreground_mask_iou": 0.976512,
+    "paired_bbox_deltas_v5_minus_v4": [
+      [
+        0,
+        1,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        0,
+        -1
+      ],
+      [
+        1,
+        1,
+        0,
+        -1
+      ],
+      [
+        0,
+        1,
+        0,
+        -1
+      ],
+      [
+        1,
+        2,
+        -1,
+        -1
+      ],
+      [
+        0,
+        1,
+        -1,
+        -1
+      ]
+    ]
+  },
+  "analysis_note": "Approximate hair region includes light low-saturation head pixels; descriptive comparison only, not semantic segmentation. Generated chroma background is near-magenta, not byte-exact #FF00FF."
+}

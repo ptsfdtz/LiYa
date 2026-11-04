@@ -1,0 +1,18 @@
+{
+  "state": "thinking",
+  "source": "assets/pet-style-v4/decoded/thinking.png",
+  "prompt": "assets/pet-style-v4/prompts/thinking.txt",
+  "generator": "built-in image_gen",
+  "generation_attempts": 1,
+  "inspected": ["source strip", "row-clean.png", "gif-contact.png decoded from final thinking.gif"],
+  "actual_drawn_poses": 8,
+  "gif_unique_frames": 8,
+  "identity": "Original compact rounded chibi, silver-white/lavender curls, teal horns, golden eyes, white flower and viewer-left dark teal bow, original white/teal/gold outfit preserved.",
+  "motion": "Hand gradually rises from side through chest to chin; eyes glance upward with gentle head tilt; full small blink; hand lowers through chest and returns low. Tail tip and hair follow. First and last nearly match.",
+  "tails": "Exactly one attached low viewer-right teal tail per pose, no left appendage or high waist root.",
+  "cropping": "Eight complete separated silhouettes, all frame edge pixel counts zero, no clipping or guide marks.",
+  "baseline": "Final alpha bbox bottom y=202 or 203, one-pixel anti-aliased shoe variation; no visible foot lift or scale pop.",
+  "effects": "No text, thought bubbles, detached effects, shadows or new props.",
+  "bundled_review": "ok=true; zero errors and warnings",
+  "accepted": true
+}

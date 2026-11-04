@@ -1,0 +1,18 @@
+Use case: stylized-concept
+Asset type: QQ desktop companion eight-frame SHY animation strip.
+Draw exactly EIGHT separated sequential FULL-BODY standing poses of the SAME original soft round compact chibi dragon girl, arranged in ONE horizontal row. Background and gutters: flat pure MAGENTA #FF00FF.
+References: 1 approved idle/00.png is primary identity, standing proportions, outfit and correct ONE-tail anatomy. 2 original reference-sleepy.png defines especially soft round face/head and cute original painted quality, not its seated pose. 3 sleepy/row-clean.png defines matching delicate soft painted finish, not seated action. 4 failed.png is INVISIBLE eight-slot spacing ONLY, do not draw boxes, lines or marks.
+Character exactly like idle frame: big rounded head and cheeks, short round torso, tiny legs and small ivory shoes, about 2.5 heads tall, never taller/slimmer. Silver-white pale lilac long curly hair, two curved teal horns, gold eyes, pointed ears, white blossom and teal ribbons on viewer-left hair, original ivory/teal/gold short robe with wide sleeves. Preserve original original soft chibi identity and delicate linework; no polished taller anime redesign.
+ONE TAIL TOTAL per character: low attachment hidden behind lower skirt near knee/hem, a single soft teal curve curling out to viewer-right ONLY. Viewer-left outline is lilac hair and robe only; no left tail/teal curl, no split appendage, no high waist root. Keep low right tail like idle ref, small bashful sway.
+Eight drawn phases, left to right:
+1 gentle shy smile, gold eyes open, hands relaxed low in front;
+2 faint rosy cheeks directly on face, hands lift toward chest;
+3 both little index fingertips touch together at upper chest, small bashful smile, gaze starts lowering;
+4 same fingertips together, head dips modestly downward, eyelids lower and hair gently follows;
+5 slow blink eyes softly closed, head dipped, fingertips together, tiny blush;
+6 eyes reopen gazing gently upward while head starts recovering, fingertips beginning to part;
+7 head nearly upright, hands lowering, blush eases;
+8 return close to frame1 gentle smile, hands relaxed low, gaze soft forward.
+Draw true changing head angle, gaze, eyelids, hand/arm shapes and little hair/tail delayed sway in all eight poses. Keep feet planted and baseline identical, consistent body size. Motion small and coherent, first/last close. No repeated static copies and no broad raster warps.
+Composition: exactly 8 complete poses evenly spaced in ONE row with generous pure magenta gutters, every horn/hair/hand/shoe/tail completely visible and separate from neighboring poses. Stable scale and foot baseline.
+Avoid: hearts, floating symbols, detached effects, blush clouds, sparkles, text, labels, frame numbers, borders, guide lines, shadows, scenery, props, blur, motion streaks, clipping, overlaps, duplicate tails, viewer-left teal appendages and high tail roots.

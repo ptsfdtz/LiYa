@@ -1,0 +1,20 @@
+{
+  "state": "sleepy",
+  "frames": 8,
+  "unique_frames": 8,
+  "method": "bundled pet scripts; generated pose frames only; no raster deformation",
+  "durations_ms": [
+    300,
+    120,
+    100,
+    100,
+    120,
+    140,
+    160,
+    260
+  ],
+  "loop_duration_ms": 1300,
+  "gif": "assets/pet-style-v5-colors/previews/sleepy.gif",
+  "review": "assets/pet-style-v5-colors/qa/rows/sleepy/review.json",
+  "ok": true
+}

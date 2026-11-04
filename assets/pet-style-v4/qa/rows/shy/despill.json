@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "input": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\shy\\row-raw.png",
+  "output": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\shy\\row-clean.png",
+  "chroma_key": "#FF00FF",
+  "algorithm": "edge-local-chroma-spill-suppression",
+  "strength": 1,
+  "edge_radius": 5,
+  "spill_tolerance": 0.15,
+  "minimum_saturation": 0.1,
+  "changed_pixels": 24412,
+  "decontaminated_pixels": 18915,
+  "spill_suppressed_pixels": 24412,
+  "rejected_pixels": 0,
+  "changed_by_cell": {
+    "r0c5": 3181,
+    "r0c6": 3106,
+    "r0c2": 3076,
+    "r0c1": 3067,
+    "r0c0": 3053,
+    "r0c3": 3016,
+    "r0c7": 2960,
+    "r0c4": 2953
+  },
+  "alpha_preserved": true
+}

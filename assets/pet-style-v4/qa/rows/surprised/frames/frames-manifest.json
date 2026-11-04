@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "chroma_key": {
+    "hex": "#FF00FF",
+    "rgb": [
+      255,
+      0,
+      255
+    ],
+    "threshold": 96.0
+  },
+  "rows": [
+    {
+      "state": "surprised",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\07.png"
+      ],
+      "method": "components"
+    }
+  ]
+}

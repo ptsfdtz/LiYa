@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "frames_root": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\thinking\\frames",
+  "states": [
+    "thinking"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "thinking",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\thinking\\frames\\thinking\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18184,
+          "bbox": [
+            26,
+            6,
+            165,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 8
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\thinking\\frames\\thinking\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18300,
+          "bbox": [
+            26,
+            6,
+            165,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 26
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\thinking\\frames\\thinking\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18268,
+          "bbox": [
+            26,
+            5,
+            165,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 13
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\thinking\\frames\\thinking\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18321,
+          "bbox": [
+            25,
+            5,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 6
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\thinking\\frames\\thinking\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18383,
+          "bbox": [
+            25,
+            5,
+            166,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 15
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\thinking\\frames\\thinking\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18351,
+          "bbox": [
+            25,
+            5,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 13
+        },
+        {
+          "index": 6,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\thinking\\frames\\thinking\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18125,
+          "bbox": [
+            26,
+            6,
+            165,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 19
+        },
+        {
+          "index": 7,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\thinking\\frames\\thinking\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18148,
+          "bbox": [
+            26,
+            6,
+            164,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 30
+        }
+      ]
+    }
+  ]
+}

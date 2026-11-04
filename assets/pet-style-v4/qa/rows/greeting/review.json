@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "frames_root": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\greeting\\frames",
+  "states": [
+    "greeting"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "greeting",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\greeting\\frames\\greeting\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18885,
+          "bbox": [
+            24,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 18
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\greeting\\frames\\greeting\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18944,
+          "bbox": [
+            23,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 14
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\greeting\\frames\\greeting\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18928,
+          "bbox": [
+            23,
+            5,
+            168,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 38
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\greeting\\frames\\greeting\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18863,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 32
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\greeting\\frames\\greeting\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18807,
+          "bbox": [
+            22,
+            5,
+            168,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 34
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\greeting\\frames\\greeting\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18846,
+          "bbox": [
+            21,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 38
+        },
+        {
+          "index": 6,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\greeting\\frames\\greeting\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18729,
+          "bbox": [
+            24,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 15
+        },
+        {
+          "index": 7,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\greeting\\frames\\greeting\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18702,
+          "bbox": [
+            24,
+            5,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 17
+        }
+      ]
+    }
+  ]
+}

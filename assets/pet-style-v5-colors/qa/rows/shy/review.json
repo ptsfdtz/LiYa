@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "frames_root": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\shy\\frames",
+  "states": [
+    "shy"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "shy",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\shy\\frames\\shy\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18222,
+          "bbox": [
+            27,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 6
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\shy\\frames\\shy\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18161,
+          "bbox": [
+            27,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 22
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\shy\\frames\\shy\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17964,
+          "bbox": [
+            27,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 10
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\shy\\frames\\shy\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17569,
+          "bbox": [
+            27,
+            9,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 23
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\shy\\frames\\shy\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17585,
+          "bbox": [
+            27,
+            9,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 38
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\shy\\frames\\shy\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18153,
+          "bbox": [
+            27,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 11
+        },
+        {
+          "index": 6,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\shy\\frames\\shy\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18089,
+          "bbox": [
+            27,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 14
+        },
+        {
+          "index": 7,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\shy\\frames\\shy\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 17994,
+          "bbox": [
+            28,
+            5,
+            163,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 9
+        }
+      ]
+    }
+  ]
+}

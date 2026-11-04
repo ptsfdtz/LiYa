@@ -1,0 +1,18 @@
+{
+  "state": "relieved",
+  "source": "assets/pet-style-v4/decoded/relieved.png",
+  "prompt": "assets/pet-style-v4/prompts/relieved.txt",
+  "generator": "built-in image_gen",
+  "generation_attempts": 1,
+  "inspected": ["whole source strip", "row-clean.png", "gif-contact.png decoded from final relieved.gif"],
+  "actual_drawn_poses": 8,
+  "gif_unique_frames": 8,
+  "identity": "Original soft compact rounded painterly chibi, silver-white/lavender curls, teal horns, golden eyes, white flower and viewer-left dark teal ribbon, original white/teal/gold dress and short white shoes preserved.",
+  "motion": "Slightly worried eyebrows and mouth, one attached hand rises to chest, small smile appears, eyes softly close with relaxed shoulders, eyes reopen half-lidded, hand lowers, relaxed near-neutral return. Tail remains small and shifts subtly while hair and sleeve settle.",
+  "tails": "Exactly one low attached viewer-right teal tail each, small curl variation, no giant tail, no left appendage or high root.",
+  "cropping": "Eight complete separated poses, no clipped horns, shoes, hands or tails, zero edge pixels in all final frames.",
+  "baseline": "All final alpha bbox tops y=5 and bottoms y=203. Stable planted feet, shared scale and registration.",
+  "effects": "No breath cloud, symbols, detached effects, shadows, text or guide marks.",
+  "bundled_review": "ok=true; zero errors and warnings",
+  "accepted": true
+}

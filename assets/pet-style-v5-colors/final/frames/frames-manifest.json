@@ -1,0 +1,218 @@
+{
+  "ok": true,
+  "chroma_key": {
+    "hex": "#FF00FF"
+  },
+  "rows": [
+    {
+      "state": "idle",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\idle\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\idle\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\idle\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\idle\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\idle\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\idle\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\idle\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\idle\\07.png"
+      ]
+    },
+    {
+      "state": "happy",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\happy\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\happy\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\happy\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\happy\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\happy\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\happy\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\happy\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\happy\\07.png"
+      ]
+    },
+    {
+      "state": "curious",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\curious\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\curious\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\curious\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\curious\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\curious\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\curious\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\curious\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\curious\\07.png"
+      ]
+    },
+    {
+      "state": "thinking",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\thinking\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\thinking\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\thinking\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\thinking\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\thinking\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\thinking\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\thinking\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\thinking\\07.png"
+      ]
+    },
+    {
+      "state": "sulky",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sulky\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sulky\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sulky\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sulky\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sulky\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sulky\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sulky\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sulky\\07.png"
+      ]
+    },
+    {
+      "state": "caring",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\caring\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\caring\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\caring\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\caring\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\caring\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\caring\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\caring\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\caring\\07.png"
+      ]
+    },
+    {
+      "state": "greeting",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\greeting\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\greeting\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\greeting\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\greeting\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\greeting\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\greeting\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\greeting\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\greeting\\07.png"
+      ]
+    },
+    {
+      "state": "sleepy",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sleepy\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sleepy\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sleepy\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sleepy\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sleepy\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sleepy\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sleepy\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sleepy\\07.png"
+      ]
+    },
+    {
+      "state": "excited",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\excited\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\excited\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\excited\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\excited\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\excited\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\excited\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\excited\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\excited\\07.png"
+      ]
+    },
+    {
+      "state": "shy",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\shy\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\shy\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\shy\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\shy\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\shy\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\shy\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\shy\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\shy\\07.png"
+      ]
+    },
+    {
+      "state": "surprised",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\surprised\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\surprised\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\surprised\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\surprised\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\surprised\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\surprised\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\surprised\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\surprised\\07.png"
+      ]
+    },
+    {
+      "state": "worried",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\worried\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\worried\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\worried\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\worried\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\worried\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\worried\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\worried\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\worried\\07.png"
+      ]
+    },
+    {
+      "state": "sad",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sad\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sad\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sad\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sad\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sad\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sad\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sad\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\sad\\07.png"
+      ]
+    },
+    {
+      "state": "relieved",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\relieved\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\relieved\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\relieved\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\relieved\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\relieved\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\relieved\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\relieved\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\relieved\\07.png"
+      ]
+    },
+    {
+      "state": "determined",
+      "method": "components",
+      "frames": [
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\determined\\00.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\determined\\01.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\determined\\02.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\determined\\03.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\determined\\04.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\determined\\05.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\determined\\06.png",
+        "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\final\\frames\\determined\\07.png"
+      ]
+    }
+  ]
+}

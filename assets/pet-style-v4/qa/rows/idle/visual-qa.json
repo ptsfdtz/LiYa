@@ -1,0 +1,18 @@
+{
+  "state": "idle",
+  "source": "assets/pet-style-v4/decoded/idle.png",
+  "prompt": "assets/pet-style-v4/prompts/idle.txt",
+  "generator": "built-in image_gen",
+  "generation_attempts": 1,
+  "inspected": ["source strip", "row-clean.png", "gif-contact.png decoded from final idle.gif"],
+  "actual_drawn_poses": 8,
+  "gif_unique_frames": 8,
+  "identity": "Original compact round chibi, silver-white/lavender curls, teal horns, golden eyes, white flower and viewer-left dark teal bow, original white/teal/gold dress preserved.",
+  "motion": "Open eyes, inhale and low hand lift, half lids, full blink with head dip, half reopen, open and settle. Hair and low tail differ across poses. First and last nearly match.",
+  "tails": "Exactly one attached low viewer-right teal tail per pose; no viewer-left or high waist tail.",
+  "cropping": "All eight complete, separated and unclipped; bundled frame review edge_pixels zero in all frames.",
+  "baseline": "All eight final frame alpha bboxes end at y=203; head dip is intentional. Shared scale preserved.",
+  "effects": "No text, guide marks, shadows or detached effects.",
+  "bundled_review": "ok=true; zero errors and warnings",
+  "accepted": true
+}

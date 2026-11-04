@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "frames_root": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\sad\\frames",
+  "states": [
+    "sad"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "sad",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\sad\\frames\\sad\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18914,
+          "bbox": [
+            28,
+            5,
+            163,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 31
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\sad\\frames\\sad\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18599,
+          "bbox": [
+            28,
+            6,
+            163,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 12
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\sad\\frames\\sad\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18675,
+          "bbox": [
+            26,
+            8,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 40
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\sad\\frames\\sad\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18453,
+          "bbox": [
+            25,
+            9,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 28
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\sad\\frames\\sad\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18752,
+          "bbox": [
+            25,
+            6,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 8
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\sad\\frames\\sad\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18710,
+          "bbox": [
+            26,
+            5,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 35
+        },
+        {
+          "index": 6,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\sad\\frames\\sad\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18924,
+          "bbox": [
+            26,
+            5,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 35
+        },
+        {
+          "index": 7,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\sad\\frames\\sad\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18827,
+          "bbox": [
+            26,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 13
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "frames_root": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sleepy\\frames",
+  "states": [
+    "sleepy"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "sleepy",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sleepy\\frames\\sleepy\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23088,
+          "bbox": [
+            14,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 17
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sleepy\\frames\\sleepy\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23025,
+          "bbox": [
+            14,
+            6,
+            176,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 44
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sleepy\\frames\\sleepy\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22696,
+          "bbox": [
+            15,
+            7,
+            176,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 44
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sleepy\\frames\\sleepy\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22314,
+          "bbox": [
+            14,
+            11,
+            176,
+            202
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 23
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sleepy\\frames\\sleepy\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23083,
+          "bbox": [
+            14,
+            6,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 26
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sleepy\\frames\\sleepy\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23208,
+          "bbox": [
+            14,
+            5,
+            177,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 68
+        },
+        {
+          "index": 6,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sleepy\\frames\\sleepy\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 22975,
+          "bbox": [
+            14,
+            6,
+            176,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 32
+        },
+        {
+          "index": 7,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sleepy\\frames\\sleepy\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 23004,
+          "bbox": [
+            15,
+            5,
+            176,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 37
+        }
+      ]
+    }
+  ]
+}

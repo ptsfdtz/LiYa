@@ -1,0 +1,18 @@
+Use case: stylized-concept
+Asset type: QQ desktop companion eight-frame DETERMINED animation strip.
+Draw exactly EIGHT separated sequential FULL-BODY standing poses of the SAME original soft round compact chibi dragon girl in ONE horizontal row. Background and gutters flat pure MAGENTA #FF00FF.
+References: 1 approved idle/00.png is exact standing identity, proportions, outfit and correct ONE-tail anatomy; 2 original reference-sleepy.png defines round face softness, cute original painted finish, not seated pose; 3 approved sleepy row reinforces original pastel chibi finish only, not sitting; 4 failed.png is INVISIBLE eight-slot layout spacing guide only, do not render lines/marks/boxes.
+Identity: large softly rounded head and cheeks, short round body and tiny legs/shoes, about 2.5 heads tall, original compact cute chibi. Silver-white pale lilac long loose curly hair, two curved teal horns, gold eyes, pointed ears, white blossom/teal ribbon on viewer-left, original ivory/teal/gold short robe with wide sleeves and tiny ivory shoes. Delicate soft pastel painted linework. No tall slim anime redraw.
+ONE tail TOTAL per character, LOW root hidden behind LOWER skirt at knee/hem, one teal curl on viewer-right ONLY, like idle reference. Viewer-left outline only lilac hair and robe, no teal appendage or second tail. No high tail root. Tail steady with very gentle delayed tip sway.
+Eight actual drawn phases left to right:
+1 attentive focused golden eyes and relaxed friendly mouth, hands low, ready posture;
+2 a small confident smile appears and viewer-right hand begins lifting toward chest;
+3 hand curls into a small encouraging fist close to chest, eyes softly determined, other hand low;
+4 fist held close to chest, small affirmative downward nod begins, smile remains;
+5 head dipped modestly with a brief soft blink, fist still close to chest;
+6 eyes reopen and head recovers upright, fist begins relaxing into open hand;
+7 hand lowers and smile eases to attentive readiness;
+8 return close to first pose, focused friendly golden eyes and hands low.
+Friendly readiness and encouragement, never angry/aggressive. Draw changing eyelids/gaze/head/hand/arm/sleeve shapes, not repeated static poses, no broad raster warps. Hair follows nod slightly, one low right tail sways gently then settles. Same body size and planted feet baseline throughout; first and last close for loop.
+Composition: exactly 8 complete characters evenly spaced in one row, wide pure magenta gutters and edge padding. Full horns, hair, hands, feet and tails fully included without overlap.
+Avoid: anger brows, rage symbols, text, icons, letters, labels, frame numbers, guide marks, borders, detached effects, sparkles, streaks, shadows, scenery, props, blur, clipping, extra tails, high waist tail roots and taller proportions.

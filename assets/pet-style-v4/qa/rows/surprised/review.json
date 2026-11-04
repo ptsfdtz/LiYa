@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "frames_root": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames",
+  "states": [
+    "surprised"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "surprised",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18255,
+          "bbox": [
+            26,
+            6,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 21
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18332,
+          "bbox": [
+            26,
+            6,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 17
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18283,
+          "bbox": [
+            26,
+            6,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 10
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18319,
+          "bbox": [
+            26,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 19
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18334,
+          "bbox": [
+            26,
+            6,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 14
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18385,
+          "bbox": [
+            26,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 28
+        },
+        {
+          "index": 6,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18352,
+          "bbox": [
+            26,
+            6,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 16
+        },
+        {
+          "index": 7,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v4\\qa\\rows\\surprised\\frames\\surprised\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18182,
+          "bbox": [
+            26,
+            6,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 20
+        }
+      ]
+    }
+  ]
+}

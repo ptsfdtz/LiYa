@@ -1,0 +1,20 @@
+Use case: illustration-story
+Asset type: eight-frame soft sad animation sprite strip.
+Draw exactly EIGHT genuinely newly drawn sequential full-body poses in ONE horizontal row, on uniform flat solid pure magenta #FF00FF. A quiet gentle sadness loop with real eyelid, head, shoulder, hand, clothing, hair and tail changes. Keep eight complete separated characters, identical scale, stable planted shoe baseline, generous gutters and safe outer margins.
+
+Input reference roles: Image 1 approved idle frame is authoritative original compact standing identity, outfit, short body proportions and correct ONE LOW VIEWER-RIGHT TAIL anatomy. Image 2 reference-sleepy.png is the authoritative original SOFT ROUND COMPACT chibi painting style, not its seated pose. Image 3 approved sleepy row shows approved soft detailed painterly style and original rounded facial proportions. Image 4 failed.png is ONLY invisible eight-slot horizontal spacing guidance: never draw any guide marks, boxes, lines or labels.
+
+Preserve the original tiny ROUND chibi girl: large round soft face, tiny short torso and stubby short legs, silver-white/lavender long curly hair, two curled teal horns, golden eyes, daisy and dark teal ribbon on viewer-left, pointed ears, original elaborate ivory/teal/gold fantasy dress and tiny white shoes. Retain soft detailed anime painting and gentle rounded original proportions. Do not elongate, slim, stand taller, lengthen legs, sharpen the face or redesign outfit. Exactly ONE teal dragon tail attaches LOW behind the LOWER skirt on VIEWER-RIGHT, curls low beside feet and moves slowly with a gently lowered tip. Viewer-left contains only ribbon, hair, sleeve and skirt; absolutely NO viewer-left teal tail appendage or pale fur-tipped extra tail. No high waist-root tail, second tail or disconnected parts.
+
+Eight chronological poses from left to right:
+1 Quiet downcast golden eyes, very small soft frown, both hands loosely together near front of skirt.
+2 Shoulders relax a little lower, hands draw gently closer, eyes soften downward.
+3 Chin gently dips, eyelids half lower, curls start following the head.
+4 Head in a small dip with a full slow blink, mouth remains tiny subdued frown, tail tip droops slightly.
+5 Blink easing open, head still low, hands and sleeves settle.
+6 Golden eyes lift a little toward viewer, small tender subdued expression, head slowly rises.
+7 Head returns close to start, hair and slow low right tail follow through.
+8 Return closely to frame 1 for a quiet seamless loop, hands low together near skirt and gaze gently downcast.
+Feet remain planted on one baseline. Tiny physical pose and expression changes, never eight copied static pictures or global picture warps. Original short body retains consistent size across all frames. Soft sadness only, no extreme crying, dramatic grief, pleading or emotional manipulation.
+
+All eight characters fully visible from horn tips to both shoes and entire single right tail. No clipping, overlap or neighboring bleed. Pure flat #FF00FF background only; no texture or gradients. No tears, floating droplets, symbols, hearts, icons, effects, sparkles, glow, shadow, motion lines, scenery, props, text, numbers or guide marks.

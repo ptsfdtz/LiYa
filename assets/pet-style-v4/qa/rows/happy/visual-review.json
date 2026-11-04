@@ -1,0 +1,22 @@
+{
+  "state": "happy",
+  "visual_review": "pass",
+  "generation_attempts": 2,
+  "selected_source": "assets/pet-style-v4/decoded/happy.png",
+  "selected_prompt": "assets/pet-style-v4/prompts/happy.txt",
+  "method": "built-in image_gen; one generated strip, one targeted image_gen tail repair; bundled deterministic extraction",
+  "inspected": [
+    "full magenta source strip",
+    "qa/rows/happy/row-clean.png",
+    "qa/rows/happy/frames/happy/00.png",
+    "qa/rows/happy/frames/happy/03.png",
+    "qa/rows/happy/frames/happy/07.png"
+  ],
+  "frame_count": 8,
+  "unique_decoded_preview_frames": 8,
+  "identity": "Original compact round chibi face, short body and legs, silver-white curls, teal horns, golden eyes, daisy and teal ribbon, ivory/teal/gold clothes retained.",
+  "motion": "Gathered hands lift and settle, eyes soften and close into a warm little laugh before reopening, head tilts subtly, hair and attached right tail vary gently. First and last poses closely match.",
+  "anatomy": "One low viewer-right tail per frame. The unwanted viewer-left tail in attempt one was removed by targeted generation repair.",
+  "spacing_and_edges": "Eight separated complete source poses; stable shoe baseline. All normalized frame bottoms are y=203, zero edge pixels. No clipping, guide marks, labels, detached effects or props observed.",
+  "pipeline": "qq_pet_frames.py happy completed successfully. inspect_frames review has ok=true with no errors or warnings; alpha preserved by despill."
+}

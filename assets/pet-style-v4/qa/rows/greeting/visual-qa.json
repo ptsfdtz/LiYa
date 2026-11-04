@@ -1,0 +1,18 @@
+{
+  "state": "greeting",
+  "source": "assets/pet-style-v4/decoded/greeting.png",
+  "prompt": "assets/pet-style-v4/prompts/greeting.txt",
+  "generator": "built-in image_gen",
+  "generation_attempts": 1,
+  "inspected": ["whole source strip", "row-clean.png", "gif-contact.png decoded from final greeting.gif"],
+  "actual_drawn_poses": 8,
+  "gif_unique_frames": 8,
+  "identity": "Approved original compact rounded painterly chibi, silver-white/lavender curls, teal horns, golden eyes, white flower and viewer-left dark teal bow, original white/teal/gold dress and shoes preserved.",
+  "motion": "Rest smile, hand raises beside shoulder, four distinct attached wrist/finger wave drawings with happy smile, blink and hand lowers, neutral return. The second frame is a small low-hand preparation, followed by shoulder-height wave; tail shape follows the welcome.",
+  "tails": "Exactly one attached low viewer-right teal tail in each pose, no extra left appendage or high root.",
+  "cropping": "Eight separated complete silhouettes, no clipping, all final edge pixel counts zero.",
+  "baseline": "All final alpha bbox bottoms are y=203 and tops y=5; feet remain planted with no body bob or rotation.",
+  "effects": "No detached effects, shadow, text or guide marks.",
+  "bundled_review": "ok=true; zero errors and warnings",
+  "accepted": true
+}

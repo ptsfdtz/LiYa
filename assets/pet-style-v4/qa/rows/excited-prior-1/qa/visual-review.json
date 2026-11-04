@@ -1,0 +1,27 @@
+{
+  "state": "excited",
+  "visual_review": "pass",
+  "generation_attempts": 1,
+  "selected_source": "assets/pet-style-v4/decoded/excited.png",
+  "selected_prompt": "assets/pet-style-v4/prompts/excited.txt",
+  "method": "built-in image_gen with approved idle single-tail canonical, original sleepy style, approved sleepy row and invisible spacing guide; bundled extraction preserves source vertical travel",
+  "inspected": [
+    "full magenta source strip",
+    "qa/rows/excited/row-clean.png",
+    "qa/rows/excited/frames/excited/00.png",
+    "qa/rows/excited/frames/excited/03.png",
+    "qa/rows/excited/frames/excited/07.png"
+  ],
+  "frame_count": 8,
+  "unique_decoded_preview_frames": 8,
+  "identity": "Original small rounded chibi, short body and legs, soft detailed anime painting, original silver-white curls, horns, gold eyes, daisy and ribbon, ivory/teal/gold outfit retained.",
+  "motion": "Standing, knee-bend anticipation, takeoff with raised hands, clear airborne peak with delighted closed eyes, airborne descent, approach, soft landing crouch and standing return. Hair and single tail follow.",
+  "apparent_size": "Whole body retains consistent apparent size throughout; pose silhouette height varies modestly with knee bend. Shared extraction scale used.",
+  "anatomy": "Exactly one low attached viewer-right tail throughout. No left teal appendage, high root, detached parts or effects observed.",
+  "final_bbox_bottoms": [203, 203, 178, 156, 173, 195, 203, 203],
+  "final_bbox_bottom_range_pixels": 47,
+  "required_bottom_range_pixels": 8,
+  "vertical_travel_gate": "pass",
+  "spacing_and_edges": "Eight complete separated poses. Clear visible source jump arc retained in final frames, first and last return to identical baseline, zero edge pixels. No clipping, shadow, dust, stars, motion lines, labels or guide marks.",
+  "pipeline": "qq_pet_frames.py excited completed; inspect_frames ok=true with no errors or warnings; alpha preserved by despill."
+}

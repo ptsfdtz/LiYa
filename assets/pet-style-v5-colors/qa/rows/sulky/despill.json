@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "input": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sulky\\row-raw.png",
+  "output": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sulky\\row-clean.png",
+  "chroma_key": "#FF00FF",
+  "algorithm": "edge-local-chroma-spill-suppression",
+  "strength": 1,
+  "edge_radius": 5,
+  "spill_tolerance": 0.15,
+  "minimum_saturation": 0.1,
+  "changed_pixels": 25421,
+  "decontaminated_pixels": 19540,
+  "spill_suppressed_pixels": 25421,
+  "rejected_pixels": 0,
+  "changed_by_cell": {
+    "r0c2": 3246,
+    "r0c4": 3219,
+    "r0c5": 3215,
+    "r0c0": 3209,
+    "r0c3": 3163,
+    "r0c1": 3138,
+    "r0c6": 3125,
+    "r0c7": 3106
+  },
+  "alpha_preserved": true
+}

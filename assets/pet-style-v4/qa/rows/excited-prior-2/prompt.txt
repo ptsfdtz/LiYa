@@ -1,0 +1,20 @@
+Use case: precise-object-edit
+Asset type: eight-frame excited SMALL HOP animation strip.
+Regenerate the complete coherent EIGHT-frame strip in Image 1. Preserve its original round compact character, identity, soft detailed painting, outfit, one low right tail and sequential celebratory expressions/gestures. Make ONE TARGETED GEOMETRY CHANGE: reduce the jump to a tiny happy HOP so the original resting body can stay large when fitted in a 208px-tall sprite cell. Image 1 currently jumps too high, creating excessive headroom and making the character shrink. Draw a small physical hop with peak shoes only 25–30 SOURCE PIXELS above resting shoes (about 8–18 pixels after fitting); do NOT retain the large jump arc. Keep the full standing character's horn-to-shoe height about 330 source pixels, and peak only 25–30 source pixels above standing position. Entire eight-pose vertical envelope should be at most about 360 source pixels, so resting character remains at least 180px high in final 208px cells. Hands rise beside CHEEKS but always BELOW HORN TIPS, never increasing that height envelope.
+
+Reference roles: Image 1 previous excited strip is the animation identity/sequence to refine; change its huge jump to a tiny hop. Image 2 approved idle frame is authoritative original compact body scale, face, outfit, and ONE LOW RIGHT TAIL anatomy. Image 3 original reference-sleepy.png is authoritative original soft ROUND chibi painting style. Image 4 approved sleepy row is soft painting/face style. Image 5 failed.png is ONLY invisible eight-slot horizontal spacing; never render it. Vertical motion is deliberately a small arc.
+
+Exactly eight poses left to right:
+1 Standing delighted smile, original compact body height, feet on resting baseline, hands at front.
+2 Small anticipation crouch, knees gently bend with same foot baseline, hands preparing.
+3 Takeoff just 10–15 source pixels above baseline, hands rise beside cheeks, hair and low right tail lag gently.
+4 Tiny airborne peak exactly 25–30 source pixels above resting shoes; whole head and torso translate upward too, knees slightly bend, joyful closed-eye little laugh. This is a SMALL HOP, not a large leap.
+5 Airborne descending 20 source pixels above baseline, gold eyes start reopening, hands lower slightly.
+6 Feet approaching baseline, only 8–10 source pixels above, hands ease down.
+7 Soft little landing crouch on original baseline, hair and tail settle.
+8 Close to standing frame 1, same foot baseline and warm golden-eyed smile.
+Keep original same apparent head/body size ALL frames. Physical redrawn poses only, not rescaling individual frames, copied static images, global warps, rotations or interpolation. The peak must visibly leave ground, but only a little: do not make a stationary standing sequence, do not use the previous high leap, and do not bend legs upward without moving head/torso.
+
+Identity locked: little ROUND large-headed chibi girl, tiny short torso and stubby legs, soft silver-white/lavender curls, two curled teal horns, gold eyes, daisy and teal ribbon viewer-left, original ivory/teal/gold fantasy dress and tiny white shoes. Exactly ONE teal tail attached LOW behind LOWER skirt on VIEWER-RIGHT, softly following the hop; no viewer-left teal appendage, extra tail, high waist root or detached tip. Tail stays about shoe height and must not dangle far below airborne feet. Preserve original short rounded proportions, no slimming, elongation or outfit redesign.
+
+ONE horizontal row on pure flat uniform magenta #FF00FF, eight separated whole poses with generous horizontal gutters and safe margins. All horns, hands, shoes, hair and entire single right tail unclipped. No symbols, text, numbers, guide marks, shadows, dust, stars, sparkles, glow, motion lines, props or effects.

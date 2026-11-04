@@ -1,0 +1,21 @@
+Use case: illustration-story
+Asset type: eight-frame excited celebration JUMP animation sprite strip.
+Draw exactly EIGHT genuinely drawn sequential full-body poses in ONE horizontal row on uniform solid pure magenta #FF00FF. This strip must show a physical little JUMP with obvious vertical travel, not eight standing poses. Entire character must stay the same apparent size and shape across the sequence: the whole body rises and falls while knees, arms, face, sleeves, hair and tail are redrawn in natural sequential poses.
+
+Input image roles: Image 1 approved idle frame is the canonical standing identity, compact proportions, outfit, and authoritative SINGLE LOW RIGHT TAIL anatomy. Image 2 original reference-sleepy.png is the authoritative original SOFT ROUND COMPACT chibi painting style; do not copy seated pose. Image 3 approved sleepy row is the approved detailed soft painting style and round facial proportions only. Image 4 failed.png is ONLY invisible eight-slot horizontal spacing guidance, never draw its marks or boxes. For this JUMP the vertical position deliberately changes; the spacing guide is not a common foot baseline instruction.
+
+Preserve original little ROUND chibi girl: large round soft face, tiny short torso, stubby short legs, silver-white/lavender curly hair, two teal curled horns, warm golden eyes, daisy with teal ribbon on viewer-left, original ivory/teal/gold fantasy clothes and tiny white shoes. Original soft detailed anime painting. Do not elongate, slim, lengthen legs, stand taller, or change outfit. Exactly ONE teal dragon tail attaches low behind LOWER skirt on VIEWER-RIGHT, curves low beside her feet and follows her jump with soft delayed sway. Absolutely NO viewer-left teal appendage, no second tail, no high waist root, no disconnected tips or parts.
+
+Pose sequence:
+1 Standing excited warm open-eyed smile, feet grounded on original baseline, hands relaxed near front.
+2 Anticipation: knees bend and body gently crouches lower, hands gather and prepare to rise, eager soft smile.
+3 Takeoff: whole body visibly lifting, both shoes already above resting baseline, arms rising, hair and single tail lag low.
+4 Peak: WHOLE CHARACTER CLEARLY AIRBORNE, both shoes visibly far ABOVE frame-1 shoes, hands up beside head but within frame, delighted closed-eye little laugh, knees naturally bent. Keep original tiny short body, do not shrink it.
+5 Airborne descent begins: still clearly above standing baseline, hands slightly lower, eyes begin opening, curls and tail follow.
+6 Feet approaching ground, body still slightly above standing position, hands descending.
+7 Soft landing on original baseline with gentle knee bend and settling hair/tail.
+8 Return close to standing frame 1 and same foot baseline, warm happy gold-eyed smile.
+
+Vertical jump travel is MANDATORY: peak shoes at least 50 source pixels ABOVE the shoes of frames 1 and 8, preferably 70-90 pixels. Reserve adequate top magenta space for raised horns/hands at peak. The eight shoe bottoms must trace an unmistakable smooth upward then downward arc, NOT a straight horizontal baseline. Do not fake flight by resizing or raising legs alone: head and torso rise too. Preserve same head size and body size all eight frames, keep landing and first/last shoe baseline aligned. Real sequential redrawing of eyelids, head, limbs, clothing, hair and tail, never copied static pictures, whole-image warps, rotations or interpolation.
+
+All eight whole poses fully visible and separate with generous horizontal gutters and safe outside margins; no adjacent overlap or clipping. No text, guide marks, numbers, borders, motion lines, shadow, dust, stars, sparkles, effects, glows, icons, props or detached fragments. Pure flat #FF00FF background only.

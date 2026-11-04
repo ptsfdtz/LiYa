@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "frames_root": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sad\\frames",
+  "states": [
+    "sad"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "sad",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sad\\frames\\sad\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18799,
+          "bbox": [
+            27,
+            5,
+            163,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 21
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sad\\frames\\sad\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18603,
+          "bbox": [
+            27,
+            6,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 19
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sad\\frames\\sad\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18623,
+          "bbox": [
+            25,
+            8,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 27
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sad\\frames\\sad\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18410,
+          "bbox": [
+            25,
+            9,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 12
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sad\\frames\\sad\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18734,
+          "bbox": [
+            25,
+            7,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 18
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sad\\frames\\sad\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18721,
+          "bbox": [
+            25,
+            5,
+            165,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 30
+        },
+        {
+          "index": 6,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sad\\frames\\sad\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18837,
+          "bbox": [
+            25,
+            5,
+            166,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 19
+        },
+        {
+          "index": 7,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sad\\frames\\sad\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18711,
+          "bbox": [
+            27,
+            5,
+            164,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 1
+        }
+      ]
+    }
+  ]
+}

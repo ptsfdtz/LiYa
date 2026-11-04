@@ -1,0 +1,36 @@
+{
+  "revision": 3,
+  "status": "retired_by_user_style_and_method_feedback",
+  "supersedes": "The v2 animation draft inherits ambiguous tail outlines on both sides and is stopped.",
+  "identity": "完全保留原Q版idle造型与身高比例；不采用重新设计的高尾根长身版",
+  "anatomy": {
+    "tail_count": 1,
+    "root": "保持原图位置：下半身与裙摆后方，连接点自然遮挡，不抬高到腰背外侧",
+    "silhouette": "只删除画面左侧多余尾巴，保留右侧原有低位弯尾的外形、大小和位置",
+    "forbidden": [
+      "身体左侧另生一尾",
+      "分叉",
+      "断开的尾段",
+      "两个尾尖",
+      "把发梢或衣带画成第二条尾巴"
+    ]
+  },
+  "animation": {
+    "fps": 20,
+    "method": "对保留的原低位右尾做连续局部形变；尾根固定、外侧尾身和尾尖带延迟摆动，身体轻呼吸",
+    "states": {
+      "idle": "缓慢小幅摆动",
+      "happy": "摆动稍快、尾尖抬起",
+      "curious": "尾尖轻抬并短暂停顿",
+      "sad": "尾巴低垂，动作减弱",
+      "excited": "随身体起落，尾尖延迟回落"
+    },
+    "delivered": "仅平静摆尾样片；整套表情扩展暂停"
+  },
+  "scope": "用户明确选择原版坐姿抱尾画风与宠物逐帧动作条流程；停止v3单图变形方案，不再据此替换素材",
+  "reference": "../assets/single-tail-v3/idle-reference.png",
+  "preview": "../assets/single-tail-v3/preview.html",
+  "motion_sample": "../assets/single-tail-v3/idle-tail-motion.gif",
+  "runtime_idle": "../src/liya_companion/assets/idle.gif",
+  "superseded_by": "../assets/pet-style-v4/README.md"
+}

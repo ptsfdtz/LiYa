@@ -1,0 +1,19 @@
+{
+  "state": "idle",
+  "task": "color-only correction to original sleepy master",
+  "generation_attempts": 1,
+  "selected_source": "assets/pet-style-v5-colors/decoded/idle.png",
+  "selected_prompt": "assets/pet-style-v5-colors/prompts/idle.txt",
+  "mode": "built-in image_gen edit, transparent_background=false",
+  "color_verdict": "improved",
+  "color_observation": "Full source visually inspected. Hair has less red/dark warmth and reads more neutral silver/lilac. Muted jade/teal, ivory and subdued gold remain coherent. All eight frames share consistent illumination; original sleepy references alone supplied color authority.",
+  "reference_paths": ["assets/pet-style-v4/reference-sleepy.png", "assets/pet-style-v4/qa/rows/sleepy/row-clean.png"],
+  "approximate_hair_median_saturation_before": 0.1368,
+  "approximate_hair_median_saturation_after": 0.1116,
+  "geometry_verdict": "visually_preserved_with_minor_generated_boundary_drift",
+  "geometry_observation": "All eight original pose/eyelid/hand/hair structures, layout, compact proportions, outfit and low single right-tail anatomy remain visually consistent. No added content, clipping or effects seen. Canvas remains 2172x724; eight component groups recovered read-only. Bounds differ by at most 2px vertically and 1px horizontally; foreground-mask IoU 0.970117. Not a pixel-exact recolor.",
+  "component_groups": 8,
+  "background_note": "Flat near-magenta generated chroma retained. Byte-exact #FF00FF is not asserted; no background-only retries.",
+  "qa_scope": "Full source visual review and read-only component/geometry/color analysis. No v4 writes, active changes, scripts modified, or v4 helper runs. Parent handles adapted v5 extraction and shared GIF palette.",
+  "source_analysis": "assets/pet-style-v5-colors/qa/idle/source-analysis.json"
+}

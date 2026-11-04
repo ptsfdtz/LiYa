@@ -1,0 +1,19 @@
+Use case: stylized-concept
+Asset type: QQ desktop companion eight-frame WORRIED animation strip.
+Draw exactly EIGHT separated sequential FULL-BODY poses of the SAME original soft round compact chibi dragon girl in ONE horizontal row. Background and gutters flat pure MAGENTA #FF00FF.
+Reference roles: 1 approved idle/00.png is exact standing identity, compact proportions, outfit and ONE low right-tail anatomy; 2 original reference-sleepy.png is round face softness and original cute painted quality, not seated pose; 3 approved sleepy row is delicate painted finish and original cuteness only, not sitting or tail-on-lap action; 4 failed.png is INVISIBLE eight-slot spacing guide ONLY, never copy boxes/lines/marks.
+Identity unchanged from approved idle: large rounded head and soft cheeks, short round torso, tiny legs and ivory shoes, about 2.5 heads tall. Silver-white pale lilac long curly hair, two curved teal horns, gold eyes, pointed ears, white blossom and teal ribbon on viewer-left, original ivory/teal/gold robe and wide sleeves. Soft delicate pastel painted chibi style, never tall/slim or mature redesign.
+Anatomy: exactly ONE tail total for each character, attached LOW hidden behind LOWER skirt near knee/hem, one teal curl on viewer-right ONLY. Viewer-left outline has only lilac hair and robe, no tail/teal appendage. No high waist tail root. Tail sways gently with delayed hair motion.
+State: warm gentle concern/listening, not angry, sulky, crying or grief. Inner eyebrows raised, soft attentive eyes, tiny worried mouth, shoulders a touch gathered.
+Eight sequential actually drawn frames, left to right:
+1 gently concerned face with slightly raised INNER eyebrows, hands loosely near lower chest, soft eye contact;
+2 both hands gather at chest, worried mouth small, eyes widen softly;
+3 head tilts slightly viewer-right as if listening closely, hands lightly together at chest;
+4 same listening head tilt, gaze dips downward briefly, eyebrows remain concerned;
+5 soft full blink, gathered hands and shoulders relax a little, head begins returning;
+6 eyes reopen to gentle eye contact, head nearly upright;
+7 hands lower slightly and shoulders settle, tiny concern eases;
+8 return close to frame1, gentle concerned eye contact and hands loosely near lower chest.
+True changes in eyelids, eyebrows, gaze, head angle, hand/arm/sleeve position; do not repeat a static pose and do not use broad raster warps. Hair and single right tail follow the upper-body movement gently. Keep same body scale and planted feet baseline; first/last near matching.
+Composition: exactly 8 whole separate characters in ONE horizontal row, generous flat magenta gutters/edge padding, full horns/hair/hands/shoes/tail included, no overlap.
+Avoid: tears, detached drops, hearts, symbols, punctuation, floating effects, sparkles, motion lines, shadows, props, text, labels, frame numbers, borders, visible guide marks, blur, clipping, extra left tail or high tail root.

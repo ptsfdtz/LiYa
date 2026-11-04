@@ -1,0 +1,50 @@
+{
+  "revision": 3,
+  "status": "corrected_original_pose_and_motion_sample",
+  "tail_count_visually_checked": 1,
+  "tail_removed": "viewer-left extra appendage",
+  "retained_tail": "original low right tail behind lower skirt",
+  "size": [
+    384,
+    416
+  ],
+  "frames": 60,
+  "unique_frames": 60,
+  "fps": 20,
+  "frame_duration_ms": 50,
+  "loop_duration_ms": 3000,
+  "method": "continuous local tail deformation with anchored root and delayed tip; grounded breathing",
+  "max_step_delta": 0.6532,
+  "loop_seam_delta": 0.6529,
+  "rig": {
+    "root_x": 239.20681265206812,
+    "root_y": 365.43065693430657,
+    "tip_x": 319.5571776155718,
+    "gate_y": 287.57177615571777,
+    "scale": 0.31143552311435524,
+    "feet_y": 400
+  },
+  "sha256": "c219417ea9543bcd1edaf0c7bf8ba1af508ec8a235ff8ff2777c06e69aad5fd8",
+  "local_idle_replacement": {
+    "paths": [
+      "assets/expressions/idle.gif",
+      "src/liya_companion/assets/idle.gif"
+    ],
+    "size": [
+      192,
+      208
+    ],
+    "frames": 60,
+    "fps": 20,
+    "sha256": "96839d4e94ea1258d103ae8b085afeb69f2bca0a50107ab23a1a6a7be0c84647",
+    "design_and_runtime_identical": true
+  },
+  "deployed": true,
+  "scope": "corrected single-tail idle; full expression set is paused",
+  "deployment": {
+    "version": "1.3.0",
+    "source_commit": "80b14ea1d094b43977278d24a5e2fd027ce06220",
+    "checked_at": "2026-11-03T23:19:47.700757+08:00",
+    "scope": "idle GIF only; other eight live GIFs preserved; six new expressions not deployed"
+  }
+}

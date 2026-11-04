@@ -1,0 +1,20 @@
+{
+  "state": "shy",
+  "frames": 8,
+  "unique_frames": 8,
+  "method": "bundled pet scripts; generated pose frames only; no raster deformation",
+  "durations_ms": [
+    200,
+    100,
+    100,
+    100,
+    100,
+    100,
+    120,
+    220
+  ],
+  "loop_duration_ms": 1040,
+  "gif": "assets/pet-style-v4/previews/shy.gif",
+  "review": "assets/pet-style-v4/qa/rows/shy/review.json",
+  "ok": true
+}

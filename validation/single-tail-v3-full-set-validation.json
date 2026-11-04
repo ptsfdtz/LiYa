@@ -1,0 +1,670 @@
+{
+  "revision": 3,
+  "status": "all_15_local_expressions_replaced",
+  "fps": 20,
+  "frames_per_expression": 60,
+  "count": 15,
+  "source_art": "Built-in ImageGen identity-preserving emotion variants of approved single-tail reference",
+  "animation": "continuous local tail deformation, grounded body motion and emotion-specific gestures; no optical-flow pose interpolation",
+  "tail_anatomy": "one low right tail per source, visually checked; original root stays behind lower skirt",
+  "source_and_runtime_assets_identical": true,
+  "prior_assets_archive": "assets/animation-sources/previous-expression-set",
+  "deployed": false,
+  "checks": [
+    {
+      "state": "idle",
+      "label": "平静待机",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 0.5967,
+      "loop_seam_delta": 0.5623,
+      "tail_region_difference": 17.6454,
+      "sha256": "5a118ad7d1f4dbb146fbea47733304cbc25a5f9fe6fde0a8c47e0aa1f6c0627e",
+      "bytes": 1118938,
+      "source": "assets/single-tail-v3/idle-reference.png",
+      "source_sha256": "6669181e5ef9a18dcbf036bfd2706c6b7c759d2d70d49ff476dfa5d7ae42f4e3",
+      "motion": {
+        "tail": 11,
+        "cycles": 1,
+        "breath": 0.003,
+        "tilt": 0,
+        "label": "轻呼吸，尾尖缓慢摆动"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 197.5,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 236.76999999999998,
+        "outer_x": 317.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          221,
+          33,
+          1052,
+          1265
+        ]
+      }
+    },
+    {
+      "state": "happy",
+      "label": "开心",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 2.1475,
+      "loop_seam_delta": 1.9081,
+      "tail_region_difference": 23.2925,
+      "sha256": "c9f1ec6e8717b3e3a36aee6ac6a473fd0e2f368d4a35a4ee808e2149b348f5b9",
+      "bytes": 1102277,
+      "source": "assets/single-tail-v3/happy-reference.png",
+      "source_sha256": "0dbae525bfd00e0b1699ce9943075393c046f3ce03520c693170726f7b51cba4",
+      "motion": {
+        "tail": 15,
+        "cycles": 2,
+        "breath": 0.004,
+        "tilt": 0.7,
+        "bounce": 2,
+        "label": "轻轻晃身，尾巴欢快轻摆"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 196.0,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 235.26999999999998,
+        "outer_x": 317.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          221,
+          30,
+          1056,
+          1268
+        ]
+      }
+    },
+    {
+      "state": "curious",
+      "label": "好奇",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 2.1793,
+      "loop_seam_delta": 2.1194,
+      "tail_region_difference": 20.6036,
+      "sha256": "d2b83a2fd28738fff5f3d5b7578ea3cc5f3220900b5fdfe58b1ea58132986a8a",
+      "bytes": 1098185,
+      "source": "assets/single-tail-v3/curious-reference.png",
+      "source_sha256": "a379f68c11e63b465b7d1e0e284f3ea70cd6313c5ca51a4b1a8c12d638f09344",
+      "motion": {
+        "tail": 9,
+        "cycles": 1,
+        "breath": 0.003,
+        "tilt": 1.0,
+        "lift": -2,
+        "label": "微微歪身，尾尖轻抬"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 197.5,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 236.76999999999998,
+        "outer_x": 320.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          200,
+          13,
+          1073,
+          1269
+        ]
+      }
+    },
+    {
+      "state": "thinking",
+      "label": "思考",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 1.0876,
+      "loop_seam_delta": 1.0448,
+      "tail_region_difference": 11.9464,
+      "sha256": "0e38d8497adf73c731daa85aa47a97e7196a4a03c361f3f83527eecae06c94c9",
+      "bytes": 1103129,
+      "source": "assets/single-tail-v3/thinking-reference.png",
+      "source_sha256": "57017f9dfbd46818df610cf687a8cbe08b6341832f779b71b3b4c09f9bb73e8c",
+      "motion": {
+        "tail": 6,
+        "cycles": 1,
+        "breath": 0.0025,
+        "tilt": 0.4,
+        "label": "托腮沉思，小幅缓慢摆尾"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 197.0,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 236.26999999999998,
+        "outer_x": 316.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          223,
+          31,
+          1053,
+          1268
+        ]
+      }
+    },
+    {
+      "state": "sulky",
+      "label": "轻微不服气",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 1.8168,
+      "loop_seam_delta": 1.7638,
+      "tail_region_difference": 17.2034,
+      "sha256": "c1756c8c4fa5929ae6b92caa9b11447b89effeabd9cdedb4717b160f4df4eaff",
+      "bytes": 1110357,
+      "source": "assets/single-tail-v3/sulky-reference.png",
+      "source_sha256": "f8a2d88d4299f326c3edb1b9f0891e0502e23d0e1c0263831edcadd8cc674e37",
+      "motion": {
+        "tail": 8,
+        "cycles": 1,
+        "breath": 0.003,
+        "tilt": 0.8,
+        "label": "抱臂轻晃，尾尖短幅摆动"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 197.5,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 236.76999999999998,
+        "outer_x": 317.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          223,
+          30,
+          1059,
+          1269
+        ]
+      }
+    },
+    {
+      "state": "caring",
+      "label": "关心倾听",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 1.0035,
+      "loop_seam_delta": 0.9739,
+      "tail_region_difference": 14.1651,
+      "sha256": "bdd2b82e734fe65354c0c5c142f7adb7620e4e164130eb4fa3e9dc1b1ef1c97d",
+      "bytes": 1116920,
+      "source": "assets/single-tail-v3/caring-reference.png",
+      "source_sha256": "87b098afa8c8b591a0ae21adf9104d4b5e71b75a61ea03ffd715b1ef16ca444d",
+      "motion": {
+        "tail": 7,
+        "cycles": 1,
+        "breath": 0.004,
+        "tilt": 0.3,
+        "nod": 0.004,
+        "label": "温柔点头，尾巴轻缓跟随"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 196.5,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 235.76999999999998,
+        "outer_x": 317.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          223,
+          28,
+          1065,
+          1268
+        ]
+      }
+    },
+    {
+      "state": "greeting",
+      "label": "欢迎",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 1.7855,
+      "loop_seam_delta": 1.7371,
+      "tail_region_difference": 21.309,
+      "sha256": "0c4de0592a163251cec6f1c4070e63898f84016907b29d73951de03e5e1371a4",
+      "bytes": 1123728,
+      "source": "assets/single-tail-v3/greeting-reference.png",
+      "source_sha256": "11ce1f2ea4bd80b04457df78a2f8afa71981e6f39589d16b6cb4e71eadef9f87",
+      "motion": {
+        "tail": 12,
+        "cycles": 2,
+        "breath": 0.003,
+        "tilt": 0.5,
+        "wave": true,
+        "label": "轻挥手，尾巴同步欢迎"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 198.0,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 237.26999999999998,
+        "outer_x": 317.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          222,
+          33,
+          1057,
+          1270
+        ]
+      }
+    },
+    {
+      "state": "sleepy",
+      "label": "困倦",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 1.4506,
+      "loop_seam_delta": 1.4505,
+      "tail_region_difference": 11.1596,
+      "sha256": "74894563020fd6b7915c8c05b48d0d0cc17dd739addb77320afd74de7c787aec",
+      "bytes": 1118763,
+      "source": "assets/single-tail-v3/sleepy-reference.png",
+      "source_sha256": "996aab10abf26d1e56e5c84cebaec7f4c6ff78a81138eb3a37be3b1982f4640e",
+      "motion": {
+        "tail": 4,
+        "cycles": 1,
+        "breath": 0.005,
+        "tilt": 0.6,
+        "nod": 0.006,
+        "label": "缓缓低头，尾巴放松轻摆"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 196.5,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 235.76999999999998,
+        "outer_x": 318.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          224,
+          28,
+          1069,
+          1269
+        ]
+      }
+    },
+    {
+      "state": "excited",
+      "label": "兴奋庆祝",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 59,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 6.1505,
+      "loop_seam_delta": 2.1719,
+      "tail_region_difference": 24.8586,
+      "sha256": "8e37001e790c76bcc02e2b832a8f9a49f6a631ac63aff2f65d1f80e925880458",
+      "bytes": 1118601,
+      "source": "assets/single-tail-v3/excited-reference.png",
+      "source_sha256": "2b720d1314b39c28cb470d1f6a58b6d77f75e399587717c944fc1bf1a2e812b3",
+      "motion": {
+        "tail": 17,
+        "cycles": 2,
+        "breath": 0.004,
+        "tilt": 0.8,
+        "jump": 12,
+        "label": "小幅跳起，尾尖稍后跟随回落"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 196.5,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 235.76999999999998,
+        "outer_x": 317.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          221,
+          27,
+          1062,
+          1268
+        ]
+      }
+    },
+    {
+      "state": "shy",
+      "label": "害羞",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 1.2533,
+      "loop_seam_delta": 1.2572,
+      "tail_region_difference": 14.3981,
+      "sha256": "853aa9642af9aa4b40be58f0a44caea45fd941cd5db804eb9d02a129f0358f97",
+      "bytes": 1095797,
+      "source": "assets/single-tail-v3/shy-reference.png",
+      "source_sha256": "745d95e105c13243708dedece83f7e4493338aa158d2544e178b4b33da0cd95b",
+      "motion": {
+        "tail": 7,
+        "cycles": 1,
+        "breath": 0.003,
+        "tilt": 0.5,
+        "nod": 0.005,
+        "label": "含羞轻点头，尾尖含蓄轻摆"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 193.5,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 232.76999999999998,
+        "outer_x": 315.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          232,
+          31,
+          1057,
+          1269
+        ]
+      }
+    },
+    {
+      "state": "surprised",
+      "label": "惊讶",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 2.2386,
+      "loop_seam_delta": 1.2097,
+      "tail_region_difference": 22.3314,
+      "sha256": "db7ed29ada3d377f9ce7357841ac415c95be4fc758a814d32373c48bdfb5ed99",
+      "bytes": 1102135,
+      "source": "assets/single-tail-v3/surprised-reference.png",
+      "source_sha256": "ebd82417999c5863704270ced0ec8dd0548a171863f8432847390142366fbd73",
+      "motion": {
+        "tail": 15,
+        "cycles": 1,
+        "breath": 0.003,
+        "tilt": 0.4,
+        "startle": 3,
+        "label": "小幅一惊后恢复，尾巴随动"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 197.0,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 236.26999999999998,
+        "outer_x": 317.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          222,
+          30,
+          1060,
+          1269
+        ]
+      }
+    },
+    {
+      "state": "worried",
+      "label": "担心",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 1.4545,
+      "loop_seam_delta": 1.4609,
+      "tail_region_difference": 14.3192,
+      "sha256": "68dd2a17480fd9123e7a99681dda25f5f98fea2bc70b671297ca1a0dfba2d57b",
+      "bytes": 1087062,
+      "source": "assets/single-tail-v3/worried-reference.png",
+      "source_sha256": "67d0cc40f9bf9f4839d4c1f534c372be356a55914f8bdd0368e1cb59fc09bb89",
+      "motion": {
+        "tail": 7,
+        "cycles": 1,
+        "breath": 0.003,
+        "tilt": 0.6,
+        "label": "担心轻晃，尾巴低幅摆动"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 199.5,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 238.76999999999998,
+        "outer_x": 317.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          211,
+          3,
+          1064,
+          1268
+        ]
+      }
+    },
+    {
+      "state": "sad",
+      "label": "低落",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 0.8616,
+      "loop_seam_delta": 0.8486,
+      "tail_region_difference": 9.2026,
+      "sha256": "81efbd9a87d03e34b9e55c8df1c6b86ca5a2f2771d9ee54896c7464c64d3210f",
+      "bytes": 1117152,
+      "source": "assets/single-tail-v3/sad-reference.png",
+      "source_sha256": "00a34fed7e30841cbcb0a5f7a0964b5967d19c20b359d471dc07b0fb8585db56",
+      "motion": {
+        "tail": 4,
+        "cycles": 1,
+        "breath": 0.002,
+        "tilt": 0.3,
+        "lift": 4,
+        "label": "安静低头，尾尖低垂轻摆"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 194.5,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 233.76999999999998,
+        "outer_x": 317.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          224,
+          31,
+          1064,
+          1270
+        ]
+      }
+    },
+    {
+      "state": "relieved",
+      "label": "释然",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 1.0469,
+      "loop_seam_delta": 1.0542,
+      "tail_region_difference": 12.7519,
+      "sha256": "5feaa6b5fc52829501a1b6d36f6f4b8f745062f336ffd74fe6bc9db367359db3",
+      "bytes": 1095447,
+      "source": "assets/single-tail-v3/relieved-reference.png",
+      "source_sha256": "3789a3042f0b542d01ede3c7c08c9a43d71173f73010ad5c659a1bdcfff97bf2",
+      "motion": {
+        "tail": 7,
+        "cycles": 1,
+        "breath": 0.005,
+        "tilt": 0.3,
+        "label": "放松呼吸，尾巴舒缓摆动"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 198.5,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 237.76999999999998,
+        "outer_x": 317.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          218,
+          25,
+          1059,
+          1270
+        ]
+      }
+    },
+    {
+      "state": "determined",
+      "label": "认真鼓劲",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "unique_frames": 60,
+      "fps": 20,
+      "frame_duration_ms": 50,
+      "loop_duration_ms": 3000,
+      "max_step_delta": 1.2098,
+      "loop_seam_delta": 1.2236,
+      "tail_region_difference": 18.9108,
+      "sha256": "059ca0d4b92c61a865f307ac81c468fcec4c95bfe8034cf60d76438843b4e53b",
+      "bytes": 1114841,
+      "source": "assets/single-tail-v3/determined-reference.png",
+      "source_sha256": "ac266f22d0e69c96a8e4d8b986120de340fdd000efd2aa7de7243b97350e905d",
+      "motion": {
+        "tail": 10,
+        "cycles": 1,
+        "breath": 0.003,
+        "tilt": 0.4,
+        "nod": 0.004,
+        "label": "认真点头，尾巴稳稳跟随"
+      },
+      "ok": true,
+      "rig": {
+        "body_x": 197.0,
+        "feet_y": 395,
+        "top_y": 21,
+        "height": 374,
+        "root_x": 236.26999999999998,
+        "outer_x": 318.0,
+        "gate_y": 282.8,
+        "source_bounds": [
+          220,
+          30,
+          1064,
+          1269
+        ]
+      }
+    }
+  ]
+}

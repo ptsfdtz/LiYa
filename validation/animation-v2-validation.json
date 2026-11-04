@@ -1,0 +1,296 @@
+{
+  "animation_revision": 2,
+  "method": "four generated key poses + bidirectional DIS dense optical-flow interpolation; cosine easing",
+  "runtime_assets_match": true,
+  "checks": [
+    {
+      "state": "idle",
+      "label": "平静待机",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 9.565,
+      "loop_seam_delta": 0.2,
+      "bytes": 959682,
+      "sha256": "b5071abea48f498cf5d2ee5b07a3b9746100d8259b2b02d2b5abe49e21a90f88",
+      "ok": true
+    },
+    {
+      "state": "happy",
+      "label": "开心",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 6.451,
+      "loop_seam_delta": 0.231,
+      "bytes": 994079,
+      "sha256": "f4e381ba8dd1d0d386fc8e061c69394f986968a6bc74bb1ffa22dd46567336dd",
+      "ok": true
+    },
+    {
+      "state": "curious",
+      "label": "好奇",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 14.442,
+      "loop_seam_delta": 0.207,
+      "bytes": 977107,
+      "sha256": "2feca4d5060dfef6f0701dc4e7fea06bea0f086e8dab4f69c52970f2fb96b7b1",
+      "ok": true
+    },
+    {
+      "state": "thinking",
+      "label": "思考",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 10.474,
+      "loop_seam_delta": 0.206,
+      "bytes": 1003943,
+      "sha256": "2fb7027b78e82e48160e6a70761bccedd09c7f22c359b6f7b98050b67c9789c6",
+      "ok": true
+    },
+    {
+      "state": "sulky",
+      "label": "轻微不服气",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 16.131,
+      "loop_seam_delta": 0.202,
+      "bytes": 983439,
+      "sha256": "e214e0b1b7508ef3e4485ad9e23508ea179189a5c7371f54cb706ccfadff3e6d",
+      "ok": true
+    },
+    {
+      "state": "caring",
+      "label": "关心倾听",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 11.176,
+      "loop_seam_delta": 0.213,
+      "bytes": 968025,
+      "sha256": "1033138439b38edbe3c19bd0f1d43f13d657a8f976e010b83bcd883414e7e265",
+      "ok": true
+    },
+    {
+      "state": "greeting",
+      "label": "欢迎",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 5.623,
+      "loop_seam_delta": 0.241,
+      "bytes": 1007406,
+      "sha256": "14257702aab8144b8e803e63a3078ff7af3a1603f3e4997fdbb24525f7849f4f",
+      "ok": true
+    },
+    {
+      "state": "sleepy",
+      "label": "困倦",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 2.906,
+      "loop_seam_delta": 0.267,
+      "bytes": 1183352,
+      "sha256": "cf48a80b6cab6a660edaa8a1a7e731b2a7892f35ce580ced714fc46ba427487a",
+      "ok": true
+    },
+    {
+      "state": "excited",
+      "label": "兴奋庆祝",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 24.032,
+      "loop_seam_delta": 0.23,
+      "bytes": 843931,
+      "sha256": "54f289d7b56a3eacb4265b0e8cc3112bb023e5c5dde7efb6e262ccb7ea6a7b40",
+      "ok": true
+    },
+    {
+      "state": "shy",
+      "label": "害羞",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 7.125,
+      "loop_seam_delta": 0.232,
+      "bytes": 979578,
+      "sha256": "f1b05957964049c77b29bc8bb9aa2b22988680b374945bf8d6d884f1d30ca965",
+      "ok": true
+    },
+    {
+      "state": "surprised",
+      "label": "惊讶",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 9.931,
+      "loop_seam_delta": 0.234,
+      "bytes": 996359,
+      "sha256": "5ad0d6d13733a9710ff5cebab42d9821d9fb540379091edd4cca80ce470cbacc",
+      "ok": true
+    },
+    {
+      "state": "worried",
+      "label": "担心",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 9.088,
+      "loop_seam_delta": 0.221,
+      "bytes": 979945,
+      "sha256": "15d66a9e3ccf2f25d69792453f9a3c39153bebd70c3f058f04392b26f81cbc37",
+      "ok": true
+    },
+    {
+      "state": "sad",
+      "label": "低落",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 7.361,
+      "loop_seam_delta": 0.253,
+      "bytes": 992981,
+      "sha256": "45d3ab808d8a0042b99bcd78cc7808941d065f8e430eea34595ceec401c19656",
+      "ok": true
+    },
+    {
+      "state": "relieved",
+      "label": "释然",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 4.737,
+      "loop_seam_delta": 0.235,
+      "bytes": 1008183,
+      "sha256": "ff263951d8dae482bf3802334b015762a022b693b3c6ae825f79bee49afa406a",
+      "ok": true
+    },
+    {
+      "state": "determined",
+      "label": "认真鼓劲",
+      "size": [
+        192,
+        208
+      ],
+      "frames": 48,
+      "unique_frames": 48,
+      "frame_duration_ms": 50,
+      "fps": 20.0,
+      "loop_duration_ms": 2400,
+      "edge_pixels": 0,
+      "max_step_delta": 4.075,
+      "loop_seam_delta": 0.249,
+      "bytes": 1005768,
+      "sha256": "7b3259156841dbdbd9200006697c402d03a830ee3fa962835909a3f43e472fed",
+      "ok": true
+    }
+  ],
+  "scope": "Local decoded GIF validation; QQ client playback cadence requires a client check.",
+  "artwork_accepted": false,
+  "status": "stopped_superseded_by_single_tail_correction",
+  "visual_issue": "输入关键姿势含左右两侧尾巴，数值和循环检查没有覆盖尾巴解剖结构。"
+}

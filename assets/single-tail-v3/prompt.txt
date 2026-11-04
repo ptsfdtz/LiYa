@@ -1,0 +1,15 @@
+Tool: built-in image_gen (not CLI/API fallback).
+Edit target: assets/expressions/idle.png.
+The earlier high-waisted-tail redesign is rejected and is not used here.
+
+Prompt:
+PRECISE LOCAL EDIT ONLY of the supplied chibi character sprite. The user likes this exact original character and this exact LOW tail placement. Keep the exact same three-head-tall chibi proportions, face, golden eyes, silver-white hair, teal horns, flower, head ribbon, white/teal/gold outfit, hands, feet, pose, colors and rendering. Do NOT redesign her, do NOT make her taller, do NOT move any remaining tail upward. There are currently two teal tail-like appendages near the bottom of this sprite: an extra teal furry/curl appendage protruding to VIEWER-LEFT at ankle/knee height, and a curled teal dragon tail at VIEWER-RIGHT behind the lower skirt near her ankles. DELETE ONLY the extra LEFT appendage completely, replacing its area with transparent background. KEEP the RIGHT curled tail EXACTLY where it currently is, at the bottom behind the skirt near ankle height, retaining its curve, scale texture, shape, size, outline and tip. The remaining tail's root stays hidden naturally behind the LOWER skirt/hip area; do not draw a new exposed tail root on her waist or upper back. She should now have exactly ONE tail total, solely on viewer-right, at the original low position. No added appendages. Nothing teal extends from the lower LEFT silhouette except the existing flat fabric hem. Clean transparent alpha background. Output a SINGLE corrected full-body sprite, no panels, no text, no shadow. Match the input composition and framing, with all horns, feet and right tail inside the image. Change only what is required to remove the extra left tail; preserve the original character.
+
+Outputs:
+idle-reference.png: saved image-generation result, original alpha retained.
+idle-single-tail.png: fitted static sprite for preview.
+idle-tail-motion.gif: 20 FPS, 60 frames, 3-second loop. Continuous local tail deformation keeps the original low root attached and adds a delayed tip sway, with gentle grounded breathing. No optical-flow pose morphing.
+preview.html: play/pause control and reduced-motion static fallback.
+Builder: scripts/make_tail_sample.py.
+Validation: validation/single-tail-v3-validation.json.
+Scope: corrected reference and one motion sample; the full expression expansion is paused. No deployment.

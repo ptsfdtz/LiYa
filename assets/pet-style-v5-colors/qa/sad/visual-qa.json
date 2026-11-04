@@ -1,0 +1,26 @@
+{
+  "state": "sad",
+  "operation": "built-in image_gen color-only edit",
+  "attempts": 1,
+  "source": "assets/pet-style-v4/decoded/sad.png",
+  "candidate": "assets/pet-style-v5-colors/decoded/sad.png",
+  "prompt": "assets/pet-style-v5-colors/prompts/sad.txt",
+  "color_references": ["assets/pet-style-v4/reference-sleepy.png", "assets/pet-style-v4/qa/rows/sleepy/row-clean.png"],
+  "visual_checks": {
+    "frame_count": 8,
+    "palette": "Restored lighter luminous silver/lilac hair, ivory fabric, muted teal and subdued gold. Removed muddy dark brown-gray cast; sadness remains in brows, downcast eyes, mouth and clasped posture.",
+    "consistency": "Same soft neutral illumination and material hues throughout all eight frames.",
+    "geometry": "Original pose sequence, placement, compact short body, clasped hands, lineart design, curls, expressions, shoes baseline and low tail poses visibly preserved; no new elements. Dimensions unchanged 2172x724.",
+    "tail": "Exactly one low attached viewer-right tail each, preserving its existing pose variation.",
+    "effects": "No new shadows, symbols or effects."
+  },
+  "measurements": {
+    "foreground_mask_iou_vs_v4": 0.9626716294070494,
+    "mean_foreground_rgb_v4": [189.1141, 164.7675, 168.0760],
+    "mean_foreground_rgb_candidate": [199.1457, 177.7624, 177.9222],
+    "background_top_left_rgb": [238, 16, 236],
+    "background_bottom_right_rgb": [237, 38, 234]
+  },
+  "limitations": "Image generation edit preserves geometry visually rather than pixel-exactly. Minor near-magenta variation is left for parent's deterministic extraction. Shared GIF palette and staged pipeline remain with parent. No v4/active changes.",
+  "accepted_for_parent_staging": true
+}

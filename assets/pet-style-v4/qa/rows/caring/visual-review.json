@@ -1,0 +1,22 @@
+{
+  "state": "caring",
+  "visual_review": "pass",
+  "generation_attempts": 1,
+  "selected_source": "assets/pet-style-v4/decoded/caring.png",
+  "selected_prompt": "assets/pet-style-v4/prompts/caring.txt",
+  "method": "built-in image_gen with original caring, original sleepy style, approved idle anatomy, original identity and invisible layout references; bundled deterministic extraction only",
+  "inspected": [
+    "full magenta source strip",
+    "qa/rows/caring/row-clean.png",
+    "qa/rows/caring/frames/caring/00.png",
+    "qa/rows/caring/frames/caring/03.png",
+    "qa/rows/caring/frames/caring/07.png"
+  ],
+  "frame_count": 8,
+  "unique_decoded_preview_frames": 8,
+  "identity": "Soft rounded original chibi, short body and legs, silver-white curls, teal curled horns, golden eyes, original daisy/ribbon and ivory/teal/gold dress retained.",
+  "motion": "Joined hands near chest, tender reassuring smile, small downward nod and full blink then reopen and return. Hair, sleeves and low tail follow. First and last closely match.",
+  "anatomy": "One attached low viewer-right tail throughout. No viewer-left teal appendage, waist-root tail or disconnected tip observed.",
+  "spacing_and_edges": "Eight separated whole poses. Shoe baseline remains y=203 in all normalized frames, zero edge pixels. No clipping, symbols, props, guide marks or detached effects observed.",
+  "pipeline": "qq_pet_frames.py caring completed; review ok=true with no errors or warnings; despill preserved alpha."
+}

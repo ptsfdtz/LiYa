@@ -1,0 +1,145 @@
+{
+  "reference": "assets/pet-style-v4/reference-sleepy.png",
+  "source_color_corrections": 14,
+  "unchanged_master_state": "sleepy",
+  "all_15_gifs_use_one_palette": true,
+  "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+  "checks": [
+    {
+      "state": "idle",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "happy",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "curious",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "thinking",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "sulky",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "caring",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "greeting",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "sleepy",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "excited",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "shy",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "surprised",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "worried",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "sad",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "relieved",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    },
+    {
+      "state": "determined",
+      "frames": 8,
+      "distinct_frame_palettes": 1,
+      "palette_sha256": "dafd8b33f6a8c81bf8e6fb53938e2cdc5fecf2dabb3b77486fc683f1e2a6b279",
+      "opaque_mask_preserved": true,
+      "png_colors_from_master_palette": true,
+      "runtime_copy_matches": true
+    }
+  ],
+  "deployed": false
+}

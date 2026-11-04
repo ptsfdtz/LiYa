@@ -1,0 +1,28 @@
+{
+  "state": "caring",
+  "operation": "built-in image_gen color-only edit",
+  "attempts": 2,
+  "selected_attempt": 2,
+  "rejected_attempt": "First attempt changed frame four from two closed eyes to one open eye; rejected for expression drift.",
+  "source": "assets/pet-style-v4/decoded/caring.png",
+  "candidate": "assets/pet-style-v5-colors/decoded/caring.png",
+  "prompt": "assets/pet-style-v5-colors/prompts/caring.txt",
+  "color_references": ["assets/pet-style-v4/reference-sleepy.png", "assets/pet-style-v4/qa/rows/sleepy/row-clean.png"],
+  "visual_checks": {
+    "frame_count": 8,
+    "palette": "Selected second edit neutralizes rosy dark cast; luminous silver/lilac hair, muted jade/teal, ivory, subdued gold and light neutral skin. Consistent soft neutral illumination across all poses.",
+    "geometry": "Eight existing hand/nod/blink poses, order, short round body, sizes, positions, lineart design, curls and shoes baseline visibly preserved. Both eyes remain fully closed in frame four; original half-lowered eyelids remain in frames three and five.",
+    "tail": "Exactly one low attached viewer-right tail each, no extra appendage or high root.",
+    "effects": "No new shadows, symbols, effects or guide marks."
+  },
+  "measurements": {
+    "canvas": [2172, 724],
+    "foreground_mask_iou_vs_v4": 0.9549834419399637,
+    "mean_foreground_rgb_v4": [189.6593, 166.5342, 170.6315],
+    "mean_foreground_rgb_candidate": [193.7187, 177.4739, 178.7827],
+    "background_top_left_rgb": [243, 14, 244],
+    "background_bottom_right_rgb": [244, 33, 242]
+  },
+  "limitations": "Geometry preserved visually rather than pixel-exactly. Minor near-magenta variation remains for parent's extraction and shared palette pipeline. No v4/active/script/server changes.",
+  "accepted_for_parent_staging": true
+}

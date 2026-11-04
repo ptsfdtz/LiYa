@@ -1,0 +1,19 @@
+{
+  "state": "sulky",
+  "task": "color-only correction to original sleepy master",
+  "generation_attempts": 1,
+  "selected_source": "assets/pet-style-v5-colors/decoded/sulky.png",
+  "selected_prompt": "assets/pet-style-v5-colors/prompts/sulky.txt",
+  "mode": "built-in image_gen edit, transparent_background=false",
+  "color_verdict": "improved",
+  "color_observation": "Full source visually inspected. Rosy hair tint and warm highlights are subdued toward silver/lilac, with muted jade/teal, neutral ivory and quiet gold. All eight frames appear under the same soft illumination. Only original sleepy and approved sleepy row were color masters.",
+  "reference_paths": ["assets/pet-style-v4/reference-sleepy.png", "assets/pet-style-v4/qa/rows/sleepy/row-clean.png"],
+  "approximate_hair_median_saturation_before": 0.1480,
+  "approximate_hair_median_saturation_after": 0.1208,
+  "geometry_verdict": "visually_preserved_with_minor_generated_boundary_drift",
+  "geometry_observation": "Original eight sulk/blink/folded-arm/hand pose structures, expression shapes, linework, compact body scale, positions, composition, outfit and one low attached viewer-right tail remain visually intact. Canvas unchanged at 2172x724, eight component groups. Bounds drift at most 2px vertically and 1px horizontally; foreground mask IoU 0.976512. Not pixel-exact recoloring.",
+  "no_clipping_or_added_effects_observed": true,
+  "background_note": "Flat near-magenta generated chroma retained; byte-exact #FF00FF not asserted. No background-only retry.",
+  "qa_scope": "Full source review plus read-only component, geometry and descriptive color analysis. No v4/active/script mutations or v4 helper runs; parent handles adapted v5 extraction and shared GIF palette.",
+  "source_analysis": "assets/pet-style-v5-colors/qa/sulky/source-analysis.json"
+}

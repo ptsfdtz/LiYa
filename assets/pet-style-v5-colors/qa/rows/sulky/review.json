@@ -1,0 +1,142 @@
+{
+  "ok": true,
+  "frames_root": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sulky\\frames",
+  "states": [
+    "sulky"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rows": [
+    {
+      "state": "sulky",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sulky\\frames\\sulky\\00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18206,
+          "bbox": [
+            25,
+            6,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 29
+        },
+        {
+          "index": 1,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sulky\\frames\\sulky\\01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18404,
+          "bbox": [
+            23,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 16
+        },
+        {
+          "index": 2,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sulky\\frames\\sulky\\02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18597,
+          "bbox": [
+            21,
+            5,
+            171,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 25
+        },
+        {
+          "index": 3,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sulky\\frames\\sulky\\03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18350,
+          "bbox": [
+            21,
+            6,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 50
+        },
+        {
+          "index": 4,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sulky\\frames\\sulky\\04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18432,
+          "bbox": [
+            22,
+            5,
+            170,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 21
+        },
+        {
+          "index": 5,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sulky\\frames\\sulky\\05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18423,
+          "bbox": [
+            23,
+            5,
+            169,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sulky\\frames\\sulky\\06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18187,
+          "bbox": [
+            25,
+            6,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 17
+        },
+        {
+          "index": 7,
+          "file": "C:\\Users\\user\\Documents\\workspace\\projects\\LiYa\\assets\\pet-style-v5-colors\\qa\\rows\\sulky\\frames\\sulky\\07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 18059,
+          "bbox": [
+            25,
+            6,
+            167,
+            203
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 9
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "state": "relieved",
+  "operation": "built-in image_gen color-only edit",
+  "attempts": 1,
+  "source": "assets/pet-style-v4/decoded/relieved.png",
+  "candidate": "assets/pet-style-v5-colors/decoded/relieved.png",
+  "prompt": "assets/pet-style-v5-colors/prompts/relieved.txt",
+  "color_references": ["assets/pet-style-v4/reference-sleepy.png", "assets/pet-style-v4/qa/rows/sleepy/row-clean.png"],
+  "visual_checks": {
+    "frame_count": 8,
+    "palette": "Reduced rosy warmth, retaining luminous soft silver/lilac hair, muted jade/teal materials, ivory cloth, subdued gold and light neutral skin under consistent soft neutral illumination.",
+    "geometry": "All existing eight hand-to-chest, relax and blink poses visibly retained in original positions/order, same short round body, outfit details, fine lineart design and baseline. Both eyes fully closed in frames four and five; frame six retains half-lidded reopening.",
+    "tail": "Exactly one small low attached viewer-right tail per existing pose, same original tail variations.",
+    "effects": "No new art, breath clouds, symbols, shadows, guides or effects."
+  },
+  "measurements": {
+    "canvas": [2172, 724],
+    "foreground_mask_iou_vs_v4": 0.9747534908344915,
+    "mean_foreground_rgb_v4": [192.2971, 169.8032, 173.8436],
+    "mean_foreground_rgb_candidate": [192.1497, 172.9744, 174.7511],
+    "background_top_left_rgb": [240, 11, 243],
+    "background_bottom_right_rgb": [242, 32, 241]
+  },
+  "limitations": "Image generation edit preserves geometry visually rather than pixel-exactly; parent handles minor near-magenta variation and shared palette staging. No v4/active/script/server modifications.",
+  "accepted_for_parent_staging": true
+}

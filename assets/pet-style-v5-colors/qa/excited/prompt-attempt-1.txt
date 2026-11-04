@@ -1,0 +1,12 @@
+Use case: lighting-weather
+Asset type: color-only correction of an approved eight-frame animation sprite strip.
+
+EDIT IMAGE 1 ONLY. Change ONLY the character pigments/color grading and lighting to match the approved sleepy color master in Images 2 and 3. Treat this as a careful color correction, preserving the existing drawn artwork exactly. All EIGHT existing pose drawings, linework, facial expressions, eyelid/mouth shapes, hair curls, sleeve folds, outfit details, anatomy, silhouettes, positions, scales, spacing and jump arc must remain as in Image 1. Do not redraw, redesign or reposition anything. Preserve identical canvas composition, frame count and complete shapes.
+
+Input roles: Image 1 is the approved excited eight-pose strip being color corrected. Image 2 reference-sleepy.png is the sole ORIGINAL color master. Image 3 approved sleepy row-clean.png confirms that same palette under production rendering; use it only for color and illumination, never copy seated poses or anatomy.
+
+Match the color master's soft neutral silver-white hair with delicate cool lilac-gray shadows, muted jade/teal horns, tail and clothing, neutral ivory fabric, subdued antique-gold trim, naturally gentle skin and golden eyes. Remove the excessive pink/red saturation and warm peach/orange lighting of Image 1. Match the master's restrained saturation, soft value range, diffuse neutral illumination and painted material colors. Preserve local shading/detail; do not flatten, gray out or add a blanket blue tint. The clothes and horns/tail share the same muted jade family as sleepy. Keep ONE identical palette and ONE identical neutral illumination across ALL EIGHT frames, so the animation never pulses warm/cool or saturated/desaturated.
+
+Invariants: absolutely no change to any pose, line art, face shape, expressions, outfit design, geometry, tiny rounded compact body proportions, apparent size, jump height, baseline, character location or composition. Keep exactly one low attached viewer-right tail in every original pose, with no extra tail or detached parts. Keep eight separated complete characters in the current chronological sequence, same exact spacing and unclipped margins. Do not change the output dimensions or crop.
+
+BACKGROUND IS EXEMPT FROM COLOR CORRECTION: retain perfectly flat uniform pure magenta #FF00FF. No gradient, tint, texture or shading in the background. No text, labels, guides, boxes, symbols, props, shadows, glow, sparkles, motion lines or effects.

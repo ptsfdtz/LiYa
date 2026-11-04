@@ -1,0 +1,16 @@
+{
+  "state": "sad",
+  "visual_review": "pass",
+  "generation_attempts": 1,
+  "selected_source": "assets/pet-style-v4/decoded/sad.png",
+  "selected_prompt": "assets/pet-style-v4/prompts/sad.txt",
+  "method": "built-in image_gen with approved idle single-tail canonical, original sleepy style, approved sleepy row and invisible spacing guide; bundled deterministic extraction",
+  "inspected": ["full magenta source strip", "qa/rows/sad/row-clean.png", "qa/rows/sad/frames/sad/00.png", "qa/rows/sad/frames/sad/03.png", "qa/rows/sad/frames/sad/07.png"],
+  "frame_count": 8,
+  "unique_decoded_preview_frames": 8,
+  "identity": "Original tiny rounded chibi with short body/legs, silver-white curls, teal horns, golden eyes, daisy/ribbon and original ivory/teal/gold outfit retained.",
+  "motion": "Downcast eyes, soft tiny frown, hands joined near skirt, gentle shoulder lowering and head dip, full slow blink then eyes lift and head returns. Hair follows and single right-tail tip visibly lowers and recovers.",
+  "anatomy": "One attached low viewer-right tail, no left teal appendage, waist-root tail or detached parts.",
+  "spacing_and_edges": "Eight separated whole poses, stable foot baseline y=203 throughout, zero edge pixels. No clipping, text, guide marks, tears or effects.",
+  "pipeline": "qq_pet_frames.py sad completed; inspect_frames review ok=true with no errors or warnings; alpha preserved by despill."
+}

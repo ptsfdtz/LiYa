@@ -1,0 +1,26 @@
+{
+  "state": "surprised",
+  "operation": "built-in image_gen color-only edit",
+  "attempts": 1,
+  "source": "assets/pet-style-v4/decoded/surprised.png",
+  "candidate": "assets/pet-style-v5-colors/decoded/surprised.png",
+  "prompt": "assets/pet-style-v5-colors/prompts/surprised.txt",
+  "color_references": ["assets/pet-style-v4/reference-sleepy.png", "assets/pet-style-v4/qa/rows/sleepy/row-clean.png"],
+  "visual_checks": {
+    "frame_count": 8,
+    "palette": "Less rosy cast in hair and ivory fabric; cooler silver-lilac hair shadows, muted jade-teal accents and subdued gold, consistent soft illumination across all eight poses.",
+    "sequence": "Same calm, widened eyes/O mouth, attached raised hands, blink and relax sequence; all expressions/order visibly preserved.",
+    "geometry": "Same canvas 2172x724; original short round proportions, pose positions, lineart design, silhouette and stable shoe baseline visibly retained. No new art or guide marks.",
+    "tail": "Exactly one low attached viewer-right tail per pose.",
+    "effects": "No new effects or shadows."
+  },
+  "measurements": {
+    "foreground_mask_iou_vs_v4": 0.9710916245344045,
+    "mean_foreground_rgb_v4": [196.8058, 167.0004, 172.2264],
+    "mean_foreground_rgb_candidate": [193.3252, 171.4309, 173.3715],
+    "background_top_left_rgb": [243, 13, 244],
+    "background_bottom_right_rgb": [242, 33, 241]
+  },
+  "limitations": "Image generation edit preserves geometry visually rather than pixel-exactly. Background remains visibly magenta with small RGB variation inherited in kind from v4; parent handles extraction/chroma cleanup and shared GIF palette. No staged pipeline or active asset changes performed.",
+  "accepted_for_parent_staging": true
+}

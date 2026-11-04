@@ -1,0 +1,21 @@
+{
+  "state": "excited",
+  "task": "color-only sleepy-master palette correction",
+  "generation_attempts": 2,
+  "selected_source": "assets/pet-style-v5-colors/decoded/excited.png",
+  "selected_prompt": "assets/pet-style-v5-colors/prompts/excited.txt",
+  "mode": "built-in image_gen edit, transparent_background=false",
+  "color_verdict": "improved",
+  "color_observation": "Selected second candidate visibly reduces pink/red/orange cast: hair reads silver-white with subdued lilac-gray shadows, skin is more neutral, jade/teal, ivory and antique gold are quieter. Eight frames visually share consistent color and illumination.",
+  "references": [
+    "assets/pet-style-v4/reference-sleepy.png",
+    "assets/pet-style-v4/qa/rows/sleepy/row-clean.png"
+  ],
+  "geometry_verdict": "visually_preserved_with_minor_generated_boundary_drift",
+  "geometry_observation": "All eight original chronological pose structures, expression shapes, jump arc, composition and single low right-tail anatomy remain visually consistent. Canvas remains 2172x724. Source-frame bounds move by at most 3px vertically and 1px horizontally; foreground mask IoU is 0.962494. This is not a pixel-exact recolor.",
+  "component_groups": 8,
+  "no_clipping_or_effects_observed": true,
+  "background_note": "Flat near-magenta generated chroma visually retained; source-analysis records actual sampled RGB. Pixel-exact #FF00FF is not asserted.",
+  "qa_scope": "Full source visually inspected and bundled connected-component grouping invoked read-only. No v4 helper rerun or v4 mutations. Parent handles adapted v5 extraction, previews and shared GIF palette.",
+  "source_analysis": "assets/pet-style-v5-colors/qa/excited/source-analysis.json"
+}
