@@ -1,0 +1,25 @@
+{
+  "stage": "/opt/dragon-maibot/releases/liya-memory-20261104-173656",
+  "release": "liya-memory-20261104-173656",
+  "asset_stage": "/opt/dragon-maibot/releases/liya-single-play-20261104-172040",
+  "plugin_version": "1.5.0",
+  "expected_source": {
+    "plugin.py": "06b3a1be5ae1dde93a7da4a589fa855e312734e01e31c531e04c607192a3af70",
+    "state.py": "c4b55ee655684601e2ed0b04ffd9247cfe93cdaddc11ddff6d05f7dcdb8668dd",
+    "conversation.py": "0a9213aae233a2f06efef7535e2d31c1af002431f07ddf406a483ce7e268b7c7",
+    "personal.py": "e735ea0d10ba09cf14039fd783786dfd95a0ab81f97c25be685ef50c006e7562",
+    "experiences.py": "e6361eea4e8205c1424e710a65a10f6520248790b03de7a0e4490c293e2f3915",
+    "_manifest.json": "b659061888abddca88591fe5e2f4fe2401e7b230396eb0c2219534c407121ac7"
+  },
+  "source_sha256": {
+    "plugin.py": "06b3a1be5ae1dde93a7da4a589fa855e312734e01e31c531e04c607192a3af70",
+    "state.py": "c4b55ee655684601e2ed0b04ffd9247cfe93cdaddc11ddff6d05f7dcdb8668dd",
+    "briefing.py": "08e4539d9176172b66a4973c4babbc29a33ca6d2fdc3d4329cdca1dde140be66",
+    "web_research.py": "b688ae30100663fd05041833693928d12ced7a500e54ee14662de366595c7840",
+    "conversation.py": "262d270135cac16e18a341258017bcb4fe149f0dcd8e8846774669722dcc0ce3",
+    "personal.py": "e735ea0d10ba09cf14039fd783786dfd95a0ab81f97c25be685ef50c006e7562",
+    "activities.py": "b0017f54d2386202d2f23329d86bd1dfff61b92ee3546e290ccd2d583d8c5f0b",
+    "experiences.py": "e6361eea4e8205c1424e710a65a10f6520248790b03de7a0e4490c293e2f3915",
+    "_manifest.json": "b659061888abddca88591fe5e2f4fe2401e7b230396eb0c2219534c407121ac7"
+  }
+}

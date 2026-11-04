@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-11-04T17:31:09.268762+08:00",
+  "scope": "真实utils和replyer模型、临时数据库、合成消息；未向QQ发送，不等同于QQ端到端验收。",
+  "cases": [
+    {
+      "id": "meaningful_experience_saved",
+      "passed": true
+    },
+    {
+      "id": "restart_recall_and_emotion",
+      "passed": true,
+      "event": "success",
+      "evidence": [
+        "ep_ad385ceef858e1ff6de60160"
+      ]
+    },
+    {
+      "id": "grounded_reply",
+      "passed": true,
+      "text": "面试通过啦，恭喜！你说准备了整整两周，这份努力终于有了回响，值得好好庆祝一下呢。"
+    },
+    {
+      "id": "fiction_not_saved",
+      "passed": true
+    }
+  ],
+  "classifications": [
+    {
+      "latency_seconds": 4.17,
+      "classification": {
+        "event": "concern",
+        "intensity": 0.6,
+        "memorable": true,
+        "memory_ids": []
+      }
+    },
+    {
+      "latency_seconds": 3.9,
+      "classification": {
+        "event": "success",
+        "intensity": 0.9,
+        "memorable": true,
+        "memory_ids": [
+          "ep_ad385ceef858e1ff6de60160"
+        ]
+      }
+    },
+    {
+      "latency_seconds": 5.85,
+      "classification": {
+        "event": "neutral",
+        "intensity": 0,
+        "memorable": false,
+        "memory_ids": []
+      }
+    }
+  ],
+  "passed": 4,
+  "total": 4
+}

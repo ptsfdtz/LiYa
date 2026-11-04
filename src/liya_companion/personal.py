@@ -3,8 +3,9 @@ import asyncio
 
 
 class PersonalService:
-    def __init__(self, conversations, context):
+    def __init__(self, conversations, context, experiences=None):
         self.store, self.ctx = conversations, context
+        self.experiences = experiences
 
     async def execute(self, *, session, source_id, action, target='', value='', key=''):
         source = self.store.get_message(session, source_id)
@@ -40,13 +41,24 @@ class PersonalService:
                 return {'success':False,'error':'请先明确要删除哪项个人偏好。'}
             deleted=self.store.forget_preference(session,user,target)
             result={'success':deleted,'message':'已删除当前聊天中的这项相处偏好。' if deleted else '没有这项已保存偏好。'}
+        elif action in ('correct','forget') and target.startswith('ep_') and self.experiences:
+            result = self.experiences.modify(session,source_id,action,target,value)
         elif action in ('list', 'remember', 'correct', 'forget'):
             try:
                 async with asyncio.timeout(50):
                     result = await self.ctx.call_capability('liya.memory', timeout_ms=48000,
                         session=session, source_id=source_id, action=action, target=target, value=value)
             except (RuntimeError, TimeoutError, PermissionError, OSError):
+                if action == 'list' and self.experiences:
+                    experiences = self.experiences.list(session,user)
+                    return {'success': bool(experiences), 'facts_available': False,
+                            'experiences': experiences,
+                            'warning': '原生个人事实暂不可查询；仅返回共同经历。'}
                 return {'success': False, 'error': '个人记忆暂时无法处理，请稍后重试；没有确认操作成功。'}
+            if action == 'list' and self.experiences:
+                experiences = self.experiences.list(session,user)
+                result = {**result, 'facts_available': bool(result.get('success')),
+                          'experiences': experiences, 'success': bool(result.get('success') or experiences)}
             if action == 'list' and result.get('success'):
                 result = {**result, 'preferences': self.store.get_preferences(session, user),
                           'topics': self.store.get_topics(session, user)}

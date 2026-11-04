@@ -1,0 +1,19 @@
+{
+  "stage": "/opt/dragon-maibot/releases/liya-memory-20261104-173656",
+  "source_commit": "ddd3831230253faffca734c8190f70e99cb0a078",
+  "backup": "Backup created: dragon-20261104-173659.tar.gz verified_sqlite_databases= 5",
+  "database_before": {
+    "companion.sqlite3": {
+      "incoming": 77,
+      "relations": 7,
+      "deliveries": 6
+    },
+    "conversation.sqlite3": {
+      "messages": 50,
+      "preferences": 1,
+      "topics": 0,
+      "reminders": 3,
+      "games": 0
+    }
+  }
+}

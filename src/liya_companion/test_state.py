@@ -107,5 +107,17 @@ class StateTests(unittest.TestCase):
         self.assertEqual(state['intensity'],0.5)
         self.assertEqual(StateStore(old_path).get('g','a',1000),state)
 
+    def test_neutral_followup_preserves_feeling_without_resetting_decay(self):
+        self.store.observe('g','a','Alice','1','我面试通过了',True,now=1000)
+        self.store.appraise('g','a','1','success',0.8,now=1000,evidence=['ep_source'])
+        expected=self.store.get('g','a',1100)
+        self.store.observe('g','a','Alice','2','嗯嗯',True,now=1100)
+        actual=self.store.appraise('g','a','2','neutral',0.5,now=1100)
+        self.assertEqual(actual['event'],'success')
+        self.assertEqual(actual['updated'],1000)
+        self.assertEqual(actual['mood_source'],'1')
+        self.assertEqual(actual['valence'],expected['valence'])
+        self.assertEqual(StateStore(self.path).get('g','a',1100)['evidence'],'["ep_source"]')
+
 
 if __name__=='__main__': unittest.main()

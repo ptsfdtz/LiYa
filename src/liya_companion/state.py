@@ -69,6 +69,10 @@ class StateStore:
             columns = {row['name'] for row in db.execute('PRAGMA table_info(relations)')}
             if 'intensity' not in columns:
                 db.execute('ALTER TABLE relations ADD COLUMN intensity REAL NOT NULL DEFAULT 0.5')
+            if 'evidence' not in columns:
+                db.execute("ALTER TABLE relations ADD COLUMN evidence TEXT NOT NULL DEFAULT '[]'")
+            if 'mood_source' not in columns:
+                db.execute("ALTER TABLE relations ADD COLUMN mood_source TEXT NOT NULL DEFAULT ''")
             columns = {row['name'] for row in db.execute('PRAGMA table_info(incoming)')}
             if 'nickname' not in columns:
                 db.execute("ALTER TABLE incoming ADD COLUMN nickname TEXT NOT NULL DEFAULT ''")
@@ -149,7 +153,7 @@ class StateStore:
         return out
 
     def appraise(self, session: str, user: str, message_id: str, event: str,
-                 intensity: float, now: Optional[float] = None) -> Dict[str, Any]:
+                 intensity: float, now: Optional[float] = None, evidence=None) -> Dict[str, Any]:
         now = time.time() if now is None else now
         if event not in EVENTS or not math.isfinite(float(intensity)):
             raise ValueError('Invalid appraisal')
@@ -158,6 +162,11 @@ class StateStore:
             raise ValueError('Member has not been observed')
         if state['appraised'] == message_id:
             return state
+        # Casual chatter does not erase a feeling or restart its decay clock.
+        if event == 'neutral':
+            with self.connect() as db:
+                db.execute('UPDATE relations SET appraised=? WHERE session=? AND user=?', (message_id,session,user))
+            return self.get(session,user,now)
         target_v,target_a,_ = EVENTS[event]
         weight = 0.2+0.35*clamp(float(intensity),0,1)
         v=clamp(state['valence']*(1-weight)+target_v*weight,-0.6,0.8)
@@ -165,9 +174,16 @@ class StateStore:
         # Trust is deliberately slow and independent of obedience or flattery.
         trust=clamp(state['trust']+(0.005 if event=='correction' else 0),0.1,0.9)
         with self.connect() as db:
-            db.execute('UPDATE relations SET valence=?,arousal=?,trust=?,event=?,updated=?,appraised=?,intensity=? WHERE session=? AND user=?',
-                       (v,a,trust,event,now,message_id,clamp(float(intensity),0,1),session,user))
+            db.execute('UPDATE relations SET valence=?,arousal=?,trust=?,event=?,updated=?,appraised=?,intensity=?,evidence=?,mood_source=? WHERE session=? AND user=?',
+                       (v,a,trust,event,now,message_id,clamp(float(intensity),0,1),json.dumps((evidence or [])[:3]),message_id,session,user))
         return self.get(session,user,now)
+
+    def forget_basis(self, session: str, user: str, source_id: str, experience_id: str):
+        with self.connect() as db:
+            db.execute("""UPDATE relations SET event='neutral',valence=0,arousal=0.3,evidence='[]',mood_source=''
+                WHERE session=? AND user=? AND (mood_source=? OR EXISTS(
+                    SELECT 1 FROM json_each(relations.evidence) WHERE value=?))""",
+                (session,user,source_id,experience_id))
 
     def recently_sent(self, session: str, seconds: int) -> bool:
         with self.connect() as db:

@@ -1,0 +1,17 @@
+{
+  "objective": "共同经历长期记忆、回复前召回、结合上下文和记忆的持续情绪",
+  "status": "implemented_and_deployed",
+  "version": "1.5.0",
+  "local_tests_passed": 59,
+  "host_tests_passed": 42,
+  "real_model_cases_passed": 4,
+  "release": "liya-memory-20261104-173656",
+  "source_commit": "ddd3831230253faffca734c8190f70e99cb0a078",
+  "qq_end_to_end": "pending_member_initiated_messages",
+  "limitations": [
+    "情绪为角色状态模拟",
+    "词语召回不保证同义改写命中",
+    "6秒分类超时当轮不写入经历",
+    "经历删除不等同删除原生聊天、事实、公共摘要或备份"
+  ]
+}

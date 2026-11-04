@@ -206,7 +206,16 @@ class ConversationStore:
             rows = db.execute('''SELECT result FROM operations
                 WHERE session=? AND request_id=? AND kind LIKE 'tool-result:%'
                 ORDER BY json_extract(result,'$.recorded_at') LIMIT 20''', (session, source_id)).fetchall()
-        return [json.loads(row[0]) for row in rows]
+            hidden = set()
+            if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='experiences'").fetchone():
+                hidden = {r[0] for r in db.execute("SELECT id FROM experiences WHERE session=? AND status!='active'", (session,))}
+        receipts = [json.loads(row[0]) for row in rows]
+        # A list followed by forget in the same turn must not resend the old quote.
+        for receipt in receipts:
+            result = receipt.get('result', {})
+            if isinstance(result.get('experiences'), list):
+                result['experiences'] = [e for e in result['experiences'] if e.get('id') not in hidden]
+        return receipts
 
     def finish_delivery(self, session, source_id, sent):
         with self.connect() as db:
@@ -220,19 +229,26 @@ class ConversationStore:
         with self.connect() as db:
             rows = db.execute('''SELECT * FROM messages WHERE session=? AND received<=?
                 ORDER BY received DESC,rowid DESC LIMIT 12''', (session, anchor['received'])).fetchall()
+            hidden = set()
+            if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='experiences'").fetchone():
+                hidden = {r[0] for r in db.execute("SELECT source_id FROM experiences WHERE session=? AND status!='active'", (session,))}
             resolved = []
             for row in reversed(rows):
                 record = dict(row)
+                if record['id'] in hidden:
+                    record['text'] = '〔该来源经历已删除或更正，不用于回忆〕'
                 meta = json.loads(record.pop('metadata'))
                 targets = []
                 for target in meta['replies']:
                     found = db.execute('SELECT id,user,nickname,text FROM messages WHERE session=? AND id=?',
                                        (session, target)).fetchone()
-                    targets.append(dict(found) if found else {'id': target, 'unknown': True})
+                    targets.append(({**dict(found), 'text': '〔该来源经历已删除或更正〕'} if found['id'] in hidden else dict(found))
+                                   if found else {'id': target, 'unknown': True})
                 if meta['ref']:
                     found = db.execute('SELECT id,user,nickname,text FROM messages WHERE session=? AND json_extract(metadata,\'$.index\')=?',
                                        (session, meta['ref'])).fetchone()
-                    targets.append(dict(found) if found else {'ref': meta['ref'], 'unknown': True})
+                    targets.append(({**dict(found), 'text': '〔该来源经历已删除或更正〕'} if found['id'] in hidden else dict(found))
+                                   if found else {'ref': meta['ref'], 'unknown': True})
                 resolved.append({**record, 'mentions': meta['mentions'], 'quoted': targets, 'media': meta['media'],
                                  'picture': meta['picture'], 'emoji': meta['emoji']})
         return {'anchor_id': anchor['id'], 'author_id': anchor['user'], 'messages': resolved,
