@@ -1,0 +1,150 @@
+{
+  "checked_at": "2026-11-04T18:02:17.766129+08:00",
+  "release": "liya-private-20261104-175108",
+  "plugin_version": "1.5.1",
+  "source_commit": "ab3c88ebafd053b06ed6d5bdd627952ee0d2548b",
+  "backup": "dragon-20261104-175146.tar.gz",
+  "plugin_loaded": true,
+  "registered_tools": [
+    "liya_activity",
+    "liya_group_briefing",
+    "liya_personal",
+    "liya_expression"
+  ],
+  "memory": {
+    "success": true,
+    "enabled": true,
+    "memory_enabled": true,
+    "runtime_ready": true,
+    "retrieval_ready": true,
+    "degraded": false
+  },
+  "qq": {
+    "loaded": true,
+    "connected": true
+  },
+  "qq_identity_mapping": {
+    "mapping_matches": true,
+    "codec_matches": true
+  },
+  "private_chat": {
+    "adapter_matches": true,
+    "quotes_disabled": true,
+    "waiting_enabled": true,
+    "companion_prompt": true
+  },
+  "source_sha256": {
+    "plugin.py": "c0a54afac8192636e1fca464c4e53cf5cef01156cec82307b0399462e4c5199d",
+    "state.py": "ae2bc7d49f886ff6ffc0974c7cc7897c00e573bcb71a15dc2ede745e4a2b7d6a",
+    "_manifest.json": "24005e82927fdc4869287c34bcdebf6195a8b6f857127571fd93a93ea2d43b6e",
+    "briefing.py": "fb95e8c176acd06198275a917ea5781d292dbb92aedcacc25a3268c19eca5761",
+    "web_research.py": "bd733bd7eddb71b6c787bd8d44f8094698a8f61c9986dd8259a4734ef3d3f486",
+    "conversation.py": "cfb3cd1d659197623d0d6cee7d374874fb0500da5d53ee1da9b6d307a16ee5be",
+    "personal.py": "e0cc37dd9123c30bf92d7e494bd68d7f2ba98c11526d8f227349a358c45080a7",
+    "activities.py": "d5a7754a8645ea4570efa3c593d5d715d90ba9dba40e965f1bac7b8eeae62def",
+    "experiences.py": "e6361eea4e8205c1424e710a65a10f6520248790b03de7a0e4490c293e2f3915"
+  },
+  "all_sources_match": true,
+  "host_patches": {
+    "src/plugin_runtime/capabilities/registry.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "src/A_memorix/core/runtime/services/profile_admin_service.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "src/maisaka/memory/person_profile.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "src/maisaka/builtin_tool/query_person_profile.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "src/plugin_runtime/component_query.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "src/chat/debounce/controller.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "src/maisaka/builtin_tool/reply.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "src/maisaka/runtime.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "liya_memory.py": {
+      "matches": true,
+      "readonly": true
+    }
+  },
+  "assets_unchanged": {
+    "caring.gif": true,
+    "curious.gif": true,
+    "excited.gif": true,
+    "greeting.gif": true,
+    "happy.gif": true,
+    "idle.gif": true,
+    "liya-nine-states.gif": true,
+    "sleepy.gif": true,
+    "sulky.gif": true,
+    "thinking.gif": true,
+    "idle.png": true,
+    "happy.png": true,
+    "curious.png": true,
+    "thinking.png": true,
+    "sulky.png": true,
+    "caring.png": true,
+    "greeting.png": true,
+    "sleepy.png": true,
+    "excited.png": true,
+    "determined.gif": true,
+    "determined.png": true,
+    "liya-fifteen-states.gif": true,
+    "liya-new-emotions.gif": true,
+    "relieved.gif": true,
+    "relieved.png": true,
+    "sad.gif": true,
+    "sad.png": true,
+    "shy.gif": true,
+    "shy.png": true,
+    "surprised.gif": true,
+    "surprised.png": true,
+    "worried.gif": true,
+    "worried.png": true
+  },
+  "asset_release": null,
+  "assets_match_release": {},
+  "database": {
+    "companion.sqlite3": {
+      "integrity": "ok",
+      "counts": {
+        "incoming": 81,
+        "relations": 7,
+        "deliveries": 6
+      }
+    },
+    "conversation.sqlite3": {
+      "integrity": "ok",
+      "counts": {
+        "messages": 54,
+        "preferences": 1,
+        "topics": 0,
+        "reminders": 3,
+        "games": 0
+      }
+    }
+  },
+  "database_before": {
+    "incoming": 78,
+    "relations": 7,
+    "deliveries": 6
+  },
+  "qq_end_to_end_test": "pending_member_initiated_messages",
+  "qq_proactive_reminder_delivery": "not_yet_verified"
+}

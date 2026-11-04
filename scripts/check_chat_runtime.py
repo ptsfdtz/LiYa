@@ -30,7 +30,7 @@ def main():
                 if (folder=='deploy/config' and '.example.' in path.name) or (
                     folder!='deploy/config' and path.suffix in ('.py','.json','.gif','.png')):
                     archive.add(path,arcname=path.relative_to(root).as_posix())
-        for filename in ('scripts/evaluate_chat_models.py','scripts/collect_qq_acceptance.py','design/liya-personality-v2.json','tests/fixtures/error-screen.png'):
+        for filename in ('scripts/evaluate_chat_models.py','scripts/evaluate_private_companion.py','scripts/collect_qq_acceptance.py','design/liya-personality-v2.json','tests/fixtures/error-screen.png'):
             path=root/filename
             if path.is_file(): archive.add(path,arcname=filename)
     with tempfile.TemporaryDirectory() as temporary:

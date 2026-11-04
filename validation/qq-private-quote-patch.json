@@ -1,0 +1,5 @@
+{
+  "original": "cb0fbd76340023adada609aa51f5cf68c335cbd86856f4ba07aea775d387671a",
+  "patched": "07b1165b3747760edf844f97b8520d6563f1a8d4e1c896d2a72bd2619e693162",
+  "reason": "In C2C, passive reply_to is a send credential, not a request for a visible quote. Explicit reply segments remain supported."
+}

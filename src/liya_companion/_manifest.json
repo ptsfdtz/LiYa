@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "id": "local.liya-companion",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "name": "璃芽·陪伴人格",
   "description": "按聊天保存关系与心情，发送动态表情，按需整理群聊简报，并引导回复模型联网核实和引用来源。",
   "author": {"name": "Codex (local deployment)", "url": "https://openai.com/codex/"},

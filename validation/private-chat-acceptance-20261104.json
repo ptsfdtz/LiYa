@@ -1,0 +1,73 @@
+{
+  "messages": [
+    {
+      "source_fingerprint": "d33e78aacab44d16",
+      "received": 1793786509.780615,
+      "private": true,
+      "operations": []
+    },
+    {
+      "source_fingerprint": "d0cc01defb104b7a",
+      "received": 1793786580.3561692,
+      "private": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "at": "11-04 18:01:49",
+      "event": "私聊等待本轮说完",
+      "wait_rule": "私聊等待本轮说完：静默 inf 秒；续发重新计时"
+    },
+    {
+      "at": "11-04 18:03:00",
+      "event": "私聊等待本轮说完",
+      "wait_rule": "私聊等待本轮说完：静默 1.5 秒；续发重新计时"
+    },
+    {
+      "at": "11-04 18:03:17",
+      "event": "回复生成完成",
+      "wait_rule": null
+    },
+    {
+      "at": "11-04 18:03:24",
+      "event": "Planner 已结束本轮思考",
+      "wait_rule": null
+    }
+  ],
+  "seconds_between_messages": 70.57555413246155,
+  "checked_at": "2026-11-04T18:06:33.552721+08:00",
+  "plugin_version": "1.5.1",
+  "source_commit": "ab3c88ebafd053b06ed6d5bdd627952ee0d2548b",
+  "scope": "Authorized synthetic private desktop QQ test. Only source fingerprints and synthetic test outcomes retained.",
+  "automatic_checks": {
+    "local_tests_passed": 59,
+    "host_tests_passed": 49,
+    "real_model_cases_passed": 5
+  },
+  "ui_review": {
+    "held_while_user_explicitly_unfinished": true,
+    "only_one_reply_after_completion": true,
+    "visible_quote_box": false,
+    "unnecessary_question": false,
+    "actual_reply": "上班没劲，想到周末又有点开心，这两样不冲突呀。我这会儿挺平静，跟你安静聊几句也开心。",
+    "draft_empty": true
+  },
+  "earlier_attempt": {
+    "marker": "151A",
+    "messages_gap_seconds": 28.35,
+    "within_default_private_burst_window": false,
+    "quote_box_visible_before_adapter_patch": true,
+    "accepted_as_batch_test": false
+  },
+  "limitations": [
+    "Normal completion is inferred from message content, silence and Planner judgment; QQ does not expose unsent typing content.",
+    "The normal 7-second private burst window and suppression of a superseded in-flight body were checked in isolated Host tests; the live test explicitly said to wait and then confirmed completion.",
+    "The 5 real-model cases test conversation style and waiting. They do not replace reminder-tool acceptance."
+  ]
+}

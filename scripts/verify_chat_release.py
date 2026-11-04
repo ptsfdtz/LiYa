@@ -76,12 +76,19 @@ if qq:
         elif isinstance(value,list):
             for item in value: yield from texts(item)
     qq_status['connected']=any('已连接' in text for text in texts(widgets))
+private_quote={}
+if record.get('qq_private_quote_patch'):
+    private_quote={'adapter_matches':hashlib.sha256((root/'plugins/qq_official_adapter/plugin.py').read_bytes()).hexdigest()==record['qq_private_quote_patch']['patched']}
+    safe_config=json.loads(subprocess.check_output(['docker','exec','dragon-maibot','/MaiMBot/.venv/bin/python','-c',
+        'import json,tomllib;from pathlib import Path;d=tomllib.loads(Path("/MaiMBot/config/bot_config.toml").read_text());print(json.dumps({"quotes_disabled":d["chat"]["reply_style"]["private_quote_frequency"]=="never","waiting_enabled":d["chat"]["reply_timing"]["private_message_debounce_mode"]!="off","companion_prompt": "陪伴型伴侣" in d["chat"]["reply_style"]["private_chat_prompts"]}))'],text=True))
+    private_quote.update(safe_config)
 report={'checked_at':datetime.now(timezone(timedelta(hours=8))).isoformat(),
     'release':record['release'],'plugin_version':json.loads((root/'plugins/liya_companion/_manifest.json').read_text())['version'],
     'source_commit':subprocess.check_output(['git','-C',str(root/'plugins/liya_companion'),'rev-parse','HEAD'],text=True).strip(),
     'backup':backup,'plugin_loaded':bool(own.get('loaded')),
     'registered_tools':[c['name'] for c in components['components']], 'memory':runtime,'qq':qq_status,
     'qq_identity_mapping':qq_identity,
+    'private_chat':private_quote,
     'source_sha256':source,'all_sources_match':source==record['source_sha256'],'host_patches':host,
     'assets_unchanged':asset_status,'asset_release':asset_stage,'assets_match_release':asset_release_status,
     'database':data,'database_before':record['database_before'],
@@ -92,6 +99,7 @@ assert all(item['matches'] and item['readonly'] for item in host.values())
 assert all(asset_release_status.values()) if asset_record else all(asset_status.values())
 assert all(item['integrity']=='ok' for item in data.values())
 assert not qq_identity or all(qq_identity.values())
+assert not private_quote or all(private_quote.values())
 (stage/'verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(report,ensure_ascii=False))
 '''.replace('ASSET_STAGE',repr(preflight.get('asset_stage'))).replace('STAGE',repr(stage))

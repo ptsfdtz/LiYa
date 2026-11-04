@@ -159,4 +159,26 @@ class ConversationHookTests(unittest.IsolatedAsyncioTestCase):
             self.assertNotIn('stream_id',names)
 
 
+    async def test_private_supplement_cancels_inflight_body_and_next_reply_covers_both(self):
+        async def incoming(mid,text):
+            return await self.plugin.receive(message={'session_id':'private','message_id':mid,
+                'processed_plain_text':text,'message_info':{'user_info':{'user_id':'a'}}})
+        await incoming('p1','今天摸鱼很久，什么都不想干')
+        await self.plugin.planner(session_id='private')
+        await self.plugin.postprocess(session_id='private',reply_message_id='p1',response='旧回复')
+        await incoming('p2','你今天怎么样')
+        old={'session_id':'private','raw_message':[{'type':'text','data':'旧回复'}]}
+        self.assertEqual((await self.plugin.before_send(message=old))['action'],'abort')
+        await self.plugin.planner(session_id='private')
+        result=await self.plugin.reply(session_id='private',reply_message_id='p2')
+        prompt=result['modified_kwargs']['extra_prompt']
+        self.assertIn('今天摸鱼很久',prompt)
+        self.assertIn('你今天怎么样',prompt)
+        self.assertIn('陪伴型伴侣',prompt)
+        await self.plugin.postprocess(session_id='private',reply_message_id='p2',response='新的完整回复')
+        new={'session_id':'private','raw_message':[{'type':'text','data':'新的完整回复'}]}
+        self.assertEqual((await self.plugin.before_send(message=new))['action'],'continue')
+        self.assertEqual((await self.plugin.before_send(message=new))['action'],'abort')
+
+
 if __name__ == '__main__': unittest.main()

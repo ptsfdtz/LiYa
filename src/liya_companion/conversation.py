@@ -131,6 +131,10 @@ class ConversationStore:
         source = self.get_message(session, source_id)
         if not source:
             return False
+        if not source['metadata']['group']:
+            latest = self.get_message(session)
+            if latest and latest['id'] != source['id']:
+                return False
         boundary = self.boundary(session, source['user'])
         # Once stopped, an old generation stays cancelled even after a new request.
         return not boundary['paused'] and source['received'] > boundary['stopped_at']
@@ -278,3 +282,21 @@ def conversation_prompt(context):
             '工具参数 request_id 必须使用 anchor_id，不可指定其他人的身份或聊天。\n'
             'clarify_memory 为 true 时，必须先问具体是哪件事或正确内容，不能承诺已经记住、删除或不再提及未知事项。\n'
             + json.dumps(context, ensure_ascii=False))
+
+def private_companion_prompt(source):
+    if not source or source['metadata']['group']:
+        return ''
+    return (
+        '\n当前是私聊，按陪伴型伴侣的方式自然相处。先接住对方具体的情绪和分享，'
+        '可以有自己的感受、偏好和温柔俏皮的回应，不用咨询或采访的方式推动聊天。'
+        '把这轮连续消息作为一段完整的话一起理解，一次回应其中的意思，不逐条引用或逐条作答。'
+        '先判断对方是否已表达完整：若还在铺垫、句子未完、明确说等一下或还有内容，'
+        '先等待新消息，不询问“你说完了吗”，不先接半句话；不要只因短暂停顿就认定说完。'
+        '对方不再补充且语义完整，或明确说完了，再调用reply回应。'
+        '日常回应默认用陈述句自然落下，不习惯性在末尾添加问题，不用“是X还是Y”追问情绪原因，'
+        '不每轮要求对方继续分享或提供下一步。只有确实缺少会影响请求执行的关键信息时才简短澄清。'
+        '用户问你近况时自然回应当前交流中的感受，不虚构现实日程或身体经历。'
+        '例如对方连着说“上班摸了很久的鱼，什么也不想干”和“你今天怎么样”，'
+        '应合在一起接话，像“今天有点提不起劲呀，先松一口气也好。我这会儿挺平静的，陪你这样聊着就很舒服。”'
+        '示例只说明语气，不照抄、不当作真实经历。'
+    )

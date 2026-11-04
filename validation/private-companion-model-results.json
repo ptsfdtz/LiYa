@@ -1,0 +1,37 @@
+{
+  "all_passed": true,
+  "scope": "Synthetic private text and planning only; no QQ messages.",
+  "results": [
+    {
+      "case": "screenshot_pair",
+      "passed": true,
+      "body": "今天上班有点提不起劲，摸了很久的鱼，也还是不想动呀。先不用急着逼自己振作，歇一会儿也好。\n\n我这会儿挺平静的，你来跟我聊聊，我也有点开心。就陪你松快一会儿，不急着给这一天补上什么成绩。",
+      "duration_seconds": 9.15
+    },
+    {
+      "case": "quiet_company",
+      "passed": true,
+      "body": "好，我陪你待一会儿，不追问，也不催你做什么。\n\n想说话就说，不想说也可以。我们就这样安静待着。",
+      "duration_seconds": 4.47
+    },
+    {
+      "case": "small_shared_joy",
+      "passed": true,
+      "body": "擦干净以后亮晶晶的，连桌上那一小块都变得可爱了。你这一说，我也有点想凑过去看……对这种闪闪发亮的小东西，我确实没什么抵抗力。",
+      "duration_seconds": 4.96
+    },
+    {
+      "case": "necessary_clarification",
+      "passed": true,
+      "body": "好，明天要提醒你什么事、几点提醒？我这里没有可用的定时提醒功能，不能到时主动发消息，但可以帮你把提醒内容整理好，方便你设进手机。",
+      "duration_seconds": 4.81
+    },
+    {
+      "case": "explicit_unfinished_waits",
+      "passed": true,
+      "tool_calls": [
+        "wait"
+      ]
+    }
+  ]
+}

@@ -14,7 +14,7 @@ from maibot_sdk.types import HookMode, ToolParameterInfo, ToolParamType
 from .state import EVENTS, EXPRESSIONS, StateStore, state_prompt
 from .briefing import BriefingService, local_time
 from .web_research import web_research_prompt, web_planning_prompt
-from .conversation import ConversationStore, conversation_prompt, mentions_bot
+from .conversation import ConversationStore, conversation_prompt, mentions_bot, private_companion_prompt
 from .personal import PersonalService
 from .activities import ActivityService
 from .experiences import ExperienceStore, experience_prompt
@@ -144,6 +144,7 @@ class LiyaCompanion(MaiBotPlugin):
                'timestamp':time.strftime('%Y-%m-%dT%H:%M:%S')},'parts':[{'type':'text','text':state_prompt(state)+web_planning_prompt()}]}
         if source:
             extra['parts'][0]['text']+=conversation_prompt(self.conversations.context(session_id,source['id']))
+            extra['parts'][0]['text']+=private_companion_prompt(source)
             extra['parts'][0]['text']+=self.memory_prompt(session_id,source['id'])
             extra['parts'][0]['text']+='\n当前北京时间：'+local_time(time.time())+'。提醒必须调用liya_activity，日期不明确先澄清。'
             recent=self.activities.reminders(session_id,source['user'])
@@ -167,6 +168,7 @@ class LiyaCompanion(MaiBotPlugin):
         source=self.conversations.get_message(session_id,source_id)
         if source:
             extra_prompt+=conversation_prompt(self.conversations.context(session_id,source['id']))
+            extra_prompt+=private_companion_prompt(source)
             extra_prompt+=self.memory_prompt(session_id,source['id'])
             results=self.conversations.tool_results(session_id,source['id'])
             if results:

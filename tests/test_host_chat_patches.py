@@ -41,7 +41,7 @@ class HostChatPatchTests(unittest.IsolatedAsyncioTestCase):
         with TemporaryDirectory() as temporary:
             output=Path(temporary)
             hashes=builder.build(Path('/MaiMBot'),output)
-            self.assertEqual(len(hashes),7)
+            self.assertEqual(len(hashes),8)
             module=load('src.plugin_runtime.liya_component_query_validation',output/'src/plugin_runtime/component_query.py')
             context=SimpleNamespace(stream_id='real-chat',session_id='real-chat',group_id='real-group',
                                     user_id='real-user',platform='qq',metadata={})

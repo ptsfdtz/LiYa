@@ -15,6 +15,7 @@ ORIGINALS = {
     'src/plugin_runtime/component_query.py': 'a2cd90eadc2a5d9fae0d7626688992be1e91c4f802689363a591e19bb2a3d9d2',
     'src/chat/debounce/controller.py': '1f21013d9dd779e34e6c398b792f87eb833f57f4df1d54416f81c45df968a9fb',
     'src/maisaka/builtin_tool/reply.py': '3a78fb8756f027163f9b83b91a60519f7eba8c7ef1f4d2c724a4cfdbd7216251',
+    'src/maisaka/runtime.py': '000e4b62eabc98dc39a59f7ada0d7b5a2b1e103dd7d174ef228fe6e42f76fe4b',
 }
 PATCHED = {
     'src/plugin_runtime/capabilities/registry.py': 'd3911b0e049f2e48a6384088acc733329e0717501a15a26236d28ff9c755446c',
@@ -22,8 +23,9 @@ PATCHED = {
     'src/maisaka/memory/person_profile.py': '9114253f639950787aa58d06344b9c0ffa01c2548d8944fae83196b60906afce',
     'src/maisaka/builtin_tool/query_person_profile.py': '736151387007089c547334598fed443643811c03e3d88fb33a0cdde137309503',
     'src/plugin_runtime/component_query.py': '166d44f79409b8c962ded34ed5e3e9651a83d4313af9bb93ca06c5ee2f8abcb6',
-    'src/chat/debounce/controller.py': 'b12afb458f45d29840cfbaf90ca0a4226c76fdc4ab0dad19569a42da893c2a86',
+    'src/chat/debounce/controller.py': '3181c820ab1cc6e3886682fc716baf19d3f8ca8ef59f2717b7dbed96d160bdc6',
     'src/maisaka/builtin_tool/reply.py': 'c3b7478da510de3f44ca86912148238117e98faf8caa0200e1ae8edb0be8f134',
+    'src/maisaka/runtime.py': '002381843ff34ddd347cf8db90dded7299d14e774d971212a532887a9cc75532',
 }
 
 
@@ -44,6 +46,11 @@ def build(source_root, output):
             target.write_bytes(raw)
             hashes[name]={'original':expected,'patched':digest}
             continue
+        if name.endswith('debounce/controller.py') and digest == 'b12afb458f45d29840cfbaf90ca0a4226c76fdc4ab0dad19569a42da893c2a86':
+            raw = raw.replace(b'MENTION_LIMIT = 4.0', b'MENTION_LIMIT = 1.0')
+            raw = raw.replace('8 秒/4 秒上限'.encode(), '8 秒/1 秒上限'.encode())
+            raw = raw.replace('受@或提及 4 秒上限限制'.encode(), '受@或提及 1 秒上限限制'.encode())
+            digest = hashlib.sha256(raw).hexdigest()
         if digest != expected:
             raise ValueError('Uninspected Host source; refusing to patch '+name)
         text = raw.decode('utf-8-sig')
@@ -86,6 +93,24 @@ def build(source_root, output):
             text = replace(text, 'MENTION_LIMIT = 1.0', 'MENTION_LIMIT = 4.0')
             text = replace(text, '8 秒/1 秒上限', '8 秒/4 秒上限')
             text = replace(text, '受@或提及 1 秒上限限制', '受@或提及 4 秒上限限制')
+            helper = Path(__file__).with_name('private_turn.py').read_text(encoding='utf-8')
+            text = replace(text, 'class MessageDebouncer:', helper+'\n\nclass MessageDebouncer:')
+            text = replace(text, '        mode: DebounceMode = "natural",\n',
+                '        mode: DebounceMode = "natural",\n        is_private: bool = False,\n        text: str = "",\n')
+            text = replace(text, '        new_batch = self._first is None\n',
+                '        if is_private:\n'
+                '            self._first = arrival if self._first is None else self._first\n'
+                '            self._urgent = None\n'
+                '            wait = private_quiet_seconds(text)\n'
+                '            self._deadline = arrival + wait\n'
+                '            self.changed.set()\n'
+                '            return f"私聊等待本轮说完：静默 {wait:g} 秒；续发重新计时"\n'
+                '        new_batch = self._first is None\n')
+        elif name.endswith('maisaka/runtime.py'):
+            text = replace(text, '            at_bot=message.is_at or message.is_mentioned,\n',
+                '            at_bot=message.is_at or message.is_mentioned,\n'
+                '            is_private=not self.chat_stream.is_group_session,\n'
+                '            text=message.processed_plain_text,\n')
         elif name.endswith('builtin_tool/reply.py'):
             fallback = ('        from src.plugin_runtime.capabilities.liya_memory import send_reply_failure\n'
                         '        return await send_reply_failure(tool_ctx, target_message, reply_tool_args)')
