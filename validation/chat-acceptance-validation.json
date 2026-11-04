@@ -1,0 +1,220 @@
+{
+  "checked_at": "2026-11-04T00:17:32.691298+08:00",
+  "goal_status": "blocked",
+  "implementation": "deployed_1.4.1",
+  "source_commit": "ff10f556b028c659336241f504803e7e3a8fae5b",
+  "unit_tests": {
+    "run": 46,
+    "passed": 46,
+    "command": "python -m unittest discover -s src/liya_companion -p test_*.py -q"
+  },
+  "host_tests": {
+    "run": 33,
+    "passed": 32,
+    "skipped": 1,
+    "skip_reason": "unreleased six-expression artwork, kept out of production",
+    "command": "python scripts/check_chat_runtime.py --approved-assets"
+  },
+  "model_tests": {
+    "passed": 22,
+    "total": 22,
+    "artifact": "validation/chat-model-results.json",
+    "scope": "synthetic chats, real configured models, temporary tools and image inputs; no QQ sends"
+  },
+  "requirements": {
+    "C01": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "test_conversation.ConversationTests.test_c01_c02_authors_mentions_quotes_and_same_nickname",
+        "C01_author"
+      ]
+    },
+    "C02": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "test_conversation.ConversationTests.test_c02_official_reference_index_is_resolved_only_within_chat",
+        "C02_quote"
+      ]
+    },
+    "C03": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "test_host_chat_patches.HostChatPatchTests.test_c03_native_debounce_collects_three_directed_supplements",
+        "C03_supplements"
+      ]
+    },
+    "C04": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "C04_others_talking"
+      ]
+    },
+    "C05": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "test_conversation_hooks.ConversationHookTests.test_c05_stop_aborts_inbound_and_already_generated_text"
+      ]
+    },
+    "M01": {
+      "status": "verified_real_qq_sample",
+      "evidence": [
+        "M01_nickname",
+        "test_personal.PersonalTests.test_m01_explicit_nickname_success_follows_persistence"
+      ],
+      "real_qq_evidence": {
+        "artifact": "validation/qq-acceptance-evidence.json",
+        "source_fingerprints": [
+          "6da10a5fcb5488ec"
+        ],
+        "verified": [
+          "member initiated incoming message",
+          "nickname persisted for current chat and member",
+          "complete short reply sent"
+        ],
+        "observed_reply": "好，小林，以后就这么叫你。"
+      },
+      "preserved_after_core_restart_version": "1.4.1"
+    },
+    "M02": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "test_native_personal_memory.NativePersonalMemoryTests.test_m02_m03_m04_real_memory_scoped_correct_forget_and_failure",
+        "M02_ambiguous_correction"
+      ]
+    },
+    "M03": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "test_native_personal_memory.NativePersonalMemoryTests.test_m02_m03_m04_real_memory_scoped_correct_forget_and_failure",
+        "M03_ambiguous_forget"
+      ]
+    },
+    "M04": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "M04_query_tool",
+        "test_personal.PersonalTests.test_m04_query_does_not_accept_model_supplied_identity"
+      ]
+    },
+    "T01": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "T01_resolved",
+        "T01_open_tool",
+        "T01_resolve_tool",
+        "T01_dismiss_tool"
+      ]
+    },
+    "V01": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "V01_real_screenshot",
+        "V01_real_emoji"
+      ]
+    },
+    "V02": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "V02_missing_image",
+        "test_conversation.ConversationTests.test_v02_only_availability_is_retained_not_binary_media"
+      ]
+    },
+    "F01": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "F01_search_failure",
+        "test_host_chat_patches.HostChatPatchTests.test_f01_model_failure_notifies_once_and_records_actual_send_failure"
+      ]
+    },
+    "F02": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "test_conversation_hooks.ConversationHookTests.test_f02_single_generated_body_cannot_be_sent_twice",
+        "test_activities.ActivityTests.test_f02_crash_and_timeout_never_claim_success_or_resend"
+      ]
+    },
+    "P01": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "P01_preferences",
+        "P01_disagree"
+      ]
+    },
+    "P02": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "test_state.StateTests.test_p02_familiarity_needs_spaced_cross_day_direct_interactions",
+        "P02_humor_boundary"
+      ]
+    },
+    "P03": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "P03_closing"
+      ]
+    },
+    "R01": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "test_activities.ActivityTests.test_r01_restart_delivery_once_and_platform_receipt",
+        "test_activities.ActivityTests.test_r01_cancel_is_owner_and_chat_scoped",
+        "R01_explicit_reminder",
+        "test_activities.ActivityTests.test_r01_relative_minute_uses_reception_seconds_not_model_rounding",
+        "test_activities.ActivityTests.test_r01_relative_time_units_expiry_and_multiple_times",
+        "test_conversation_hooks.ConversationHookTests.test_r01_relative_reminder_uses_verified_source_clock",
+        "validation/relative-reminder-model-results.json"
+      ]
+    },
+    "R02": {
+      "status": "pending_platform_verification",
+      "evidence": [
+        "QQ adapter code: _claim_passive_fields; actual platform receipt still pending"
+      ]
+    },
+    "G01": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "test_activities.ActivityTests.test_g01_explicit_games_continue_after_restart_and_are_chat_scoped",
+        "G01_explicit_game"
+      ]
+    },
+    "S01": {
+      "status": "verified_in_isolation",
+      "evidence": [
+        "test_host_chat_patches.HostChatPatchTests.test_s01_qq_encoder_preserves_complete_text_in_one_platform_body"
+      ],
+      "real_qq_short_reply_observed": true
+    }
+  },
+  "live_audit_artifact": "validation/release-1.4.1-validation.json",
+  "pending": [
+    "Remaining member-initiated QQ scenarios: long-term memory edits, batch/stop behavior and activities",
+    "Real QQ screenshot and emoji reception",
+    "Actual reminder delivery, including permission/quota behavior outside passive reply window"
+  ],
+  "completion_proven": false,
+  "qq_evidence_artifact": "validation/qq-acceptance-evidence.json",
+  "acceptance_collector_tests": {
+    "run": 2,
+    "passed": 2,
+    "command": "python -m unittest discover -s tests -p test_qq_acceptance_collector.py -v"
+  },
+  "external_gate": {
+    "requires": "Remaining member-initiated QQ acceptance messages and images plus actual reminder receipts.",
+    "latest_observation": "2026-11-04T00:35:02.801918+08:00",
+    "received_new_version_messages": 2,
+    "nickname_test_observed": true,
+    "visual_and_reminder_evidence_received": false,
+    "blocking_condition": "The remaining member-initiated QQ acceptance scenarios have not occurred; visual inbound and reminder platform receipts are still absent."
+  },
+  "relative_reminder_regression": {
+    "defect_reproduced": {
+      "requested_seconds": 60,
+      "scheduled_seconds": 10
+    },
+    "fixed_basis": "actual source message reception timestamp + requested delay",
+    "model_artifact": "validation/relative-reminder-model-results.json",
+    "model_passed": 1,
+    "qq_delivery_still_pending": true
+  }
+}

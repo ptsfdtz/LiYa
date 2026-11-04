@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-11-04T00:35:02.801918+08:00",
+  "since": 0.0,
+  "received_message_count": 2,
+  "latest_received": 1793723000.3998606,
+  "nickname_test_evidence": [
+    {
+      "source_fingerprint": "4d7a67bd4c34560c",
+      "preference_currently_saved": false,
+      "reply_status": "unobserved"
+    },
+    {
+      "source_fingerprint": "6da10a5fcb5488ec",
+      "preference_currently_saved": true,
+      "reply_status": "sent"
+    }
+  ],
+  "visual_inbound_evidence": [],
+  "reminder_test_evidence": [],
+  "completion_proven": false,
+  "scope": "Only reception, persistence and recorded send receipts. Visible answer quality, ownership and passive/active QQ delivery conditions still require review."
+}

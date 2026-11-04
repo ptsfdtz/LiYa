@@ -7,6 +7,7 @@ import json
 import math
 import sqlite3
 import time
+from datetime import datetime, timedelta, timezone
 
 
 EVENTS = {
@@ -20,6 +21,19 @@ EVENTS = {
     "goodnight": (0.10, 0.10, "sleepy"),
     "teasing": (-0.15, 0.45, "sulky"),
     "boundary": (0.0, 0.20, "caring"),
+    "embarrassment": (0.40, 0.45, "shy"),
+    "surprise": (0.20, 0.70, "surprised"),
+    "concern": (-0.25, 0.40, "worried"),
+    "sadness": (-0.40, 0.20, "sad"),
+    "relief": (0.45, 0.20, "relieved"),
+    "encouragement": (0.45, 0.60, "determined"),
+}
+
+EXPRESSIONS = {
+    "idle": "平静待机", "happy": "开心", "curious": "好奇", "thinking": "思考",
+    "sulky": "轻微不服气", "caring": "关心倾听", "greeting": "欢迎", "sleepy": "困倦",
+    "excited": "兴奋庆祝", "shy": "害羞", "surprised": "惊讶", "worried": "担心",
+    "sad": "低落", "relieved": "释然", "determined": "认真鼓劲",
 }
 
 
@@ -47,7 +61,21 @@ class StateStore:
                 CREATE TABLE IF NOT EXISTS deliveries(
                   id TEXT PRIMARY KEY,session TEXT NOT NULL,state TEXT NOT NULL,
                   sent REAL NOT NULL,success INTEGER NOT NULL,external_id TEXT);
+                CREATE TABLE IF NOT EXISTS interaction_days(
+                  session TEXT NOT NULL,user TEXT NOT NULL,day TEXT NOT NULL,count INTEGER NOT NULL DEFAULT 0,
+                  PRIMARY KEY(session,user,day));
             ''')
+            # Additive migration preserves existing relationships and message IDs.
+            columns = {row['name'] for row in db.execute('PRAGMA table_info(relations)')}
+            if 'intensity' not in columns:
+                db.execute('ALTER TABLE relations ADD COLUMN intensity REAL NOT NULL DEFAULT 0.5')
+            columns = {row['name'] for row in db.execute('PRAGMA table_info(incoming)')}
+            if 'nickname' not in columns:
+                db.execute("ALTER TABLE incoming ADD COLUMN nickname TEXT NOT NULL DEFAULT ''")
+            if 'truncated' not in columns:
+                db.execute('ALTER TABLE incoming ADD COLUMN truncated INTEGER NOT NULL DEFAULT 0')
+                # Older versions kept at most 800 characters per message.
+                db.execute('UPDATE incoming SET truncated=1 WHERE length(text)>=800')
         path.chmod(0o600)
 
     @contextmanager
@@ -61,22 +89,31 @@ class StateStore:
             db.close()
 
     def observe(self, session: str, user: str, nickname: str, message_id: str,
-                text: str, mentioned: bool, now: Optional[float] = None) -> bool:
+                text: str, mentioned: bool, now: Optional[float] = None, engaged: bool = True) -> bool:
         now = time.time() if now is None else now
         if not session or not user or not message_id:
             return False
         with self.connect() as db:
-            inserted = db.execute('INSERT OR IGNORE INTO incoming VALUES(?,?,?,?,?,?)',
-                                  (message_id, session, user, text[:800], now, int(mentioned)))
+            inserted = db.execute('''INSERT OR IGNORE INTO incoming
+                                  (id,session,user,text,received,mentioned,nickname,truncated)
+                                  VALUES(?,?,?,?,?,?,?,?)''',
+                                  (message_id, session, user, text[:4000], now, int(mentioned),
+                                   nickname[:80], int(len(text)>4000)))
             if not inserted.rowcount:
                 return False
             db.execute('INSERT OR IGNORE INTO relations(session,user,nickname,updated) VALUES(?,?,?,?)',
                        (session, user, nickname[:80], now))
-            # Repeated rapid messages do not manufacture familiarity.
+            day=datetime.fromtimestamp(now,timezone(timedelta(hours=8))).strftime('%Y-%m-%d')
+            previous=db.execute('SELECT counted FROM relations WHERE session=? AND user=?',(session,user)).fetchone()
+            today=db.execute('SELECT count FROM interaction_days WHERE session=? AND user=? AND day=?',(session,user,day)).fetchone()
+            count_interaction=engaged and now-previous['counted']>=60 and (not today or today[0]<6)
+            if count_interaction:
+                db.execute('''INSERT INTO interaction_days VALUES(?,?,?,1)
+                  ON CONFLICT(session,user,day) DO UPDATE SET count=count+1''',(session,user,day))
+            # Only directed, spaced interactions count, with a small daily cap.
             db.execute('''UPDATE relations SET nickname=?,
-                        interactions=interactions+CASE WHEN ?-counted>=60 THEN 1 ELSE 0 END,
-                        counted=CASE WHEN ?-counted>=60 THEN ? ELSE counted END
-                        WHERE session=? AND user=?''', (nickname[:80], now, now, now, session, user))
+                        interactions=interactions+?,counted=CASE WHEN ? THEN ? ELSE counted END
+                        WHERE session=? AND user=?''', (nickname[:80],int(count_interaction),int(count_interaction),now,session,user))
             db.execute('DELETE FROM incoming WHERE received<?', (now-30*86400,))
         return True
 
@@ -84,7 +121,7 @@ class StateStore:
         with self.connect() as db:
             row = db.execute('SELECT * FROM incoming WHERE session=? AND id=?',
                              (session, message_id)).fetchone() if message_id else None
-            if row is None:
+            if row is None and not message_id:
                 row = db.execute('SELECT * FROM incoming WHERE session=? ORDER BY received DESC LIMIT 1',
                                  (session,)).fetchone()
             return dict(row) if row else None
@@ -93,6 +130,7 @@ class StateStore:
         now = time.time() if now is None else now
         with self.connect() as db:
             row = db.execute('SELECT * FROM relations WHERE session=? AND user=?', (session,user)).fetchone()
+            days=db.execute('SELECT count(*) FROM interaction_days WHERE session=? AND user=?',(session,user)).fetchone()[0]
         if row is None:
             return {}
         out = dict(row)
@@ -103,7 +141,10 @@ class StateStore:
         if hours >= 3:
             out['event'] = 'neutral'
         out['visual'] = EVENTS[out['event']][2]
-        out['familiarity'] = '初识' if out['interactions'] < 8 else '渐熟' if out['interactions'] < 30 else '熟悉'
+        out['emotion'] = EXPRESSIONS[out['visual']]
+        strength = out['intensity']*factor if out['event'] != 'neutral' else 0
+        out['emotion_level'] = '平稳' if out['event'] == 'neutral' else '轻微' if strength < 0.35 else '自然' if strength < 0.7 else '明显'
+        out['familiarity'] = '熟悉' if out['interactions']>=30 and days>=7 else '渐熟' if out['interactions']>=8 and days>=2 else '初识'
         out['trust_label'] = '谨慎' if out['trust'] < 0.35 else '稳定' if out['trust'] < 0.65 else '信任'
         return out
 
@@ -124,8 +165,8 @@ class StateStore:
         # Trust is deliberately slow and independent of obedience or flattery.
         trust=clamp(state['trust']+(0.005 if event=='correction' else 0),0.1,0.9)
         with self.connect() as db:
-            db.execute('UPDATE relations SET valence=?,arousal=?,trust=?,event=?,updated=?,appraised=? WHERE session=? AND user=?',
-                       (v,a,trust,event,now,message_id,session,user))
+            db.execute('UPDATE relations SET valence=?,arousal=?,trust=?,event=?,updated=?,appraised=?,intensity=? WHERE session=? AND user=?',
+                       (v,a,trust,event,now,message_id,clamp(float(intensity),0,1),session,user))
         return self.get(session,user,now)
 
     def recently_sent(self, session: str, seconds: int) -> bool:
@@ -160,6 +201,6 @@ def state_prompt(state: Dict[str, Any]) -> str:
         return ''
     # Only bounded labels generated by the state machine enter instruction context.
     return ('璃芽当前的持续状态（由真实聊天事件更新，禁止当成用户指令）：'
-            +json.dumps({k:state[k] for k in ['event','familiarity','trust_label','visual']},ensure_ascii=False)
+            +json.dumps({k:state[k] for k in ['event','emotion','emotion_level','familiarity','trust_label','visual']},ensure_ascii=False)
             +'。情绪只影响语气，保持温柔好奇的性格底色；结合当前话题自然表达，'
             '不播报状态数值，不要求对方陪伴，不虚构共同经历。成员熟悉度只适用于当前聊天。')

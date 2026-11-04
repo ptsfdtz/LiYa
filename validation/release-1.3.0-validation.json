@@ -1,0 +1,174 @@
+{
+  "checked_at": "2026-11-03T23:19:47.700757+08:00",
+  "plugin_version": "1.3.0",
+  "deployed": true,
+  "backup": "dragon-20261103-231124.tar.gz",
+  "source_commit": "80b14ea1d094b43977278d24a5e2fd027ce06220",
+  "live_model_validation": {
+    "checked_at": "2026-11-03T23:16:52.497435+08:00",
+    "qq_messages_sent": 0,
+    "reply_models": [
+      "dragon-gpt-web"
+    ],
+    "utils_models": [
+      "dragon-gpt"
+    ],
+    "web": {
+      "checked_at": "2026-11-03T23:18:18.080066+08:00",
+      "success": true,
+      "calls": [
+        {
+          "type": "web_search",
+          "status": "completed",
+          "action": "search"
+        },
+        {
+          "type": "web_search",
+          "status": "completed",
+          "action": "open_page"
+        }
+      ],
+      "has_python_official_url": true,
+      "model_name": "dragon-gpt-web",
+      "qq_messages_sent": 0
+    },
+    "briefing": {
+      "success": true,
+      "message_count": 2,
+      "has_coverage_note": true,
+      "has_topics": true,
+      "has_tasks": true,
+      "used_real_chat_data": false
+    },
+    "web_first_attempt": {
+      "success": false,
+      "calls": [],
+      "has_python_official_url": false,
+      "model_name": ""
+    }
+  },
+  "qq_test_messages_sent": 0,
+  "not_validated": [
+    "end_to_end_QQ_new_feature_delivery",
+    "QQ_full_group_message_coverage"
+  ],
+  "plugin_loaded": {
+    "Mai-with-u.qq-adapter": true,
+    "local.liya-companion": true
+  },
+  "qq_connection": "已连接：璃芽",
+  "registered_tools": [
+    "liya_group_briefing",
+    "liya_expression"
+  ],
+  "memory": {
+    "success": true,
+    "enabled": true,
+    "memory_enabled": true,
+    "runtime_ready": true,
+    "retrieval_ready": true,
+    "degraded": false
+  },
+  "reply_model": [
+    "dragon-gpt-web"
+  ],
+  "non_reply_models": {
+    "planner": [
+      "dragon-gpt"
+    ],
+    "utils": [
+      "dragon-gpt"
+    ],
+    "memory": [
+      "dragon-gpt"
+    ]
+  },
+  "source_sha256": {
+    "plugin.py": "ce68ff12836f5eb4d4ff97b05008b31650a0f2bf417232ad4a07ff88d0a8ef2d",
+    "state.py": "066fad3685b50113320db475b068be864db7e0ff84f93e798c20b6425b58ba72",
+    "briefing.py": "9ac96a3444a033fa55afc397211c4c9e901ac0eca07875bfe9cc153dbd733c84",
+    "web_research.py": "f7f35b7fc03c0eb8b80944576b3edcdd0b0a52cb3ad8756434c615c985b80ad6",
+    "_manifest.json": "9ba85e0deddde637f276c2cfd67a6bfc70d3040029c0c68862183697870cf9fc"
+  },
+  "database_counts": {
+    "incoming": 7,
+    "relations": 4,
+    "deliveries": 3
+  },
+  "database_integrity": "ok",
+  "release_preflight": {
+    "release_id": "liya-20261103-231124",
+    "backup": "dragon-20261103-231124.tar.gz",
+    "tests_passed": 36,
+    "tests_excluded_unreleased_artwork": [
+      "test_new_expressions_are_sendable",
+      "test_static_mode_sends_png_for_tool_and_automatic_expression"
+    ],
+    "approved_expression_states": [
+      "idle",
+      "happy",
+      "curious",
+      "thinking",
+      "sulky",
+      "caring",
+      "greeting",
+      "sleepy",
+      "excited"
+    ],
+    "other_gifs_unchanged": {
+      "happy": true,
+      "curious": true,
+      "thinking": true,
+      "sulky": true,
+      "caring": true,
+      "greeting": true,
+      "sleepy": true,
+      "excited": true
+    },
+    "idle": {
+      "size": [
+        192,
+        208
+      ],
+      "frames": 60,
+      "frame_duration_ms": 50
+    },
+    "model_config_valid": true,
+    "reply_model": "dragon-gpt-web",
+    "previous_source_commit": "ed9205b",
+    "files": {
+      "briefing.py": "9ac96a3444a033fa55afc397211c4c9e901ac0eca07875bfe9cc153dbd733c84",
+      "plugin.py": "ce68ff12836f5eb4d4ff97b05008b31650a0f2bf417232ad4a07ff88d0a8ef2d",
+      "state.py": "066fad3685b50113320db475b068be864db7e0ff84f93e798c20b6425b58ba72",
+      "web_research.py": "f7f35b7fc03c0eb8b80944576b3edcdd0b0a52cb3ad8756434c615c985b80ad6",
+      "_manifest.json": "9ba85e0deddde637f276c2cfd67a6bfc70d3040029c0c68862183697870cf9fc",
+      "assets/caring.gif": "b95ce9e2b9c9a8381e9910d272f710e8ed603c372efd3e9747c63772cf1f041a",
+      "assets/curious.gif": "e0580e88a673f965df6e8454397a134c7bd3e36af95e4d35b00cd74ee57aa522",
+      "assets/excited.gif": "b2e3da1e92996e1e6064d8aca03abb588fdd42e9d913f4d6bbe5512f21d824ac",
+      "assets/greeting.gif": "1a12362b0b2838d1648c401eca3001bf139a0fd6911a3af037d7faa9f73a8058",
+      "assets/happy.gif": "87d71cf7c1fa723b511d53eb6694e087e1273bc21ed79c7a5cf4410fdf1f0b14",
+      "assets/idle.gif": "96839d4e94ea1258d103ae8b085afeb69f2bca0a50107ab23a1a6a7be0c84647",
+      "assets/liya-nine-states.gif": "7d07d6295d40244fb6bcc0cbba797c328ada800d707ede4482aca95a4730e914",
+      "assets/sleepy.gif": "fc764031c66f3e57ab241b54f8b292eed02fbef121c12140bd0337e44e006f01",
+      "assets/sulky.gif": "593f5db3c694bf1d02af5b0041cd9cd611ffe751f1a2362ed3ef17f8e185d432",
+      "assets/thinking.gif": "ceebb0e3e543714cb772ddc175133c09bf90bed3733e06f9a9e3847cca019c9b",
+      "assets/idle.png": "9f0091fecbd4fab05bfc4729d561624d13903fb703660a50302fb2ce13981d6c",
+      "assets/happy.png": "d33ecd956d431af4a1d1bfd8055e3318639d13a1ddb9f6dc4dd09ae8824c48ba",
+      "assets/curious.png": "9e255755f35fcc94b1607b4f3e933979e78f13217d31f1869b14001bf3a7d9d0",
+      "assets/thinking.png": "613e12411856b3fa55991a34e65401fb231d48e990e29395259aa58656334817",
+      "assets/sulky.png": "13b15837cc15380176cd70dfe896e58ceb28162f7aa3e5620a3a9c50cc4ce02f",
+      "assets/caring.png": "15881aa423a4c7f5eafa4a42f53a6000a1816d87370e6ee592d5666cb9ab0d9a",
+      "assets/greeting.png": "afc758c42e298cbf6be08c015284cd5f7fcdfe2e059fe668715d76e565236a6c",
+      "assets/sleepy.png": "859c9fdddff71659fab593ba9c30e00042814ca9970c6cdd3b11f4ab97b2348b",
+      "assets/excited.png": "48d3472ce83642effa99919993e83f17c5d5ac90ecb6a60c84e4bb902763e012"
+    }
+  },
+  "database_before": {
+    "incoming": 7,
+    "relations": 4,
+    "deliveries": 3
+  },
+  "database_counts_preserved": true,
+  "all_installed_hashes_match": true,
+  "git_worktree_clean": true
+}

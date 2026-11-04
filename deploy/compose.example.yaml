@@ -16,6 +16,15 @@ services:
       - ./logs:/MaiMBot/logs
       - ./api.json:/run/secrets/provider.json:ro
       - ./patches/search_hit_processing_service.py:/MaiMBot/src/A_memorix/core/runtime/services/search_hit_processing_service.py:ro
+      # 1.4.0聊天能力：先按docs/09构建与校验patches/chat，再启用以下挂载。
+      - ./patches/chat/src/plugin_runtime/capabilities/registry.py:/MaiMBot/src/plugin_runtime/capabilities/registry.py:ro
+      - ./patches/chat/src/plugin_runtime/component_query.py:/MaiMBot/src/plugin_runtime/component_query.py:ro
+      - ./patches/chat/src/A_memorix/core/runtime/services/profile_admin_service.py:/MaiMBot/src/A_memorix/core/runtime/services/profile_admin_service.py:ro
+      - ./patches/chat/src/maisaka/memory/person_profile.py:/MaiMBot/src/maisaka/memory/person_profile.py:ro
+      - ./patches/chat/src/maisaka/builtin_tool/query_person_profile.py:/MaiMBot/src/maisaka/builtin_tool/query_person_profile.py:ro
+      - ./patches/chat/src/chat/debounce/controller.py:/MaiMBot/src/chat/debounce/controller.py:ro
+      - ./patches/chat/src/maisaka/builtin_tool/reply.py:/MaiMBot/src/maisaka/builtin_tool/reply.py:ro
+      - ./patches/chat/liya_memory.py:/MaiMBot/src/plugin_runtime/capabilities/liya_memory.py:ro
     logging:
       driver: json-file
       options:

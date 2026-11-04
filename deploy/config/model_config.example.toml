@@ -4,6 +4,7 @@ version = "1.17.25"
 [web]
 preview_chars = 4000 # 单次返回的内容预览字数，完整内容通过 read_tool_result 读取。
 services = {} # 联网服务定义；仅添加服务不会启用工具，需要在功能分配中选择。
+# 下方 dragon-gpt-web 使用模型服务商的原生 web_search，与这里的独立搜索服务配置分开。
 
 [[models]]
 model_type = "llm"
@@ -16,6 +17,20 @@ visual = true
 [models.extra_params.reasoning]
 effort = "low"
 [[models]]
+model_type = "llm"
+model_identifier = "gpt-6.1-sol"
+name = "dragon-gpt-web"
+api_provider = "Sub2API"
+send_temperature = false
+visual = true
+
+[models.extra_params.reasoning]
+effort = "low"
+[models.extra_params.body]
+tools = [{ type = "web_search" }]
+tool_choice = "auto" # 由回复模型按问题需要联网；使用已实测支持此工具的模型接口。
+
+[[models]]
 model_type = "embedding"
 model_identifier = "bge-m3"
 name = "liya-memory-embedding"
@@ -25,7 +40,7 @@ send_temperature = false
 model_list = [] # 选择一个 web.services 中的联网服务名称；留空不开放统一联网工具。
 
 [model_task_config.replyer] # 回复模型，影响麦麦的回复表现
-model_list = ["dragon-gpt"] # 使用的模型列表, 每个元素对应上面的模型名称(name)
+model_list = ["dragon-gpt-web"] # 回复阶段可原生联网；Planner、分类和记忆仍使用原模型。
 max_tokens = 4096 # 任务最大输出token数
 temperature = 1.0 # 模型温度
 selection_strategy = "random" # 模型选择策略：balance（负载均衡）、random（随机选择）或 sequential（按配置顺序优先选择）

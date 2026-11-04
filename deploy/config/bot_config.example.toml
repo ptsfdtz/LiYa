@@ -462,7 +462,7 @@ keyword_rules = [] # 命中关键词后，给麦麦追加一段固定反应提�
 regex_rules = [] # 命中正则规则后，给麦麦追加一段固定反应提示。
 
 [response_post_process]
-enable_response_post_process = true # 开启后会对回复做错别字、分段等后处理。
+enable_response_post_process = false # 完整生成后一次发送正文，跳过分句、错字及长度替换等后处理。
 typing_speed = 1.0 # 模拟打字等待时间；0 最快，1 默认，2 更慢。
 
 [chinese_typo]
@@ -476,7 +476,7 @@ word_replace_rate = 0.006 # 整词被替换成错词的概率。
 
 [response_splitter]
 mode = "rule" # 规则断句或使用 LLM 按语义断句。
-enable = true # 把过长回复拆成多条发送。
+enable = false # 保留整段回复，不按句子拆成多条消息。
 max_length = 512 # 单条回复允许的最大长度。
 max_sentence_num = 8 # 单条回复最多包含多少个句子。
 max_split_num = 3 # 一次回复最多拆成几条消息。

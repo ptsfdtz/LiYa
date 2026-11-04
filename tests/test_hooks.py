@@ -6,8 +6,9 @@ import logging
 import base64
 import sys
 import unittest
+import os
 
-sys.path.insert(0,'/MaiMBot/plugins')
+sys.path.insert(0,os.environ.get('LIYA_PLUGIN_ROOT','/MaiMBot/plugins'))
 from liya_companion.plugin import LiyaCompanion
 from src.plugin_runtime.hook_payloads import deserialize_prompt_items
 from src.plugin_runtime.config_widgets import read_widget_snapshot
@@ -21,9 +22,10 @@ class FakeLLM:
 
 
 class FakeSend:
-    def __init__(self):self.calls=0
+    def __init__(self):self.calls=0;self.last_data=b''
     async def emoji(self,data,session,return_details=False):
-        assert base64.b64decode(data).startswith((b'GIF87a',b'GIF89a'))
+        self.last_data=base64.b64decode(data)
+        assert self.last_data.startswith((b'GIF87a',b'GIF89a',b'\x89PNG\r\n\x1a\n'))
         self.calls+=1
         return {'sent':True,'message_id':'validation-only'}
 
@@ -109,6 +111,36 @@ class HookContractTests(unittest.IsolatedAsyncioTestCase):
         limited=await self.plugin.show_expression(state='happy',stream_id='test-only')
         self.assertFalse(limited['success'])
         self.assertEqual(self.sender.calls,1)
+
+    async def test_new_expressions_are_sendable(self):
+        if not all(state in self.plugin.available_expressions for state in ('shy','surprised','worried','sad','relieved','determined')):
+            self.skipTest('新增表情素材未发布，不属于当前现网素材验收')
+        for state in ('shy','surprised','worried','sad','relieved','determined'):
+            with self.subTest(state=state):
+                result=await self.plugin.show_expression(state=state,stream_id='expression-'+state)
+                self.assertTrue(result['success'])
+                self.assertEqual(result['state'],state)
+                self.assertTrue(self.sender.last_data.startswith(b'GIF'))
+        self.assertEqual(self.sender.calls,6)
+
+    async def test_static_mode_sends_png_for_tool_and_automatic_expression(self):
+        config=self.plugin.config.model_dump()
+        config['plugin']['expression_animation']=False
+        self.plugin.set_plugin_config(config)
+        result=await self.plugin.show_expression(state='happy',stream_id='static-tool')
+        self.assertTrue(result['success'])
+        self.assertTrue(self.sender.last_data.startswith(b'\x89PNG'))
+
+        await self.plugin.reply(session_id='test-only',reply_message_id='test-id')
+        await self.plugin.after_send(message={'session_id':'test-only','raw_message':[{'type':'text','data':'我在'}]},sent=True)
+        self.assertEqual(self.sender.calls,2)
+        self.assertTrue(self.sender.last_data.startswith(b'\x89PNG'))
+
+    async def test_uninstalled_expression_is_rejected_without_sending(self):
+        self.plugin.available_expressions.discard('shy')
+        result=await self.plugin.show_expression(state='shy',stream_id='uninstalled')
+        self.assertFalse(result['success'])
+        self.assertEqual(self.sender.calls,0)
 
 
 if __name__=='__main__': unittest.main()

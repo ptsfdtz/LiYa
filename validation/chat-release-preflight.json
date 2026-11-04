@@ -1,0 +1,52 @@
+{
+  "release": "liya-chat-20261104-000349",
+  "stage": "/opt/dragon-maibot/releases/liya-chat-20261104-000349",
+  "expected_source": {
+    "plugin.py": "ce68ff12836f5eb4d4ff97b05008b31650a0f2bf417232ad4a07ff88d0a8ef2d",
+    "state.py": "066fad3685b50113320db475b068be864db7e0ff84f93e798c20b6425b58ba72",
+    "briefing.py": "fb95e8c176acd06198275a917ea5781d292dbb92aedcacc25a3268c19eca5761",
+    "web_research.py": "f7f35b7fc03c0eb8b80944576b3edcdd0b0a52cb3ad8756434c615c985b80ad6"
+  },
+  "source_sha256": {
+    "plugin.py": "7eb20ce24a5065f6a3a7da8c16d9b3e183b41fc71fbcc0e0968a99cabbc234eb",
+    "state.py": "9d0df99bfb1aaf64d7f57a99714cdc9ee83f884382e111428a3dac1a984b2a03",
+    "briefing.py": "fb95e8c176acd06198275a917ea5781d292dbb92aedcacc25a3268c19eca5761",
+    "web_research.py": "f7f35b7fc03c0eb8b80944576b3edcdd0b0a52cb3ad8756434c615c985b80ad6",
+    "conversation.py": "a34216a613ea4912374b880a13ea9cd78dcb27266f942146f0f742c7d109ba72",
+    "personal.py": "6e3df7be50e5534bbcde7d0939f95578952a2361f187c1ab542cdec780fe2bfa",
+    "activities.py": "bc40bfd9a732f0b4a9bf2334cd846b7a35fe8690d0be2248c9f05e5af7e27b4e",
+    "_manifest.json": "6fe83c4d130ed8eef45226892cdd30149bacb7223544a7067b08bd974854c682"
+  },
+  "previous_commit": "43a4420b0590aea09549872785ffcb20417d5912",
+  "original_compose_sha256": "081d9197bf11206b93e00147ccb051afd89e4e9ff3f6928e4c8f4ebfe372d9c7",
+  "host_patches": {
+    "src/plugin_runtime/capabilities/registry.py": {
+      "original": "0e54d499e93e85337efe70ab9f69ae33c92bf04f2b74c715d2fef1cf28c477d6",
+      "patched": "d3911b0e049f2e48a6384088acc733329e0717501a15a26236d28ff9c755446c"
+    },
+    "src/A_memorix/core/runtime/services/profile_admin_service.py": {
+      "original": "3b092ede44805a4caa124e5e46fc5f0ed137146b0d0cbe034f3d0550447d36fc",
+      "patched": "7b1a0713ec49ea29cd099b3884c34e1b75250010ceadde12497e33392f75b2a2"
+    },
+    "src/maisaka/memory/person_profile.py": {
+      "original": "570b85f14ab89c128ac389728d174e5126deec2744c30bfa35b5680cbe46ef58",
+      "patched": "9114253f639950787aa58d06344b9c0ffa01c2548d8944fae83196b60906afce"
+    },
+    "src/maisaka/builtin_tool/query_person_profile.py": {
+      "original": "29fcda7e9f1797ca9387759df5bac8ffae7212f97736574a4938d4ea7453975e",
+      "patched": "736151387007089c547334598fed443643811c03e3d88fb33a0cdde137309503"
+    },
+    "src/plugin_runtime/component_query.py": {
+      "original": "a2cd90eadc2a5d9fae0d7626688992be1e91c4f802689363a591e19bb2a3d9d2",
+      "patched": "166d44f79409b8c962ded34ed5e3e9651a83d4313af9bb93ca06c5ee2f8abcb6"
+    },
+    "src/chat/debounce/controller.py": {
+      "original": "1f21013d9dd779e34e6c398b792f87eb833f57f4df1d54416f81c45df968a9fb",
+      "patched": "b12afb458f45d29840cfbaf90ca0a4226c76fdc4ab0dad19569a42da893c2a86"
+    },
+    "src/maisaka/builtin_tool/reply.py": {
+      "original": "3a78fb8756f027163f9b83b91a60519f7eba8c7ef1f4d2c724a4cfdbd7216251",
+      "patched": "c3b7478da510de3f44ca86912148238117e98faf8caa0200e1ae8edb0be8f134"
+    }
+  }
+}

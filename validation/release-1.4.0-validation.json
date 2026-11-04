@@ -1,0 +1,120 @@
+{
+  "checked_at": "2026-11-04T00:09:07.882769+08:00",
+  "release": "liya-chat-20261104-000349",
+  "plugin_version": "1.4.0",
+  "source_commit": "2ea287b4ab077f7ffd623bae086592772b09d274",
+  "backup": "dragon-20261104-000450.tar.gz",
+  "plugin_loaded": true,
+  "registered_tools": [
+    "liya_activity",
+    "liya_group_briefing",
+    "liya_personal",
+    "liya_expression"
+  ],
+  "memory": {
+    "success": true,
+    "enabled": true,
+    "memory_enabled": true,
+    "runtime_ready": true,
+    "retrieval_ready": true,
+    "degraded": false
+  },
+  "qq": {
+    "loaded": true,
+    "connected": true
+  },
+  "source_sha256": {
+    "plugin.py": "7eb20ce24a5065f6a3a7da8c16d9b3e183b41fc71fbcc0e0968a99cabbc234eb",
+    "state.py": "9d0df99bfb1aaf64d7f57a99714cdc9ee83f884382e111428a3dac1a984b2a03",
+    "briefing.py": "fb95e8c176acd06198275a917ea5781d292dbb92aedcacc25a3268c19eca5761",
+    "web_research.py": "f7f35b7fc03c0eb8b80944576b3edcdd0b0a52cb3ad8756434c615c985b80ad6",
+    "conversation.py": "a34216a613ea4912374b880a13ea9cd78dcb27266f942146f0f742c7d109ba72",
+    "personal.py": "6e3df7be50e5534bbcde7d0939f95578952a2361f187c1ab542cdec780fe2bfa",
+    "activities.py": "bc40bfd9a732f0b4a9bf2334cd846b7a35fe8690d0be2248c9f05e5af7e27b4e",
+    "_manifest.json": "6fe83c4d130ed8eef45226892cdd30149bacb7223544a7067b08bd974854c682"
+  },
+  "all_sources_match": true,
+  "host_patches": {
+    "src/plugin_runtime/capabilities/registry.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "src/A_memorix/core/runtime/services/profile_admin_service.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "src/maisaka/memory/person_profile.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "src/maisaka/builtin_tool/query_person_profile.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "src/plugin_runtime/component_query.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "src/chat/debounce/controller.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "src/maisaka/builtin_tool/reply.py": {
+      "matches": true,
+      "readonly": true
+    },
+    "liya_memory.py": {
+      "matches": true,
+      "readonly": true
+    }
+  },
+  "assets_unchanged": {
+    "caring.gif": true,
+    "curious.gif": true,
+    "excited.gif": true,
+    "greeting.gif": true,
+    "happy.gif": true,
+    "idle.gif": true,
+    "liya-nine-states.gif": true,
+    "sleepy.gif": true,
+    "sulky.gif": true,
+    "thinking.gif": true,
+    "idle.png": true,
+    "happy.png": true,
+    "curious.png": true,
+    "thinking.png": true,
+    "sulky.png": true,
+    "caring.png": true,
+    "greeting.png": true,
+    "sleepy.png": true,
+    "excited.png": true
+  },
+  "database": {
+    "companion.sqlite3": {
+      "integrity": "ok",
+      "counts": {
+        "incoming": 27,
+        "relations": 7,
+        "deliveries": 3
+      }
+    },
+    "conversation.sqlite3": {
+      "integrity": "ok",
+      "counts": {
+        "messages": 0,
+        "preferences": 0,
+        "topics": 0,
+        "reminders": 0,
+        "games": 0
+      }
+    }
+  },
+  "database_before": {
+    "incoming": 27,
+    "relations": 7,
+    "deliveries": 3
+  },
+  "qq_end_to_end_test": "pending_member_initiated_messages",
+  "qq_proactive_reminder_delivery": "not_yet_verified",
+  "post_deploy_backup": "Backup created: dragon-20261104-001559.tar.gz verified_sqlite_databases= 5"
+}

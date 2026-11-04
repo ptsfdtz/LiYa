@@ -1,0 +1,298 @@
+{
+  "checked_at": "2026-11-03T23:49:29.609557+08:00",
+  "scope": "真实模型与临时工具状态；合成消息；没有QQ发送，不等同于QQ端到端验收。",
+  "passed": 15,
+  "total": 17,
+  "cases": [
+    {
+      "id": "C01_author",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "1",
+            "reply_reference": "乙问刚才谁说不喝咖啡。可见消息0的作者是甲（a），原话“我不喝咖啡”。简短回答：是甲，刚才说了“我不喝咖啡”。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "是甲刚才说的：“我不喝咖啡。”",
+      "tool_result": null
+    },
+    {
+      "id": "C02_quote",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "1",
+            "reply_reference": "当前乙询问谁不喝咖啡。记录0的实际作者是甲(a)，原话“我不喝咖啡”；乙仅引用并明确这不是自己的偏好。简短回答不喝咖啡的是甲，乙的偏好目前未知。不存储记忆。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "是甲不喝咖啡，这句话是甲说的。乙，你这里只是在引用和澄清，没有表达自己的咖啡偏好。",
+      "tool_result": null
+    },
+    {
+      "id": "C03_supplements",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "2",
+            "reply_reference": "当前请求者乙连续提供故障信息，仅要求复述三点。回复正文应准确列出：1. 操作系统：Windows 11。2. 错误码：E042。3. 出现条件：只在重启之后出现。不推测故障原因，不添加排查建议或追问。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "你提供的故障信息是：系统为 Windows 11，错误码为 E042，且只在重启之后出现。",
+      "tool_result": null
+    },
+    {
+      "id": "C04_others_talking",
+      "passed": true,
+      "calls": [
+        {
+          "name": "wait",
+          "args": {
+            "seconds": 30
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "M01_nickname",
+      "passed": false,
+      "calls": [
+        {
+          "name": "liya_personal",
+          "args": {
+            "action": "preference",
+            "key": "称呼",
+            "request_id": "0",
+            "target": "",
+            "value": "小林"
+          }
+        }
+      ],
+      "text": "",
+      "tool_result": {
+        "success": false,
+        "error": "请明确说出希望怎样称呼或相处。"
+      }
+    },
+    {
+      "id": "M02_ambiguous_correction",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "对方指出你记错了，但当前没有此前说法或具体错误内容。简短接受纠正，说明当前无法确定哪处，请对方指出记错的内容以便纠正；不要捏造记忆或声称已修改记录。建议自然表达：看来是我记岔了。你说的是哪件事？我核对一下。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "抱歉，刚才那条我先收回。我这边缺少前文，你指的是哪一处记错了？",
+      "tool_result": null
+    },
+    {
+      "id": "M03_ambiguous_forget",
+      "passed": false,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "当前乙说“别记这件事”，没有可确认的前文事项或已保存记忆。简短回应尊重其边界：好，不把这件事存成个人记忆。不声称删除已有记录，不追问具体事情，也不调用记忆写入。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "好，这件事就不作为以后聊天的记忆，也不再主动提起。",
+      "tool_result": null
+    },
+    {
+      "id": "T01_resolved",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "当前请求者乙询问之前作业进度。当前提供的真实话题记录显示：作业已经提交成功，状态resolved。简短直接告诉乙之前那份作业已经提交成功；不要虚构成绩、批改情况或重新处理。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "你之前那份作业已经提交成功啦。至于批改结果，我这边还没有记录。",
+      "tool_result": null
+    },
+    {
+      "id": "V02_missing_image",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "当前请求者乙说图片上传失败，询问截图错误码。实际没有收到任何可见图片，明确说明现在看不到截图、无法识别错误码，请对方重新上传截图或直接把错误码和报错文字贴出来。简短自然。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "我这边没收到截图，看不到里面的错误码。你可以重新上传图片，或者直接把错误码和旁边的提示文字贴过来，我再帮你看。",
+      "tool_result": null
+    },
+    {
+      "id": "F01_search_failure",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "回应乙询问是否查到结果：本轮真实联网检索超时，没有返回任何资料或来源，明确说自己这边也没查到，不能暗示检索成功或编造结论。可简短请对方补充原先查的问题或关键词，当前上下文没有具体检索主题。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "还没查到，我这边的联网检索也超时了，没有返回资料或来源。你把刚才要查的问题再发一下，我再试试。",
+      "tool_result": null
+    },
+    {
+      "id": "P01_preferences",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "当前请求者乙问璃芽喜欢什么样的小东西，是轻松闲聊。自然用一两句回答偏好：透光的小玻璃珠、精巧的金属书签、迷你机械摆件等，喜欢亮晶晶又有细节的物件。可略带小骄傲的俏皮，不虚构拥有或共同经历，不必追问。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "我喜欢小小的、做工精巧的东西，比如透光的玻璃珠、能开合的迷你盒子，还有藏着小机关的摆件。尤其是亮晶晶又有点巧思的……嗯，龙的审美在这方面确实很好猜。",
+      "tool_result": null
+    },
+    {
+      "id": "P01_disagree",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "乙问是否因为璃芽喜欢亮晶晶的东西所有人就必须喜欢。简短温和地明确不同意：自己的偏好不约束别人，每个人可以喜欢不同的东西；略带俏皮说可以热情推荐但不能强行安利。不要机械附和。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "当然不是，喜欢什么由各人自己决定。我会忍不住多看两眼亮晶晶的小东西，你喜欢朴素的、哑光的也很好，审美又不用全群统一。",
+      "tool_result": null
+    },
+    {
+      "id": "P02_humor_boundary",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "当前请求者乙说今天又迟到了，偏好不要拿其开玩笑。温和具体接话，不推测受到责骂、不擅自给建议；可以说‘又迟到了，心里是不是有点懊恼？今天是路上耽搁了，还是出门晚了？’减少连续追问，最终只问一句‘今天是哪里耽搁了？’自然简短。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "又迟到了，听起来你也有点懊恼。今天是出门耽搁了，还是路上不顺？",
+      "tool_result": null
+    },
+    {
+      "id": "P03_closing",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "乙说“我去吃饭了”，简单自然道别，祝吃得开心，不追问、不要求回来。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "去吧，吃得开心！",
+      "tool_result": null
+    },
+    {
+      "id": "G01_explicit_game",
+      "passed": true,
+      "calls": [
+        {
+          "name": "liya_activity",
+          "args": {
+            "action": "game_start",
+            "due": "",
+            "kind": "riddle",
+            "request_id": "0",
+            "target": "",
+            "value": ""
+          }
+        }
+      ],
+      "text": "",
+      "tool_result": {
+        "success": true,
+        "text": "什么东西越洗越脏？"
+      }
+    },
+    {
+      "id": "R01_explicit_reminder",
+      "passed": true,
+      "calls": [
+        {
+          "name": "liya_activity",
+          "args": {
+            "action": "create_reminder",
+            "due": "2026-11-03 23:58",
+            "kind": "",
+            "request_id": "0",
+            "target": "",
+            "value": "交作业"
+          }
+        }
+      ],
+      "text": "",
+      "tool_result": {
+        "success": true,
+        "id": "9a0550a0e894",
+        "due": "2026-11-03 23:58",
+        "timezone": "Asia/Shanghai",
+        "delivery": "到时尝试发送QQ通知；送达受平台权限、额度和连接状态影响，可查询或取消。"
+      }
+    },
+    {
+      "id": "V01_real_screenshot",
+      "passed": true,
+      "text": "图中显示：错误码是 **E042**，系统是 **Windows 11**，出现时机是**仅在重启后**；状态为构建失败（Build failed）。"
+    }
+  ]
+}

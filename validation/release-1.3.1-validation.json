@@ -1,0 +1,45 @@
+{
+  "plugin_version": "1.3.1",
+  "source_commit": "43a4420b0590aea09549872785ffcb20417d5912",
+  "backup": "dragon-20261103-232755.tar.gz",
+  "tests_passed": 19,
+  "scope": "actionable empty briefing diagnostics; no QQ receive permission changes",
+  "diagnosed_request": {
+    "saved_messages": 1,
+    "saved_non_at_messages": 0,
+    "summary_request_excluded": true,
+    "summarizable_messages": 0
+  },
+  "files": {
+    "briefing.py": "fb95e8c176acd06198275a917ea5781d292dbb92aedcacc25a3268c19eca5761",
+    "_manifest.json": "c102251b2cf6afea2ba666f74a831533527e232b20b8ff4c8fc98d7dcfae5216"
+  },
+  "live_health": {
+    "qq_connection": "已连接：璃芽",
+    "plugin_loaded": {
+      "Mai-with-u.qq-adapter": true,
+      "local.liya-companion": true
+    },
+    "version": "1.3.1",
+    "database_integrity": "ok",
+    "test_group": {
+      "saved_messages": 1,
+      "ordinary_messages": 0,
+      "latest_received": "2026-11-03T23:24:23.807738+08:00"
+    }
+  },
+  "group_briefing_e2e": {
+    "checked_at": "2026-11-03T23:34:58.617704+08:00",
+    "ordinary_test_messages_received": 2,
+    "saved_group_messages": 4,
+    "briefing_tool": {
+      "success": true,
+      "message_count": 3,
+      "available_count": 3
+    },
+    "reply_send_confirmed": true,
+    "user_changed_QQ_receive_scope": true,
+    "history_before_permission_not_backfilled": true,
+    "agent_sent_test_messages": false
+  }
+}

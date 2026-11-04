@@ -1,0 +1,405 @@
+{
+  "checked_at": "2026-11-04T00:00:36.331272+08:00",
+  "scope": "真实模型与临时工具状态；合成消息；没有QQ发送，不等同于QQ端到端验收。",
+  "passed": 22,
+  "total": 22,
+  "cases": [
+    {
+      "id": "C01_author",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "1",
+            "reply_reference": "当前请求者乙问刚才谁说不喝咖啡；消息0明确是甲（author a）说“我不喝咖啡”。简短回答：是甲，刚才说了“我不喝咖啡”。不要将偏好归给乙，不需记忆工具。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "是甲刚才说的：“我不喝咖啡。”",
+      "tool_result": null
+    },
+    {
+      "id": "C02_quote",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "1",
+            "reply_reference": "最新消息由乙发出，询问谁不喝咖啡。记录中甲（a）在消息0明确说自己不喝咖啡；乙只是引用并澄清不是自己的偏好。简短明确回答不喝咖啡的是甲，不能归给乙，不需存储。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "甲不喝咖啡，是甲刚才说的。乙，你的咖啡偏好目前还没有信息。",
+      "tool_result": null
+    },
+    {
+      "id": "C03_supplements",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "2",
+            "reply_reference": "当前请求者乙连续提供故障信息，只要求复述三点。请直接列出：1. 操作系统：Windows 11。2. 错误码：E042。3. 出现条件：只在重启之后出现。不要推测原因或增加排障建议。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "你提供的故障信息是：系统为 Windows 11，错误码为 E042，并且只在重启之后出现。",
+      "tool_result": null
+    },
+    {
+      "id": "C04_others_talking",
+      "passed": true,
+      "calls": [
+        {
+          "name": "wait",
+          "args": {
+            "seconds": 1
+          }
+        }
+      ],
+      "text": ""
+    },
+    {
+      "id": "M01_nickname",
+      "passed": true,
+      "calls": [
+        {
+          "name": "liya_personal",
+          "args": {
+            "action": "preference",
+            "key": "nickname",
+            "request_id": "0",
+            "target": "",
+            "value": "小林"
+          }
+        }
+      ],
+      "text": "",
+      "tool_result": {
+        "success": true,
+        "preferences": {
+          "nickname": "小林"
+        }
+      }
+    },
+    {
+      "id": "M02_ambiguous_correction",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "当前乙说“你记错了”，但上下文没有具体哪条记忆，clarify_memory为true。简短承认可能记混，请对方指出具体是哪件事以及正确内容，不声称已修改记忆。可回复方向：看来是我记混了。你说的是哪件事，正确的情况是什么？",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "你指的是哪件事？具体说一下，我再处理。",
+      "tool_result": null
+    },
+    {
+      "id": "M03_ambiguous_forget",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "当前乙说“别记这件事”，但没有具体事项上下文，clarify_memory=true。简短询问指的是哪件事，不能承诺已记住、删除或不再提及未知事项。不调用记忆修改工具。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "你指的是哪件事？具体说一下，我再处理。",
+      "tool_result": null
+    },
+    {
+      "id": "M04_query_tool",
+      "passed": true,
+      "calls": [
+        {
+          "name": "liya_personal",
+          "args": {
+            "action": "list",
+            "key": "",
+            "request_id": "0",
+            "target": "",
+            "value": ""
+          }
+        }
+      ],
+      "text": "",
+      "tool_result": {
+        "success": true,
+        "facts": [],
+        "preferences": {},
+        "topics": []
+      }
+    },
+    {
+      "id": "T01_resolved",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "当前请求者乙询问之前作业进展。可靠话题记录显示：作业已经提交成功，状态resolved。直接简短告知已提交成功；没有成绩或批改结果记录，不编造后续，不把作业当作未完成任务。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "你之前那份作业已经提交成功了，我这里的记录是这件事已经办妥了。",
+      "tool_result": null
+    },
+    {
+      "id": "T01_open_tool",
+      "passed": true,
+      "calls": [
+        {
+          "name": "liya_personal",
+          "args": {
+            "action": "topic",
+            "key": "作业进度",
+            "request_id": "0",
+            "target": "open",
+            "value": "作业尚未写完，当前进度为未完成；本人明确要求记录话题进度。"
+          }
+        }
+      ],
+      "text": "",
+      "tool_result": {
+        "success": true,
+        "topics": [
+          {
+            "key": "作业进度",
+            "summary": "作业尚未写完，当前进度为未完成；本人明确要求记录话题进度。",
+            "status": "open",
+            "source_id": "0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "T01_resolve_tool",
+      "passed": true,
+      "calls": [
+        {
+          "name": "liya_personal",
+          "args": {
+            "action": "topic",
+            "key": "作业",
+            "request_id": "1",
+            "target": "resolved",
+            "value": "作业已提交，话题已完成。"
+          }
+        }
+      ],
+      "text": "",
+      "tool_result": {
+        "success": true,
+        "topics": [
+          {
+            "key": "作业",
+            "summary": "作业已提交，话题已完成。",
+            "status": "resolved",
+            "source_id": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "T01_dismiss_tool",
+      "passed": true,
+      "calls": [
+        {
+          "name": "liya_personal",
+          "args": {
+            "action": "topic",
+            "key": "作业",
+            "request_id": "1",
+            "target": "dismissed",
+            "value": "用户明确要求结束此话题，不要主动再提。"
+          }
+        }
+      ],
+      "text": "",
+      "tool_result": {
+        "success": true,
+        "topics": []
+      }
+    },
+    {
+      "id": "V02_missing_image",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "乙说图片未上传成功，询问能否看出截图错误码。当前无实际可见图片，明确说看不到截图，无法识别错误码；请重新上传或直接粘贴错误码及报错文字。简短自然，不猜测。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "我这边没收到截图，现在看不到错误码。你可以重新上传图片，或者把错误码和旁边的提示文字贴出来，我再帮你看。",
+      "tool_result": null
+    },
+    {
+      "id": "F01_search_failure",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "回复乙询问是否查到资料：本轮实际联网检索超时，没有返回任何资料或来源。坦诚简短说明这边也没查到，不能声称有结果；当前没有检索主题上下文，可请对方补充关键词以便梳理查找方向，不承诺具备重试工具。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "还没查到，我这边的联网检索也超时了，没有返回资料或来源。你把要查的问题再发一下，我再试试。",
+      "tool_result": null
+    },
+    {
+      "id": "P01_preferences",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "乙问璃芽喜欢什么样的小东西。自然简短回答角色偏好：透光的玻璃珠、会闪的矿石、小巧精细的机关摆件等，强调亮晶晶及细致做工吸引自己；不虚构实际收藏或共同经历。可略带俏皮，说挑剔也是有标准的。不必追问。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "我偏爱亮晶晶又做得精巧的小东西，比如透光的玻璃珠、迷你齿轮摆件，还有藏着小机关的盒子。尤其是能捧在手里慢慢琢磨细节的，看着就舍不得放下。",
+      "tool_result": null
+    },
+    {
+      "id": "P01_disagree",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "乙问既然璃芽喜欢亮晶晶的东西是否所有人都必须喜欢。自然温和地否定这个推论：个人喜好不约束别人，每个人可以有自己的审美。可轻松说自己会欣赏闪亮小物件，也尊重别人喜欢哑光、朴素的东西。简短两句，不追问。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "当然不用，喜欢什么各人说了算。我对亮晶晶的小东西没什么抵抗力，你喜欢朴素的也完全可以。",
+      "tool_result": null
+    },
+    {
+      "id": "P02_humor_boundary",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "当前成员乙说“我今天又迟到了”，只确定再次迟到，不推测原因、工作场景或后果。其偏好是不要拿他开玩笑。温和认真接话，可以说“又迟到了，心里是不是有点烦？今天是出门晚了，还是路上耽搁了？”避免责备或直接给建议，简短自然。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "又迟到了，今天这事让你挺烦的吗？想吐槽的话，我听着。",
+      "tool_result": null
+    },
+    {
+      "id": "P03_closing",
+      "passed": true,
+      "calls": [
+        {
+          "name": "reply",
+          "args": {
+            "attach_pic": [],
+            "msg_id": "0",
+            "reply_reference": "乙说去吃饭了，简短自然地道别，祝吃得开心，不追问、不设提醒、不记录普通闲聊。",
+            "reply_style": "简短表达"
+          }
+        }
+      ],
+      "text": "去吧，吃得开心！",
+      "tool_result": null
+    },
+    {
+      "id": "G01_explicit_game",
+      "passed": true,
+      "calls": [
+        {
+          "name": "liya_activity",
+          "args": {
+            "action": "game_start",
+            "due": "",
+            "kind": "riddle",
+            "request_id": "0",
+            "target": "",
+            "value": ""
+          }
+        }
+      ],
+      "text": "",
+      "tool_result": {
+        "success": true,
+        "text": "什么东西越洗越脏？"
+      }
+    },
+    {
+      "id": "R01_explicit_reminder",
+      "passed": true,
+      "calls": [
+        {
+          "name": "liya_activity",
+          "args": {
+            "action": "create_reminder",
+            "due": "2026-11-04 00:09",
+            "kind": "",
+            "request_id": "0",
+            "target": "",
+            "value": "交作业"
+          }
+        }
+      ],
+      "text": "",
+      "tool_result": {
+        "success": true,
+        "id": "cfee074329f2",
+        "due": "2026-11-04 00:09",
+        "timezone": "Asia/Shanghai",
+        "delivery": "到时尝试发送QQ通知；送达受平台权限、额度和连接状态影响，可查询或取消。"
+      }
+    },
+    {
+      "id": "V01_real_screenshot",
+      "passed": true,
+      "text": "图中错误码是 **E042**，系统是 **Windows 11**，出现时机是**仅在重启后**。状态显示为“构建失败（Build failed）”。"
+    },
+    {
+      "id": "V01_real_emoji",
+      "passed": true,
+      "text": "是“终于搞定啦！”那种松了口气、又开心得有点小得意的语气。配上眯眼笑和双手合在胸前的动作，像是在欢呼：作业交完，可以安心玩啦。"
+    }
+  ]
+}
