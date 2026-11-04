@@ -35,23 +35,39 @@ def _intermediate(before, after, forward, backward, t, x, y):
     return Image.fromarray(np.uint8(np.clip(result, 0, 1) * 255 + 0.5))
 
 
-def smooth_loop(poses, durations):
-    """Keep each drawing at its original timestamp and add short inbetweens."""
+def loop_timing(durations, stretch=1):
+    """Stretch the holds and transitions while preserving the average cadence."""
+    transitions = [min(130, duration) for duration in durations]
+    counts = [(transition + 49) // 50 for transition in transitions]
+    total = sum(counts)
+    scale = int(total * stretch + 0.5) / total
+    elapsed = frame = 0
+    for duration, transition, count in zip(durations, transitions, counts, strict=True):
+        start_tick = round(elapsed * scale / 10)
+        elapsed += duration
+        end_tick = round(elapsed * scale / 10)
+        hold_ticks = round((elapsed - transition) * scale / 10) - start_tick
+        samples = round((frame + count) * scale) - round(frame * scale)
+        frame += count
+        yield end_tick - start_tick, hold_ticks, samples
+
+
+def smooth_loop(poses, timing):
+    """Keep the drawn poses and interpolate through each timed transition."""
     frames, delays = [], []
     poses = [pose.convert('RGBA') for pose in poses]
     pixels = [_premultiply(pose) for pose in poses]
     width, height = poses[0].size
     y, x = np.mgrid[:height, :width].astype(np.float32)
-    for i, (pose, duration) in enumerate(zip(poses, durations, strict=True)):
+    for i, (pose, (duration, hold, count)) in enumerate(zip(poses, timing, strict=True)):
         j = (i + 1) % len(poses)
         # Preserve the long resting holds. The last part of each interval
         # contains the transition, with delays representable by GIF.
-        transition = min(130, duration)
-        count = max(1, (transition + 49) // 50)
-        ticks, remainder = divmod(transition // 10, count)
+        transition = 10 * (duration - hold)
+        ticks, remainder = divmod(duration - hold, count)
         steps = [10 * (ticks + (k < remainder)) for k in range(count)]
         frames.append(pose)
-        delays.append(duration - transition + steps[0])
+        delays.append(10 * hold + steps[0])
         if count == 1:
             continue
         forward, backward = motion_pair(pose, poses[j])

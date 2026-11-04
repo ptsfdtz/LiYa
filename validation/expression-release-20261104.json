@@ -1,0 +1,151 @@
+{
+  "release": "liya-expressions-20261104-165812",
+  "stage": "/opt/dragon-maibot/releases/liya-expressions-20261104-165812",
+  "previous_commit": "1f64ae0454c243f94f3928bb4ef6ba8163c4cd41",
+  "backup": "Backup created: dragon-20261104-165827.tar.gz verified_sqlite_databases= 5",
+  "source_sha256": {
+    "activities.py": "b0017f54d2386202d2f23329d86bd1dfff61b92ee3546e290ccd2d583d8c5f0b",
+    "briefing.py": "08e4539d9176172b66a4973c4babbc29a33ca6d2fdc3d4329cdca1dde140be66",
+    "conversation.py": "0ae63d1e0370eb4d45098a2334eff7a98a0545bd954758254074bdc79c039c5d",
+    "personal.py": "12510d21af17c03dccfab07bef7e1d6fe8ffaf60ea60e7435c9c57abed0de2ae",
+    "plugin.py": "90093ffeb7c7fdf946e049158cc60f715b99bf7fce0a00e97a9312de31535a66",
+    "state.py": "9d0df99bfb1aaf64d7f57a99714cdc9ee83f884382e111428a3dac1a984b2a03",
+    "web_research.py": "b688ae30100663fd05041833693928d12ced7a500e54ee14662de366595c7840"
+  },
+  "asset_sha256": {
+    "caring.gif": "e84894e7b3f10adeb6bf7d4982fc2c41d73b4e70948507625092dc5a500ab5ab",
+    "caring.png": "c477c332e8eee2ce48fa7e95214f833967ed27634ed815a7758424d526008cfe",
+    "curious.gif": "3b5d35e6b7c6da29c12b49207488b4528552f5c97d054325021fdd379acbbd8e",
+    "curious.png": "55518a8abaf44e16ff17af206af206a3201801d63cde9c5839c84108f6e20314",
+    "determined.gif": "6433e94070bc6dc6068f2743745495554783e4b04da4d25ae92d848018be2f61",
+    "determined.png": "6f723eceb92c36a05e4996d5564d5d598f5d50fc4b2a3b870abcc31bf81d2e00",
+    "excited.gif": "6769e3894be7af74b7a35360143683fabd0921c3340eb4aaa2dbecb882095dec",
+    "excited.png": "0d2d6c2509a7e2bc544c41e905f7e0f740af37afb34bc79ba5f9e4321a032ca5",
+    "greeting.gif": "a763776a4b345fed4eca1076a78051f5aca8a7abfc678ae41af9a310faa044c5",
+    "greeting.png": "61b2861c94ae29d4eee334c7d045b9f5cd65b45bbc3f46a20cd4c4da5ba257b3",
+    "happy.gif": "1ab56b0f41f0160dc062d06eb51c44ce7cb863feb6194ba487d67cdf87255f8c",
+    "happy.png": "2388e00d97c46579ff55da0c2d3a607a2eabf17849774c587f17f001307cdc72",
+    "idle.gif": "6bc2f0c06f6c72e4241a6cb4e5d56ade0eacf189d89bbd7113ffc6986755ef99",
+    "idle.png": "0f7bdbe6db75ef92b04a0e15b0edeb472f10590697999afede0b8a0c07d74f3a",
+    "liya-fifteen-states.gif": "ff4ee4c26091cb977bd7f25f253bfbf7469b72d38a5979974d4663898862bd41",
+    "liya-new-emotions.gif": "0db50ff6068ee092e10a851d14d91211d001ffc2519292bbb227a5960d39ce07",
+    "liya-nine-states.gif": "0c4f96c6ae62d7dca3d83d82850a61c8bcec7d84da6cf568a74ffaf57d5db94a",
+    "relieved.gif": "7b0bfee2a8baa1d8116c8d484e70499de0ecd4467dc2509dad26c02117361664",
+    "relieved.png": "4e179b00fc5873da55483a103904a3ba5ad546caa74442365804ef8c642cfad2",
+    "sad.gif": "558a535f330895b01fadaf4d87c822e4e6115e79f2cd30333a624ab6c24ac772",
+    "sad.png": "2b241bbe368a6cc66c85c2702d4cb052a5f0f054e03730a6675fcb4aa3472d44",
+    "shy.gif": "ad35698ad4ae4375941d9d5b6eb14beb84f1be256150c939b87482ba63720eb6",
+    "shy.png": "ef2177f730a63665856cbf54db446d804f7a819ded41e059d5b16316cfa93d37",
+    "sleepy.gif": "83b0c529c4244062108c542701b84efe5ff0d614695084f0590c40a58bcb8f2b",
+    "sleepy.png": "83cc0a9ba356a7924c13cc86652e507322e4b31ea39b8fd4344c1e6fa5503eb5",
+    "sulky.gif": "9bddcf7204b5fa903589a970dc46699158c069088e6f771bd247800ff80abb66",
+    "sulky.png": "8ed416d7c9c3a40d292369aff6e17ea441210b2d84f5a9abe2ed92c2d943a4a8",
+    "surprised.gif": "af1125c51a7b8884dcba72867a50a35c23ba348100a3862502d510795912c7b3",
+    "surprised.png": "63d8fb5d93ce83a7999f9daa9bc1be5ef93cc88715ca7ea8b14cd23e5ff6f053",
+    "thinking.gif": "7d8a78f690bfbc69a12aee8866788bfdd6c41e23d4f5d93a96fc5d3b6b036d4f",
+    "thinking.png": "f78647885ddf9035d2e7b47678f99afa0f818619c165f6f419f61d2bc0455408",
+    "worried.gif": "668e623114688fbfd31f5651872deab1a7a0a0a5753d2553a03056a8a0e24ec8",
+    "worried.png": "34537dbeabfcca1c401a733f9aabc912fc13177613ca657c5c1b8fb073f197d4"
+  },
+  "database_before": {
+    "companion.sqlite3": {
+      "integrity": "ok",
+      "counts": {
+        "incoming": 68,
+        "relations": 7,
+        "deliveries": 4
+      }
+    },
+    "conversation.sqlite3": {
+      "integrity": "ok",
+      "counts": {
+        "messages": 41,
+        "preferences": 1,
+        "topics": 0,
+        "reminders": 3,
+        "games": 0
+      }
+    }
+  },
+  "assets_before": {
+    "caring.gif": "b95ce9e2b9c9a8381e9910d272f710e8ed603c372efd3e9747c63772cf1f041a",
+    "curious.gif": "e0580e88a673f965df6e8454397a134c7bd3e36af95e4d35b00cd74ee57aa522",
+    "excited.gif": "b2e3da1e92996e1e6064d8aca03abb588fdd42e9d913f4d6bbe5512f21d824ac",
+    "greeting.gif": "1a12362b0b2838d1648c401eca3001bf139a0fd6911a3af037d7faa9f73a8058",
+    "happy.gif": "87d71cf7c1fa723b511d53eb6694e087e1273bc21ed79c7a5cf4410fdf1f0b14",
+    "idle.gif": "96839d4e94ea1258d103ae8b085afeb69f2bca0a50107ab23a1a6a7be0c84647",
+    "liya-nine-states.gif": "7d07d6295d40244fb6bcc0cbba797c328ada800d707ede4482aca95a4730e914",
+    "sleepy.gif": "fc764031c66f3e57ab241b54f8b292eed02fbef121c12140bd0337e44e006f01",
+    "sulky.gif": "593f5db3c694bf1d02af5b0041cd9cd611ffe751f1a2362ed3ef17f8e185d432",
+    "thinking.gif": "ceebb0e3e543714cb772ddc175133c09bf90bed3733e06f9a9e3847cca019c9b",
+    "idle.png": "9f0091fecbd4fab05bfc4729d561624d13903fb703660a50302fb2ce13981d6c",
+    "happy.png": "d33ecd956d431af4a1d1bfd8055e3318639d13a1ddb9f6dc4dd09ae8824c48ba",
+    "curious.png": "9e255755f35fcc94b1607b4f3e933979e78f13217d31f1869b14001bf3a7d9d0",
+    "thinking.png": "613e12411856b3fa55991a34e65401fb231d48e990e29395259aa58656334817",
+    "sulky.png": "13b15837cc15380176cd70dfe896e58ceb28162f7aa3e5620a3a9c50cc4ce02f",
+    "caring.png": "15881aa423a4c7f5eafa4a42f53a6000a1816d87370e6ee592d5666cb9ab0d9a",
+    "greeting.png": "afc758c42e298cbf6be08c015284cd5f7fcdfe2e059fe668715d76e565236a6c",
+    "sleepy.png": "859c9fdddff71659fab593ba9c30e00042814ca9970c6cdd3b11f4ab97b2348b",
+    "excited.png": "48d3472ce83642effa99919993e83f17c5d5ac90ecb6a60c84e4bb902763e012"
+  },
+  "local_tests": 48,
+  "host_checks": 37,
+  "new_expressions": [
+    "shy",
+    "surprised",
+    "worried",
+    "sad",
+    "relieved",
+    "determined"
+  ],
+  "plugin_loaded": true,
+  "qq_connected": true,
+  "memory": {
+    "runtime_ready": true,
+    "retrieval_ready": true,
+    "degraded": false
+  },
+  "source_commit": "3cf84dba1be3f1ae104adfd4cf53626e5e3a9bed",
+  "database_after": {
+    "companion.sqlite3": {
+      "integrity": "ok",
+      "counts": {
+        "incoming": 68,
+        "relations": 7,
+        "deliveries": 4
+      }
+    },
+    "conversation.sqlite3": {
+      "integrity": "ok",
+      "counts": {
+        "messages": 41,
+        "preferences": 1,
+        "topics": 0,
+        "reminders": 3,
+        "games": 0
+      }
+    }
+  },
+  "assets_match": true,
+  "protected_files_match": true,
+  "available_expressions": [
+    "idle",
+    "happy",
+    "curious",
+    "thinking",
+    "sulky",
+    "caring",
+    "greeting",
+    "sleepy",
+    "excited",
+    "shy",
+    "surprised",
+    "worried",
+    "sad",
+    "relieved",
+    "determined"
+  ],
+  "plugin_version": "1.4.3",
+  "qq_expression_delivery": "pending_member_request",
+  "checked_at": 1793782718.9926772
+}

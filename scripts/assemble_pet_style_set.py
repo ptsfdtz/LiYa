@@ -10,7 +10,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageSequence
 
 from qq_pet_frames import ROOT,RUN,COUNTS,DURATIONS,bundled
 from shared_gif_palette import master_palette,indexed_frame,save_preview
-from pose_inbetweens import smooth_loop
+from pose_inbetweens import loop_timing,smooth_loop
 import sys
 sys.path.insert(0,str(ROOT/'src/liya_companion'))
 from state import EXPRESSIONS
@@ -18,6 +18,7 @@ from state import EXPRESSIONS
 OUT = ROOT/'assets/expressions'
 RUNTIME = ROOT/'src/liya_companion/assets'
 FINAL = RUN/'final'
+MOTION_STRETCH = 1.5
 STATIC_FRAME = {state:2 for state in EXPRESSIONS}
 STATIC_FRAME.update(idle=0,sleepy=0,happy=3,greeting=3,excited=3,relieved=3)
 
@@ -31,6 +32,12 @@ def copy_atomic(source,target):
     shutil.copy2(source,staged)
     staged.replace(target)
     assert sha(source)==sha(target)
+
+
+def save_png_atomic(image,target):
+    staged = target.with_suffix('.building.png')
+    image.save(staged)
+    staged.replace(target)
 
 
 def contact_sheet(atlas,names,offset,title):
@@ -55,13 +62,13 @@ def montage(name,states,animations,columns=5,labels=True):
         font=ImageFont.truetype('C:/Windows/Fonts/msyh.ttc',13)
     except OSError:
         font=ImageFont.load_default()
-    gallery_timing = [40] * 26
+    gallery_timing = [40] * round(26 * MOTION_STRETCH)
     for index in range(len(gallery_timing)):
         image=Image.new('RGBA',(width*columns,height*rows),'#f5f2ea' if labels else (0,0,0,0))
         draw=ImageDraw.Draw(image)
         for i,state in enumerate(states):
             frames, delays = animations[state]
-            timestamp = index * sum(delays) / len(gallery_timing)
+            timestamp = (index + 0.5) * sum(delays) / len(gallery_timing)
             end = 0
             for sprite, delay in zip(frames, delays, strict=True):
                 end += delay
@@ -73,7 +80,7 @@ def montage(name,states,animations,columns=5,labels=True):
             image.alpha_composite(sprite,(x,y))
             if labels:
                 draw.text((x+width/2,y+175),EXPRESSIONS[state],font=font,fill='#335d56',anchor='mt')
-        image.save(folder/f'{index:02d}.png')
+        save_png_atomic(image,folder/f'{index:02d}.png')
     bundled('render_animation_previews',['--frames-root',folder.parent,'--output-dir',FINAL/'previews'],
             {'ROW_DURATIONS':{name:gallery_timing}})
     return folder
@@ -137,9 +144,10 @@ def main():
         frames[state]=[]
         for i in range(8):
             cell=atlas.crop((i*192,row*208,(i+1)*192,(row+1)*208))
-            cell.save(frames_root/state/f'{i:02d}.png')
+            save_png_atomic(cell,frames_root/state/f'{i:02d}.png')
             frames[state].append(cell)
-    animations = {state: smooth_loop(frames[state], DURATIONS[state]) for state in names}
+    timings = {state: list(loop_timing(DURATIONS[state], MOTION_STRETCH)) for state in names}
+    animations = {state: smooth_loop(frames[state], timings[state]) for state in names}
     for state, (poses, delays) in animations.items():
         save_preview(poses, delays, FINAL/'previews'/f'{state}.gif', RUN)
     contact_sheet(atlas,names,0,'first-nine')
@@ -167,22 +175,28 @@ def main():
             for frame in ImageSequence.Iterator(gif):
                 decoded.append(frame.convert('RGBA'))
                 delays.append(frame.info['duration'])
-        assert sum(delays) == sum(DURATIONS[state]), state
+        timing = timings[state]
+        assert sum(delays) == 10 * sum(duration for duration, _, _ in timing), state
+        original_count = sum(count for _, _, count in loop_timing(DURATIONS[state]))
+        original_fps = 1000 * original_count / sum(DURATIONS[state])
+        output_fps = 1000 * len(decoded) / sum(delays)
+        assert abs(output_fps / original_fps - 1) < 0.005, state
         assert len({f.tobytes() for f in decoded}) > COUNTS[state], state
         elapsed = 0
-        original_start = 0
+        pose_start = 0
         frame_index = 0
         palette = master_palette(RUN)
-        for pose, duration in zip(frames[state], DURATIONS[state], strict=True):
-            while elapsed + delays[frame_index] <= original_start:
+        for pose, (duration, _, _) in zip(frames[state], timing, strict=True):
+            while elapsed + delays[frame_index] <= pose_start:
                 elapsed += delays[frame_index]
                 frame_index += 1
             assert decoded[frame_index].tobytes() == indexed_frame(pose, palette).convert('RGBA').tobytes(), state
-            original_start += duration
+            pose_start += 10 * duration
         qa=RUN/'qa/rows'/state
         result=json.loads((qa/'result.json').read_text(encoding='utf-8'))
         checks.append({**result,'output_frames':len(decoded),'output_durations_ms':delays,
-                       'original_pose_pixels_and_timing_preserved':True,
+                       'original_pose_pixels_and_order_preserved':True,
+                       'original_average_fps':round(original_fps, 3),'output_average_fps':round(output_fps, 3),
                        'sha256':sha(gif_path),'source_sha256':sha(RUN/'decoded'/f'{state}.png'),
                        'design_and_runtime_identical':True})
     for state in names:
@@ -205,7 +219,7 @@ def main():
                 reference='assets/pet-style-v4/reference-sleepy.png',
                 method='color-only image_gen corrections; original drawn poses retained; bundled sprite pipeline plus one common approved-reference GIF palette',
                 shared_palette_sha256=palette_record['palette_sha256'],
-                export_interpolation='Motion-compensated inbetweens between existing drawings; original drawings, palette, and loop durations retained.',
+                export_interpolation='Motion-compensated inbetweens stretch the original action by about 50% while retaining the drawings, palette, and average frame cadence.',
                 source_drawings_modified=False,atlas_size=list(atlas.size),atlas_sha256=sha(atlas_path),
                 qq_custom_format=True,chatgpt_pet_created=False,deployed=False,
                 jump_bottoms=jump_bottoms,checks=checks,

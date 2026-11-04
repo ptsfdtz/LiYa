@@ -80,7 +80,8 @@ def save_preview(frames,durations,output,run_dir):
     palette=master_palette(run_dir)
     indexed=[indexed_frame(frame,palette) for frame in frames]
     staged=output.with_name(output.stem+'.building.gif')
+    # Omitting the loop extension requests one playback. loop=0 repeats forever.
     indexed[0].save(staged,save_all=True,append_images=indexed[1:],duration=durations,
-                    loop=0,disposal=2,transparency=0,optimize=False,
+                    disposal=2,transparency=0,optimize=False,
                     palette=bytes(palette.getpalette()))
     staged.replace(output)
