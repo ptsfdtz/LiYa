@@ -4,6 +4,18 @@ from .briefing import local_time
 import time
 
 
+def web_planning_prompt():
+    return (
+        '\n本部署的联网能力分配：Replyer使用dragon-gpt-web，供应商原生web_search在reply回复阶段提供，'
+        '与Planner的tool_search可发现工具分开。需要联网时，通过reply_reference要求Replyer实际查询并引用来源；'
+        '若回复阶段实际无工具或查询失败，必须如实说明。'
+        'Planner的tool_search未找到统一联网工具，不能据此认定Replyer没有原生联网能力。'
+        'Replyer的供应商原生联网活动可能不出现在Planner的工具结果中；缺少该记录不等于未联网，'
+        '也不能凭空断言已联网。正文成功发送后，没有新请求或有依据的实质错误就结束本轮，'
+        '不要仅因Planner未看到联网记录而再次调用reply纠正或重发。'
+    )
+
+
 def web_research_prompt():
     return (
         '\n当前北京时间：'+local_time(time.time())+'。'

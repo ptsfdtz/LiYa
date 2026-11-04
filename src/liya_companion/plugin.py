@@ -13,7 +13,7 @@ from maibot_sdk.types import HookMode, ToolParameterInfo, ToolParamType
 
 from .state import EVENTS, EXPRESSIONS, StateStore, state_prompt
 from .briefing import BriefingService, local_time
-from .web_research import web_research_prompt
+from .web_research import web_research_prompt, web_planning_prompt
 from .conversation import ConversationStore, conversation_prompt, mentions_bot
 from .personal import PersonalService
 from .activities import ActivityService
@@ -138,7 +138,7 @@ class LiyaCompanion(MaiBotPlugin):
             self.anchors[session_id]=source['id']
         # Match the native Context Item snapshot schema; no provider replay fields.
         extra={'item_type':'SystemMessageItem','meta':{'item_id':uuid.uuid4().hex,'logical_turn_id':None,
-               'timestamp':time.strftime('%Y-%m-%dT%H:%M:%S')},'parts':[{'type':'text','text':state_prompt(state)}]}
+               'timestamp':time.strftime('%Y-%m-%dT%H:%M:%S')},'parts':[{'type':'text','text':state_prompt(state)+web_planning_prompt()}]}
         if source:
             extra['parts'][0]['text']+=conversation_prompt(self.conversations.context(session_id,source['id']))
             extra['parts'][0]['text']+='\n当前北京时间：'+local_time(time.time())+'。提醒必须调用liya_activity，日期不明确先澄清。'
