@@ -22,3 +22,7 @@ logs/
 __pycache__/
 *.pyc
 .venv-artwork/
+
+# Keep raw runtime traces and local inspection snapshots out of version control.
+validation/*.log
+validation/private-chat-baseline.json

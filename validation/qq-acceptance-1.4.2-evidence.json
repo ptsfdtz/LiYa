@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-04T11:34:42.044409+08:00",
+  "since": 1793761790.0,
+  "received_message_count": 11,
+  "latest_received": 1793763175.8335636,
+  "nickname_test_evidence": [],
+  "visual_inbound_evidence": [],
+  "reminder_test_evidence": [
+    {
+      "reminder_fingerprint": "292cbb1fec32f646",
+      "due": 1793761854.384781,
+      "status": "sent",
+      "has_platform_receipt": true,
+      "receipt_fingerprint": "5cb5c09042bef9e4"
+    },
+    {
+      "reminder_fingerprint": "3bd752d6777ced2e",
+      "due": 1793763073.7152417,
+      "status": "cancelled",
+      "has_platform_receipt": false,
+      "receipt_fingerprint": null
+    }
+  ],
+  "completion_proven": false,
+  "scope": "Only reception, persistence and recorded send receipts. Visible answer quality, ownership and passive/active QQ delivery conditions still require review."
+}

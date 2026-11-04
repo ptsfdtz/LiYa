@@ -1,0 +1,238 @@
+{
+  "checked_at": "2026-11-04T11:34:41.326239+08:00",
+  "messages": [
+    {
+      "source_fingerprint": "b9e662e9eb9796dc",
+      "received": 1793761794.384781,
+      "mentioned": false,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        },
+        {
+          "tool": "liya_activity",
+          "action": "create_reminder",
+          "success": true
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "badbc8673ee399fd",
+      "received": 1793761916.945001,
+      "mentioned": false,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        },
+        {
+          "tool": "liya_personal",
+          "action": "remember",
+          "success": true
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "f64bc8ee956c5eaa",
+      "received": 1793762011.7803698,
+      "mentioned": false,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        },
+        {
+          "tool": "liya_personal",
+          "action": "correct",
+          "success": true
+        },
+        {
+          "tool": "liya_personal",
+          "action": "list",
+          "success": true,
+          "test_marker_fact_count": 1
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "7e8391cb0ffebf0b",
+      "received": 1793762287.8129156,
+      "mentioned": false,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        },
+        {
+          "tool": "liya_personal",
+          "action": "forget",
+          "success": true
+        },
+        {
+          "tool": "liya_personal",
+          "action": "list",
+          "success": true,
+          "test_marker_fact_count": 0
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "aab86e3cca67f6a3",
+      "received": 1793762555.279342,
+      "mentioned": true,
+      "operations": []
+    },
+    {
+      "source_fingerprint": "17345ce58b3437bb",
+      "received": 1793762612.6493726,
+      "mentioned": true,
+      "operations": []
+    },
+    {
+      "source_fingerprint": "d9d685e2dbd4067f",
+      "received": 1793762773.7152417,
+      "mentioned": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        },
+        {
+          "tool": "liya_activity",
+          "action": "create_reminder",
+          "success": true
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "7216542e8b2fee95",
+      "received": 1793762888.648981,
+      "mentioned": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        },
+        {
+          "tool": "liya_activity",
+          "action": "cancel_reminder",
+          "success": true
+        },
+        {
+          "tool": "liya_activity",
+          "action": "list_reminders",
+          "success": true
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "1a6d3656a61ab2f3",
+      "received": 1793763036.3396995,
+      "mentioned": true,
+      "operations": []
+    },
+    {
+      "source_fingerprint": "d619b6dc4c3b0a52",
+      "received": 1793763122.0684044,
+      "mentioned": true,
+      "operations": []
+    },
+    {
+      "source_fingerprint": "83823cc5cef13ca8",
+      "received": 1793763175.8335636,
+      "mentioned": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        }
+      ]
+    }
+  ],
+  "reminders": [
+    {
+      "fingerprint": "292cbb1fec32f646",
+      "text": "QQ验收提醒142",
+      "status": "sent",
+      "due": 1793761854.384781,
+      "delay_seconds": 60.0,
+      "has_platform_receipt": true,
+      "due_has_passed": true
+    },
+    {
+      "fingerprint": "3bd752d6777ced2e",
+      "text": "QQ142取消验收",
+      "status": "cancelled",
+      "due": 1793763073.7152417,
+      "delay_seconds": 300.0,
+      "has_platform_receipt": false,
+      "due_has_passed": true
+    }
+  ],
+  "boundary": {
+    "paused": 0,
+    "stopped_at": 1793763122.0684044,
+    "resumed_at": 1793763175.8335636
+  },
+  "plugin_version": "1.4.2",
+  "source_commit": "313ad7c6bc679b04716db0d2061b3aebb164cb7b",
+  "scope": "Authorized desktop QQ tests in one group with one logged-in member. Anonymous source fingerprints and synthetic test content only.",
+  "automatic_checks": {
+    "local_tests_passed": 48,
+    "host_tests_passed": 36,
+    "host_tests_skipped": 1
+  },
+  "all_chat_capabilities_accepted": false,
+  "ui_review": {
+    "memory": {
+      "passed": true,
+      "remember_reply": "保存成功",
+      "correct_reply": "已更正成功，饮料改为温白开水",
+      "forget_reply": "已删除成功，复查青柠142匹配0条",
+      "test_data_removed": true
+    },
+    "reminder": {
+      "passed": true,
+      "actual_notification": "提醒小林：QQ验收提醒142",
+      "delay_seconds": 60,
+      "one_visible_delivery": true,
+      "delivery_conditions_preserved": true,
+      "duplicate_conditions_removed_in_final_revision": true
+    },
+    "reminder_management": {
+      "passed": true,
+      "listed": true,
+      "cancelled": true,
+      "queried_status": "cancelled",
+      "original_due": "2026-11-04 11:31:13+08:00",
+      "no_notification_after_due": true
+    },
+    "stop_failure_notice": {
+      "passed": true,
+      "boundary_paused_observed": true,
+      "send_guard_abort_observed_at": "2026-11-04 11:24:56+08:00",
+      "late_notice_visible": false
+    },
+    "stop_successfully_generated_body": {
+      "passed": false,
+      "status": "unverified_due_to_provider_502",
+      "second_attempt": "Planner failed before Replyer started"
+    },
+    "resume": {
+      "passed": true,
+      "final_visible_reply": "已恢复正常"
+    }
+  },
+  "remaining": [
+    "成功生成的正常长正文中途停止",
+    "多人身份与引用归属",
+    "连续消息合批",
+    "QQ表情包语境理解",
+    "超出QQ被动窗口的主动提醒",
+    "字词接龙和跨群隔离",
+    "话题续接",
+    "联网来源链接的QQ完整链路",
+    "长正文完整投递"
+  ]
+}

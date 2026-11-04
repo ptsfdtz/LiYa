@@ -1,5 +1,11 @@
 {
-  "release": "liya-reminder-20261104-003152",
-  "stage": "/opt/dragon-maibot/releases/liya-reminder-20261104-003152",
-  "source_commit": "ff10f556b028c659336241f504803e7e3a8fae5b"
+  "stage": "/opt/dragon-maibot/releases/liya-private-20261104-175108",
+  "plugin_version": "1.5.1",
+  "source_commit": "ab3c88ebafd053b06ed6d5bdd627952ee0d2548b",
+  "qq_identity_mapping": {
+    "alias_fingerprint": "bea3e1dcf64ff452",
+    "canonical_fingerprint": "33ff9cc8ac6d9d1f",
+    "codec_sha256": "2a33fb6d9caebe659b4574ffa8fb2100da4f91356509440200733760a30844e2"
+  },
+  "asset_stage": "/opt/dragon-maibot/releases/liya-single-play-20261104-172040"
 }

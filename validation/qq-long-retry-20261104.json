@@ -1,0 +1,314 @@
+{
+  "scope": "Authorized synthetic QQ desktop retests; server IDs hashed; no code/config changes.",
+  "messages": [
+    {
+      "source_fingerprint": "374a16fe594251fb",
+      "synthetic_request": "@璃芽  链路复测143P1，请只回复“收到143P1”。",
+      "received": 1793780638.6128097,
+      "mentioned": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "96fb02f3c8daa494",
+      "synthetic_request": "@璃芽  长正文复测143H2。请写一篇约1200字的虚构小龙童话，分成六段，开头为“正文开始143H2”，结尾为“正文结束143H2”。保留换行，并在第三段自然加入（小龙认真点头）。完整生成后一次发送，不用保存记忆或提醒。",
+      "received": 1793780719.9402018,
+      "mentioned": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "0272393f7c5b0d0d",
+      "synthetic_request": "@璃芽  长正文复测143H3。请重新写一篇约1200字的虚构小龙童话，分成六段，开头为“正文开始143H3”，结尾为“正文结束143H3”。保留换行，并在第三段自然加入（小龙认真点头）。完整生成后一次发送，不用保存记忆或提醒。",
+      "received": 1793780893.2813513,
+      "mentioned": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "29ad1979ff35643d",
+      "synthetic_request": "@璃芽  长正文复测143H4。请写一篇约1200字的虚构小龙童话，分成六段，开头为“正文开始143H4”，结尾为“正文结束143H4”。保留换行，并在第三段加入（小龙认真点头）。完整生成后一次发送，不用保存记忆或提醒。",
+      "received": 1793781072.5497904,
+      "mentioned": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "2c74dccc7ec4ccef",
+      "synthetic_request": "@璃芽  长正文复测143H5。请再试一次，写约1200字的虚构小龙童话，分六段，开头为“正文开始143H5”，结尾为“正文结束143H5”，第三段保留（小龙认真点头）。完整生成后一次发送，不保存记忆或提醒。",
+      "received": 1793781281.746438,
+      "mentioned": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "eeb552871c09beaf",
+      "synthetic_request": "@璃芽  停止复测143I1。请写一篇约1200字的虚构小龙童话，分成六段，第一句为“停止正文143I1”。完整生成后一次发送，不用保存记忆或提醒。",
+      "received": 1793781495.539955,
+      "mentioned": true,
+      "operations": []
+    },
+    {
+      "source_fingerprint": "869fd32769748e96",
+      "synthetic_request": "@璃芽  先别说了",
+      "received": 1793781548.9269638,
+      "mentioned": true,
+      "operations": []
+    },
+    {
+      "source_fingerprint": "aeaf136dab2ff666",
+      "synthetic_request": "@璃芽  恢复正常回答，不用继续任何故事，也不用保存记忆或提醒。本轮重试测试结束，请只回复“恢复完成143P2”。",
+      "received": 1793781646.4435427,
+      "mentioned": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        }
+      ]
+    }
+  ],
+  "boundary": {
+    "paused": 0,
+    "stopped_at": 1793781548.9269638,
+    "resumed_at": 1793781646.4435427
+  },
+  "events": [
+    {
+      "time": "11-04 16:22:15",
+      "event": "code=4009",
+      "http_502": null
+    },
+    {
+      "time": "11-04 16:24:12",
+      "event": "回复生成完成",
+      "http_502": null
+    },
+    {
+      "time": "11-04 16:24:18",
+      "event": "Planner 已结束本轮思考",
+      "http_502": null
+    },
+    {
+      "time": "11-04 16:26:10",
+      "event": "HTTP错误",
+      "http_502": true
+    },
+    {
+      "time": "11-04 16:27:41",
+      "event": "HTTP错误",
+      "http_502": true
+    },
+    {
+      "time": "11-04 16:28:19",
+      "event": "conversation_guard",
+      "http_502": null
+    },
+    {
+      "time": "11-04 16:29:11",
+      "event": "HTTP错误",
+      "http_502": true
+    },
+    {
+      "time": "11-04 16:29:57",
+      "event": "Planner 已结束本轮思考",
+      "http_502": null
+    },
+    {
+      "time": "11-04 16:32:00",
+      "event": "HTTP错误",
+      "http_502": true
+    },
+    {
+      "time": "11-04 16:32:45",
+      "event": "Planner 已结束本轮思考",
+      "http_502": null
+    },
+    {
+      "time": "11-04 16:35:34",
+      "event": "HTTP错误",
+      "http_502": true
+    },
+    {
+      "time": "11-04 16:36:20",
+      "event": "Planner 已结束本轮思考",
+      "http_502": null
+    },
+    {
+      "time": "11-04 16:39:03",
+      "event": "HTTP错误",
+      "http_502": true
+    },
+    {
+      "time": "11-04 16:39:08",
+      "event": "observe 中止",
+      "http_502": null
+    },
+    {
+      "time": "11-04 16:39:41",
+      "event": "conversation_guard",
+      "http_502": null
+    },
+    {
+      "time": "11-04 16:39:48",
+      "event": "Planner 已结束本轮思考",
+      "http_502": null
+    },
+    {
+      "time": "11-04 16:41:03",
+      "event": "回复生成完成",
+      "http_502": null
+    },
+    {
+      "time": "11-04 16:41:10",
+      "event": "Planner 已结束本轮思考",
+      "http_502": null
+    }
+  ],
+  "generated_bodies": [
+    {
+      "marker": "恢复完成143P2",
+      "body_characters": 9,
+      "cjk_characters": 4,
+      "paragraphs": 1,
+      "parentheses_preserved": false,
+      "parentheses_in_third_paragraph": false,
+      "first_30_characters": "恢复完成143P2",
+      "last_35_characters": "恢复完成143P2",
+      "body_sha256": "d529850296b4c57ab968fb7964b6996687323d5faeb263dde698b31897e09748",
+      "generation": {
+        "model_name": "dragon-gpt-web",
+        "duration_ms": 2796.08,
+        "prompt_tokens": 16792,
+        "completion_tokens": 9,
+        "total_tokens": 16801
+      },
+      "attempts": [
+        {
+          "status": "succeeded",
+          "started_at": "2026-11-04T16:41:00.274",
+          "duration_ms": 2790.03,
+          "provider_attempt": 1
+        }
+      ]
+    }
+  ],
+  "checked_at": "2026-11-04T16:42:09.714316+08:00",
+  "plugin_version": "1.4.3",
+  "source_commit": "1f64ae0454c243f94f3928bb4ef6ba8163c4cd41",
+  "provider_diagnostics": {
+    "generation_failures": [
+      "16:26:48",
+      "16:28:19",
+      "16:29:49",
+      "16:32:38",
+      "16:36:12",
+      "16:39:41"
+    ],
+    "first_502_delays": [
+      {
+        "reply_started": "16:25:35",
+        "first_502": "16:26:10",
+        "seconds_to_first_502": 35.0
+      },
+      {
+        "reply_started": "16:27:06",
+        "first_502": "16:27:41",
+        "seconds_to_first_502": 35.0
+      },
+      {
+        "reply_started": "16:28:36",
+        "first_502": "16:29:11",
+        "seconds_to_first_502": 35.0
+      },
+      {
+        "reply_started": "16:31:25",
+        "first_502": "16:32:00",
+        "seconds_to_first_502": 35.0
+      },
+      {
+        "reply_started": "16:34:59",
+        "first_502": "16:35:34",
+        "seconds_to_first_502": 35.0
+      },
+      {
+        "reply_started": "16:38:28",
+        "first_502": "16:39:03",
+        "seconds_to_first_502": 35.0
+      }
+    ],
+    "html_error_titles": [
+      "502 Bad Gateway"
+    ],
+    "latest_planner_end": "16:41:10",
+    "inference": "Six first failures occurred 35 seconds after Replyer started. This suggests a fixed gateway/upstream wait limit; the underlying proxy/provider cause has not been verified."
+  },
+  "ui_review": {
+    "outbound_messages": 9,
+    "unreceived_during_gateway_reconnect": [
+      "长正文复测143H1"
+    ],
+    "short_probe": {
+      "passed": true,
+      "actual_reply": "收到143P1"
+    },
+    "long_requests_received": 5,
+    "long_request_markers": [
+      "143H2",
+      "143H3",
+      "143H4",
+      "143H5",
+      "143I1"
+    ],
+    "long_normal_body_generated": false,
+    "complete_1200_character_body_delivery": {
+      "passed": false,
+      "status": "unverified_due_to_repeated_502"
+    },
+    "normal_1200_character_body_stop": {
+      "passed": false,
+      "status": "unverified_due_to_repeated_502"
+    },
+    "stop_failure_notice": {
+      "passed": true,
+      "paused_observed": 1,
+      "stop_received_at": "2026-11-04T16:39:08.926+08:00",
+      "send_guard_aborted_at": "2026-11-04T16:39:41+08:00",
+      "late_failure_notice_visible": false
+    },
+    "resume": {
+      "passed": true,
+      "actual_reply": "恢复完成143P2",
+      "draft_empty": true
+    },
+    "optional_expression_visible_after_resume": true
+  },
+  "all_chat_capabilities_accepted": false,
+  "summary": {
+    "long_requests_received": 5,
+    "long_generation_calls_exhausting_502_retries": 6,
+    "successful_long_bodies": 0,
+    "additional_long_request_not_received_during_gateway_reconnect": 1,
+    "normal_replies_restored": true
+  }
+}

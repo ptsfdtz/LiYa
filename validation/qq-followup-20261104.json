@@ -1,0 +1,232 @@
+{
+  "messages": [
+    {
+      "source_fingerprint": "88ccc766bb037903",
+      "synthetic_request": "@璃芽  请写一篇约1200字的虚构小龙童话，分成六段，第一句为“停止复测142C”，完整生成后一次发送。",
+      "received": 1793765415.7031035,
+      "mentioned": true,
+      "operations": []
+    },
+    {
+      "source_fingerprint": "7eb8d95d6e1017eb",
+      "synthetic_request": "@璃芽  先别说了",
+      "received": 1793765481.0389855,
+      "mentioned": true,
+      "operations": []
+    },
+    {
+      "source_fingerprint": "22637baec9eb6ec8",
+      "synthetic_request": "@璃芽  恢复回答。请写一篇约600字的虚构小龙童话，分成六段，第一句为“停止复测142D”，完整生成后一次发送。",
+      "received": 1793765706.8428073,
+      "mentioned": true,
+      "operations": []
+    },
+    {
+      "source_fingerprint": "9d27118616f7c91c",
+      "synthetic_request": "@璃芽  先别说了",
+      "received": 1793765744.0630634,
+      "mentioned": true,
+      "operations": []
+    },
+    {
+      "source_fingerprint": "1e134ff5d7b50c3a",
+      "synthetic_request": "@璃芽  恢复正常回答。本轮请写一篇约600字的虚构小龙童话，分六段，第一句为“正文复测142E”，结尾为“故事结束142E”。完整生成后一次发送，不用保存记忆或提醒。",
+      "received": 1793765800.618825,
+      "mentioned": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "df00b6e8bea9ba0e",
+      "synthetic_request": "@璃芽  联网验收142F。请实际联网查询 Python 3.13.0 正式版的发布日期，简短回答，并附一个 python.org 官方来源的完整 https 链接。",
+      "received": 1793765867.161575,
+      "mentioned": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "33378f38a0fa6e5a",
+      "synthetic_request": "@璃芽  联网复测143G。请实际联网查询 Python 3.12.0 正式版的发布日期，简短回答，并附一个 python.org 官方来源的完整 https 链接。",
+      "received": 1793766169.301119,
+      "mentioned": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "status": "sent"
+        }
+      ]
+    }
+  ],
+  "boundary": {
+    "paused": 0,
+    "stopped_at": 1793765744.0630634,
+    "resumed_at": 1793766169.301119
+  },
+  "pending_reminders_in_test_session": 0,
+  "generated_bodies": [
+    {
+      "marker": "停止复测142D",
+      "prompt_record_fingerprint": "cea463748d94909c",
+      "generation": {
+        "model_name": "dragon-gpt-web",
+        "duration_ms": 18951.24,
+        "prompt_tokens": 15795,
+        "completion_tokens": 542,
+        "total_tokens": 16337
+      },
+      "attempts": [
+        {
+          "status": "succeeded",
+          "started_at": "2026-11-04T12:15:27.549",
+          "duration_ms": 18942.18,
+          "workflow_purpose": "maisaka.replyer",
+          "provider_attempt": 1
+        }
+      ],
+      "body_characters": 570,
+      "body_sha256": "f64a48fa2770e384993165a2e225e7d1e417de90a787462cdf2c5e9ed857cfeb",
+      "paragraphs": 6,
+      "starts_with_marker": true,
+      "ends_with_end_marker": false
+    },
+    {
+      "marker": "正文复测142E",
+      "prompt_record_fingerprint": "f3aae2dc01532076",
+      "generation": {
+        "model_name": "dragon-gpt-web",
+        "duration_ms": 19471.59,
+        "prompt_tokens": 15822,
+        "completion_tokens": 517,
+        "total_tokens": 16339
+      },
+      "attempts": [
+        {
+          "status": "succeeded",
+          "started_at": "2026-11-04T12:16:53.199",
+          "duration_ms": 19465.34,
+          "workflow_purpose": "maisaka.replyer",
+          "provider_attempt": 1
+        }
+      ],
+      "body_characters": 571,
+      "body_sha256": "32b9268cc96f99b720c1b1cd7f942a4f06edae352eb5d76a189f2708d1540403",
+      "paragraphs": 6,
+      "starts_with_marker": true,
+      "ends_with_end_marker": true
+    }
+  ],
+  "checked_at": "2026-11-04T12:24:18.535830+08:00",
+  "plugin_version": "1.4.2",
+  "source_commit": "313ad7c6bc679b04716db0d2061b3aebb164cb7b",
+  "scope": "Authorized synthetic desktop QQ tests in the same single group and member. Source IDs are hashed; no real user content is retained.",
+  "ui_review": {
+    "stop_normal_generated_body": {
+      "passed": true,
+      "marker": "停止复测142D",
+      "stop_received_at": "2026-11-04T12:15:44.063+08:00",
+      "generation_finished_at": "2026-11-04T12:15:46.489+08:00",
+      "send_guard_aborted_at": "2026-11-04T12:15:46+08:00",
+      "late_body_visible": false
+    },
+    "complete_body_delivery": {
+      "passed": true,
+      "marker": "正文复测142E",
+      "one_visible_message": true,
+      "six_paragraphs_visible": true,
+      "start_and_end_markers_visible": true
+    },
+    "web_qq_delivery": {
+      "passed": true,
+      "native_provider_activity": {
+        "provider_type": "web_search",
+        "action_type": "open_page",
+        "status": "completed",
+        "timestamp": "2026-11-04T12:18:08.019545",
+        "url": "https://www.python.org/downloads/release/python-3130/"
+      },
+      "date_correctly_reported": "2024-10-07",
+      "official_source_independently_opened": true,
+      "one_visible_message": true,
+      "complete_https_link_visible": true,
+      "planner_visibility_issue": {
+        "spurious_correction_generations": 2,
+        "duplicate_sends_blocked": true,
+        "explanation": "Planner tool_search had no unified search tool. It incorrectly concluded that Replyer lacked provider-hosted native web access. Actual Replyer ProviderActivityItem records show a completed native open_page."
+      }
+    }
+  },
+  "provider_limitations": [
+    "1200-character stop attempt 142C reached Replyer but exhausted HTTP 502 retries; the failure notice was blocked at 12:11:46.",
+    "A 100-token direct Replyer connectivity probe succeeded.",
+    "142D Planner recovered after a retryable 502; its normal Replyer output succeeded on the first provider attempt."
+  ],
+  "all_chat_capabilities_accepted": false,
+  "subsequent_fix": {
+    "plugin_version": "1.4.3",
+    "source_commit": "1f64ae0454c243f94f3928bb4ef6ba8163c4cd41",
+    "description": "Explain Replyer native web capability and incomplete Planner visibility in Planner prompt; avoid unsupported corrections after a successful reply.",
+    "qq_retest": {
+      "passed": true,
+      "marker": "联网复测143G",
+      "one_visible_reply": true,
+      "complete_https_link_visible": true,
+      "date_correctly_reported": "2023-10-02",
+      "official_source_independently_opened": true,
+      "planner_reply_calls": 1,
+      "planner_ended_after_success": true,
+      "unexpected_correction_generations": 0
+    },
+    "backend_retest": {
+      "replyer_records": [
+        {
+          "record_fingerprint": "fce3b76d653c5dee",
+          "body": "我查一下官网发布日期。\n已联网核实，Python 3.12.0 正式版发布于2023年10月2日。([python.org](https://www.python.org/downloads/release/python-3120/))\n官方来源：https://www.python.org/downloads/release/python-3120/",
+          "native_activities": [
+            {
+              "action_type": "open_page",
+              "provider_type": "web_search",
+              "status": "completed",
+              "details": [
+                "页面：https://www.python.org/downloads/release/python-3120/"
+              ]
+            }
+          ],
+          "duration_ms": 6463.12
+        }
+      ],
+      "planner_tool_calls": [
+        "reply"
+      ]
+    }
+  },
+  "automatic_checks": {
+    "local_tests_passed": 48,
+    "host_tests_passed": 36,
+    "host_tests_skipped": 1,
+    "isolated_root": "/tmp/liya-chat-acceptance-30c7a2e5102f"
+  },
+  "remaining": [
+    "1200字及更长正文稳定生成与投递（本轮142C上游502）",
+    "多人身份与引用归属",
+    "连续消息合批",
+    "QQ表情包语境理解",
+    "超出QQ被动窗口的主动提醒",
+    "字词接龙和跨群隔离",
+    "话题续接",
+    "括号等完整格式组合的QQ投递"
+  ],
+  "current_release": {
+    "plugin_version": "1.4.3",
+    "source_commit": "1f64ae0454c243f94f3928bb4ef6ba8163c4cd41",
+    "stage": "/opt/dragon-maibot/releases/liya-web-20261104-122055"
+  },
+  "plugin_version_scope": "Top-level 1.4.2 identifies the initial follow-up tests; subsequent_fix and current_release identify the deployed 1.4.3 and its QQ retest."
+}

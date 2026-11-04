@@ -1,0 +1,328 @@
+{
+  "checked_at": "2026-11-04T10:52:04.237385+08:00",
+  "plugin_version": "1.4.1",
+  "source_commit": "ff10f556b028c659336241f504803e7e3a8fae5b",
+  "messages": [
+    {
+      "source_fingerprint": "11105cf20c8cd8e8",
+      "received": 1793759922.0684688,
+      "mentioned_flag": false,
+      "mention_segment_count": 1,
+      "picture": false,
+      "operations": [
+        {
+          "kind": "activity",
+          "result": {
+            "success": true,
+            "due": "2026-11-04 10:39:42",
+            "timing_basis": "message_reception"
+          }
+        },
+        {
+          "kind": "reply-body",
+          "result": {
+            "status": "sent"
+          }
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "18008448b16af215",
+      "received": 1793760056.975449,
+      "mentioned_flag": false,
+      "mention_segment_count": 1,
+      "picture": true,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "result": {
+            "status": "sent"
+          }
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "1995663696d8136d",
+      "received": 1793760117.5341082,
+      "mentioned_flag": false,
+      "mention_segment_count": 1,
+      "picture": false,
+      "operations": [
+        {
+          "kind": "personal:remember",
+          "result": {
+            "success": true,
+            "action": "remember"
+          }
+        },
+        {
+          "kind": "reply-body",
+          "result": {
+            "status": "sent"
+          }
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "94bc93c15b850f05",
+      "received": 1793760214.2687829,
+      "mentioned_flag": false,
+      "mention_segment_count": 1,
+      "picture": false,
+      "operations": [
+        {
+          "kind": "personal:correct",
+          "result": {
+            "success": true,
+            "action": "correct"
+          }
+        },
+        {
+          "kind": "reply-body",
+          "result": {
+            "status": "sent"
+          }
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "ec5edaedd2a0424e",
+      "received": 1793760289.2156672,
+      "mentioned_flag": false,
+      "mention_segment_count": 1,
+      "picture": false,
+      "operations": [
+        {
+          "kind": "personal:forget",
+          "result": {
+            "success": true,
+            "action": "forget"
+          }
+        },
+        {
+          "kind": "reply-body",
+          "result": {
+            "status": "sent"
+          }
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "6a86a6ed706eeffa",
+      "received": 1793760359.7504284,
+      "mentioned_flag": false,
+      "mention_segment_count": 1,
+      "picture": false,
+      "operations": [
+        {
+          "kind": "activity",
+          "result": {
+            "success": true
+          }
+        },
+        {
+          "kind": "reply-body",
+          "result": {
+            "status": "sent"
+          }
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "dcd793f67d9707f1",
+      "received": 1793760437.0458581,
+      "mentioned_flag": false,
+      "mention_segment_count": 1,
+      "picture": false,
+      "operations": [
+        {
+          "kind": "activity",
+          "result": {
+            "success": true
+          }
+        },
+        {
+          "kind": "reply-body",
+          "result": {
+            "status": "sent"
+          }
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "4416b524a7273ee8",
+      "received": 1793760506.0128646,
+      "mentioned_flag": false,
+      "mention_segment_count": 1,
+      "picture": false,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "result": {
+            "status": "sent"
+          }
+        }
+      ]
+    },
+    {
+      "source_fingerprint": "53556740a9155a6a",
+      "received": 1793760550.7221239,
+      "mentioned_flag": false,
+      "mention_segment_count": 1,
+      "picture": false,
+      "operations": []
+    },
+    {
+      "source_fingerprint": "82ac68d719c5944b",
+      "received": 1793760653.079835,
+      "mentioned_flag": false,
+      "mention_segment_count": 1,
+      "picture": false,
+      "operations": [
+        {
+          "kind": "reply-body",
+          "result": {
+            "status": "sent"
+          }
+        }
+      ]
+    }
+  ],
+  "reminders": [
+    {
+      "fingerprint": "450bc6dbb27496d3",
+      "delay_seconds": 60.0,
+      "status": "sent",
+      "has_platform_receipt": true
+    }
+  ],
+  "tool_events": [
+    {
+      "timestamp": "2026-11-04T10:39:13.466155",
+      "tool": "liya_activity",
+      "success": true
+    },
+    {
+      "timestamp": "2026-11-04T10:42:12.081747",
+      "tool": "liya_personal",
+      "success": false
+    },
+    {
+      "timestamp": "2026-11-04T10:42:18.538495",
+      "tool": "liya_personal",
+      "success": true
+    },
+    {
+      "timestamp": "2026-11-04T10:43:44.719046",
+      "tool": "liya_personal",
+      "success": true,
+      "fact_count": 2,
+      "test_marker_facts": 1
+    },
+    {
+      "timestamp": "2026-11-04T10:43:51.243451",
+      "tool": "liya_personal",
+      "success": true
+    },
+    {
+      "timestamp": "2026-11-04T10:45:00.385060",
+      "tool": "liya_personal",
+      "success": true,
+      "fact_count": 2,
+      "test_marker_facts": 1
+    },
+    {
+      "timestamp": "2026-11-04T10:45:05.912063",
+      "tool": "liya_personal",
+      "success": true
+    },
+    {
+      "timestamp": "2026-11-04T10:45:11.267429",
+      "tool": "liya_personal",
+      "success": true,
+      "fact_count": 1,
+      "test_marker_facts": 0
+    },
+    {
+      "timestamp": "2026-11-04T10:46:10.643200",
+      "tool": "liya_activity",
+      "success": true
+    },
+    {
+      "timestamp": "2026-11-04T10:47:27.921703",
+      "tool": "liya_activity",
+      "success": true
+    }
+  ],
+  "active_game_count": 0,
+  "scope": "Member-authorized desktop QQ testing, one logged-in member, one group. Server evidence collected read-only. No full conversation, credentials or platform identifiers stored.",
+  "ui_review": {
+    "nickname": {
+      "status": "passed",
+      "observed": "正确使用小林称呼"
+    },
+    "screenshot": {
+      "status": "passed",
+      "fixture": "tests/fixtures/error-screen.png",
+      "observed_fields": [
+        "Windows 11",
+        "E042",
+        "仅重启后",
+        "构建失败"
+      ],
+      "single_visible_body": true
+    },
+    "reminder": {
+      "status": "partial",
+      "scheduled_delay_seconds": 60,
+      "visible_delivery": true,
+      "single_visible_notification": true,
+      "expected_content": "QQ验收提醒",
+      "observed_content": "一分钟后提醒我交作业，内容写“QQ验收提醒”",
+      "issue": "指定提醒正文未被准确提取，创建回复也遗漏工具返回的实际投递条件"
+    },
+    "personal_memory": {
+      "status": "failed_visible_confirmation",
+      "storage_remember": true,
+      "storage_correct": true,
+      "storage_forget": true,
+      "test_marker_absent_after_forget": true,
+      "issue": "三轮存储操作成功，但实际QQ正文声称没有工具或无法确认结果"
+    },
+    "riddle": {
+      "status": "passed_this_scenario",
+      "prompt": "什么东西越洗越脏？",
+      "answer": "水",
+      "observed": "答对啦，小林，是水。这轮结束。",
+      "active_games_after": 0,
+      "scope": "一轮猜谜的发起、回答及结束，未覆盖接龙或跨群隔离"
+    },
+    "stop": {
+      "status": "failed",
+      "request_fingerprint": "4416b524a7273ee8",
+      "stop_fingerprint": "53556740a9155a6a",
+      "long_story_visible": false,
+      "late_failure_notification_visible": true,
+      "observed": "这次回复没能生成成功，稍后再试一下。",
+      "boundary_row_existed": false,
+      "issue": "真实QQ提及段存在，但顶层被提及标记为false，未建立停止边界。长故事生成失败，不能以故事缺席证明取消成功。"
+    },
+    "resume_and_missing_attachment": {
+      "status": "passed_this_scenario",
+      "observed": "小林，这条消息没收到新附件。",
+      "scope": "新明确请求获得回复，未伪造新附件。停止边界未建立，不能据此证明真正暂停后的恢复。"
+    }
+  },
+  "unverified": [
+    "多人身份与引用归属",
+    "连续三条消息合批",
+    "QQ表情包语境理解",
+    "超过QQ被动窗口的主动提醒",
+    "提醒列出取消与重启后恢复",
+    "字词接龙及跨群隔离",
+    "话题续接",
+    "联网来源链接的QQ完整链路",
+    "长正文完整投递"
+  ],
+  "completion_proven": false
+}

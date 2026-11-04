@@ -1,24 +1,28 @@
 {
-  "release": "liya-chat-20261104-000349",
-  "stage": "/opt/dragon-maibot/releases/liya-chat-20261104-000349",
+  "release": "liya-web-20261104-122055",
+  "stage": "/opt/dragon-maibot/releases/liya-web-20261104-122055",
   "expected_source": {
-    "plugin.py": "ce68ff12836f5eb4d4ff97b05008b31650a0f2bf417232ad4a07ff88d0a8ef2d",
-    "state.py": "066fad3685b50113320db475b068be864db7e0ff84f93e798c20b6425b58ba72",
-    "briefing.py": "fb95e8c176acd06198275a917ea5781d292dbb92aedcacc25a3268c19eca5761",
-    "web_research.py": "f7f35b7fc03c0eb8b80944576b3edcdd0b0a52cb3ad8756434c615c985b80ad6"
-  },
-  "source_sha256": {
-    "plugin.py": "7eb20ce24a5065f6a3a7da8c16d9b3e183b41fc71fbcc0e0968a99cabbc234eb",
+    "plugin.py": "b7733f412df7a60f7647a7a9b0af2face6b3f00f35472b32c5b51404ee303147",
     "state.py": "9d0df99bfb1aaf64d7f57a99714cdc9ee83f884382e111428a3dac1a984b2a03",
     "briefing.py": "fb95e8c176acd06198275a917ea5781d292dbb92aedcacc25a3268c19eca5761",
     "web_research.py": "f7f35b7fc03c0eb8b80944576b3edcdd0b0a52cb3ad8756434c615c985b80ad6",
-    "conversation.py": "a34216a613ea4912374b880a13ea9cd78dcb27266f942146f0f742c7d109ba72",
+    "conversation.py": "95c646b7a7c82d8905ebaeeb0904f87f5cfb35f800e40c948b00a3d17ca9f4f6",
     "personal.py": "6e3df7be50e5534bbcde7d0939f95578952a2361f187c1ab542cdec780fe2bfa",
-    "activities.py": "bc40bfd9a732f0b4a9bf2334cd846b7a35fe8690d0be2248c9f05e5af7e27b4e",
-    "_manifest.json": "6fe83c4d130ed8eef45226892cdd30149bacb7223544a7067b08bd974854c682"
+    "activities.py": "d5a7754a8645ea4570efa3c593d5d715d90ba9dba40e965f1bac7b8eeae62def",
+    "_manifest.json": "8b480a2c0b73620d53f68c53722acb1a861206fffe2cf291237c9559fa19a967"
   },
-  "previous_commit": "43a4420b0590aea09549872785ffcb20417d5912",
-  "original_compose_sha256": "081d9197bf11206b93e00147ccb051afd89e4e9ff3f6928e4c8f4ebfe372d9c7",
+  "source_sha256": {
+    "plugin.py": "90093ffeb7c7fdf946e049158cc60f715b99bf7fce0a00e97a9312de31535a66",
+    "state.py": "9d0df99bfb1aaf64d7f57a99714cdc9ee83f884382e111428a3dac1a984b2a03",
+    "briefing.py": "08e4539d9176172b66a4973c4babbc29a33ca6d2fdc3d4329cdca1dde140be66",
+    "web_research.py": "b688ae30100663fd05041833693928d12ced7a500e54ee14662de366595c7840",
+    "conversation.py": "0ae63d1e0370eb4d45098a2334eff7a98a0545bd954758254074bdc79c039c5d",
+    "personal.py": "12510d21af17c03dccfab07bef7e1d6fe8ffaf60ea60e7435c9c57abed0de2ae",
+    "activities.py": "b0017f54d2386202d2f23329d86bd1dfff61b92ee3546e290ccd2d583d8c5f0b",
+    "_manifest.json": "48cdee76db0096e5d13e96f4d55be9860cd8c817477b1beefa3c4c258815704e"
+  },
+  "previous_commit": "313ad7c6bc679b04716db0d2061b3aebb164cb7b",
+  "original_compose_sha256": "acb4d6abac528abb52b86adc519d0303e0db6c393d422d4e7b842d886dc28e5b",
   "host_patches": {
     "src/plugin_runtime/capabilities/registry.py": {
       "original": "0e54d499e93e85337efe70ab9f69ae33c92bf04f2b74c715d2fef1cf28c477d6",
@@ -48,5 +52,16 @@
       "original": "3a78fb8756f027163f9b83b91a60519f7eba8c7ef1f4d2c724a4cfdbd7216251",
       "patched": "c3b7478da510de3f44ca86912148238117e98faf8caa0200e1ae8edb0be8f134"
     }
+  },
+  "conversation_counts_before": {
+    "messages": 2,
+    "preferences": 1,
+    "reminders": 0
+  },
+  "qq_identity_mapping": {
+    "alias_fingerprint": "bea3e1dcf64ff452",
+    "canonical_fingerprint": "33ff9cc8ac6d9d1f",
+    "codec_sha256": "2a33fb6d9caebe659b4574ffa8fb2100da4f91356509440200733760a30844e2",
+    "mapping_previously_existed": false
   }
 }
